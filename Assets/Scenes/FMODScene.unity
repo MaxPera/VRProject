@@ -1041,7 +1041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4438001227347519064, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: StopEvent
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4438001227347519064, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: TriggerOnce
@@ -1053,7 +1053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559912555137203711, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: StopEvent
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4559912555137203711, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: TriggerOnce
@@ -1065,7 +1065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5147167235111706395, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: StopEvent
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5147167235111706395, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: TriggerOnce
@@ -1085,7 +1085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7094789381148224583, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: StopEvent
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7094789381148224583, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: TriggerOnce
@@ -1101,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8827127913410005687, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: StopEvent
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8827127913410005687, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: TriggerOnce
