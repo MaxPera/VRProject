@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3385958044552582957}
   - component: {fileID: 7541076707896221788}
   m_Layer: 0
-  m_Name: PT_Poppy_02
+  m_Name: Poppy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
