@@ -173,6 +173,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &79128565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123012670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd9ebf1401392e4bbd47fea32f47642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBakedListener: {fileID: 0}
+  applyReverb: 1
+  reverbType: 0
+  useAllProbeBatches: 0
+  probeBatches: []
+  mTotalDataSize: 0
+  mProbeDataSizes: 
+  mIdentifier:
+    type: 0
+    variation: 0
+    endpointInfluence:
+      center:
+        x: 0
+        y: 0
+        z: 0
+      radius: 0
+  mProbeBatchesUsed: []
 --- !u!114 &194562799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,6 +476,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 194562799}
+    - targetCorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 79128565}
     - targetCorrespondingSourceObject: {fileID: 8063056433196656523, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1123012680}
@@ -1064,6 +1096,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5147167235111706395, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
+      propertyPath: PlayEvent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147167235111706395, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: StopEvent
       value: 0
       objectReference: {fileID: 0}
@@ -1097,6 +1133,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8827127913410005687, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
       propertyPath: Preload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827127913410005687, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
+      propertyPath: PlayEvent
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8827127913410005687, guid: 747cfba2968ac3c4f8a782d8303d98c6, type: 3}
