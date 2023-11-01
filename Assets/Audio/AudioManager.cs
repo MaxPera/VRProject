@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SteamAudio;
 using FMODUnity;
 using FMOD.Studio;
 using System;
@@ -10,9 +11,13 @@ public class AudioManager : MonoBehaviour
 {
     //Creates static instance of the class to use through the project
     public static AudioManager instance { get; private set; }
-
-    private List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmitters;
+    private List<EventInstance> eventInstances;
+
+    public bool usingSteamAudio;
+
+    [SerializeField]
+    private Camera mainCamera;
 
     private void Awake()
     {
@@ -22,12 +27,29 @@ public class AudioManager : MonoBehaviour
         //If there is an instance save it
         else
             DontDestroyOnLoad(instance);
+
+        eventEmitters = new List<StudioEventEmitter>();
+        eventInstances = new List<EventInstance>();
     }
 
     private void Start()
     {
-        StudioEventEmitter ambience = InitializeEventEmitter(FMODSounds.instance.soundEffects);
+        CheckSetup();
+
+        StudioEventEmitter ambience = InitializeEventEmitter(FMODSounds.instance.FindAudio("Crash"),SteamAudioPresets.instance.FindPreset("Test"), GameObject.Find("ToPlay"));
         ambience.Play();
+    }
+
+    /// <summary>
+    /// Checks if the Camera is setup up with the right Audio Listeners
+    /// </summary>
+    private void CheckSetup()
+    {
+        if (!mainCamera.GetComponent<StudioListener>())
+            mainCamera.gameObject.AddComponent<StudioListener>();
+        if (!mainCamera.GetComponent<SteamAudioListener>() && usingSteamAudio)
+            mainCamera.gameObject.AddComponent<SteamAudioListener>();
+
     }
 
     /// <summary>
@@ -35,7 +57,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="soundToPlay">What sound to play</param>
     /// <param name="worldPos">The 3D position of the sound in the Scene</param>
-    public void PlayOneShot(EventReference soundToPlay, Vector3 worldPos)
+    public void PlayOneShot(EventReference soundToPlay, UnityEngine.Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(soundToPlay, worldPos);
     }
@@ -94,12 +116,22 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="eventReference">The sound that should be played</param>
     /// <param name="emitterGameObject">GameObject where the sound originates from, if empty initializes it on the AudioManager</param>
+    /// <param name="emitterSource">If using SteamAudio add Preset</param>
     /// <returns></returns>
-    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, [Optional]GameObject emitterGameObject)
+    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, [Optional]SteamAudioPreset emitterSource,[Optional]GameObject emitterGameObject)
     {
         if (emitterGameObject != null)
         {
+            //Debug.Log(eventReference);
             StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();
+            if (usingSteamAudio)
+            {
+                SteamAudioSource source = emitterGameObject.AddComponent<SteamAudioSource>();
+                if (emitterSource != null)
+                {
+                    emitterSource.ChangeSourceSettings(source);
+                }
+            }
             emitter.EventReference = eventReference;
             eventEmitters.Add(emitter);
             return emitter;
@@ -107,11 +139,20 @@ public class AudioManager : MonoBehaviour
         else
         {
             StudioEventEmitter emitter = gameObject.AddComponent<StudioEventEmitter>();
+            if (usingSteamAudio)
+            {
+                SteamAudioSource source = gameObject.AddComponent<SteamAudioSource>();
+                if (emitterSource != null)
+                {
+                    emitterSource.ChangeSourceSettings(source);
+                }
+            }
             emitter.EventReference = eventReference;
             eventEmitters.Add(emitter);
             return emitter;
         }
     }
+
     /// <summary>
     /// Plays emitter created by InitializeEventEmitter()
     /// </summary>
@@ -159,15 +200,17 @@ public class AudioManager : MonoBehaviour
     //Stops all audio on disable and clears audio cashe
     private void CleanUpAudio()
     {
-        foreach (EventInstance eventInstance in eventInstances)
-        {
-            eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            eventInstance.release();
-        }
-        foreach (StudioEventEmitter eventEmitter in eventEmitters)
-        {
-            eventEmitter.Stop();
-        }
+        if(eventInstances.Count != 0)
+            foreach (EventInstance eventInstance in eventInstances)
+            {
+                eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                eventInstance.release();
+            }
+        if(eventEmitters.Count != 0)
+            foreach (StudioEventEmitter eventEmitter in eventEmitters)
+            {
+                eventEmitter.Stop();
+            }
     }
 
     private void OnDestroy()
