@@ -13,7 +13,8 @@ public class AudioManager : MonoBehaviour
     private List<StudioEventEmitter> eventEmitters;
     private List<EventInstance> eventInstances;
 
-    public bool usingSteamAudio;
+    [SerializeField]
+    private bool usingSteamAudio;
 
     [SerializeField]
     private Camera mainCamera;
