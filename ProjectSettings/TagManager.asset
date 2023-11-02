@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Anchor
-  - Ball
+  - Stick
   layers:
   - Default
   - TransparentFX
