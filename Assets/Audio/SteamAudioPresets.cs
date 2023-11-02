@@ -31,6 +31,7 @@ public class SteamAudioPresets : MonoBehaviour
     }
 }
 
+
 [Serializable]
 [CreateAssetMenu(menuName = "Steam Audio/SteamAudio Source Preset")]
 public class SteamAudioPreset : ScriptableObject

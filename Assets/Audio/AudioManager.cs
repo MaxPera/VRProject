@@ -23,10 +23,14 @@ public class AudioManager : MonoBehaviour
     {
         //Checks if there is no instance in which case it creates a new one
         if (instance == null)
+        {
             instance = this;
+        }
         //If there is an instance save it
         else
-            DontDestroyOnLoad(instance);
+            Destroy(this);
+
+        DontDestroyOnLoad(instance);
 
         eventEmitters = new List<StudioEventEmitter>();
         eventInstances = new List<EventInstance>();
@@ -133,6 +137,9 @@ public class AudioManager : MonoBehaviour
                 }
             }
             emitter.EventReference = eventReference;
+            emitter.OverrideAttenuation = true;
+            emitter.OverrideMinDistance = 100;
+            emitter.OverrideMaxDistance = 1000;
             eventEmitters.Add(emitter);
             return emitter;
         }
@@ -148,6 +155,9 @@ public class AudioManager : MonoBehaviour
                 }
             }
             emitter.EventReference = eventReference;
+            emitter.OverrideAttenuation = true;
+            emitter.OverrideMinDistance = 100;
+            emitter.OverrideMaxDistance = 1000;
             eventEmitters.Add(emitter);
             return emitter;
         }

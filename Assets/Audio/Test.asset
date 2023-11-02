@@ -18,7 +18,7 @@ MonoBehaviour:
   reflections: 1
   reflectionsType: 0
   bakedSource: {fileID: 0}
-  pathing: 1
+  pathing: 0
   probeBatch: {fileID: 0}
   pathValidation: 0
   findAlternativePaths: 0
