@@ -61,7 +61,7 @@
 			<value>true</value>
 		</property>
 		<property name="minimumDistance">
-			<value>5</value>
+			<value>0</value>
 		</property>
 		<property name="maximumDistance">
 			<value>10000</value>
@@ -141,7 +141,7 @@
 			<value>true</value>
 		</property>
 		<property name="minimumDistance">
-			<value>10</value>
+			<value>0</value>
 		</property>
 		<property name="maximumDistance">
 			<value>10000</value>
@@ -215,7 +215,7 @@
 			<value>ApplyDA</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -257,7 +257,7 @@
 			<value>ApplyOccl</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -271,7 +271,7 @@
 			<value>ApplyTrans</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -285,7 +285,7 @@
 			<value>ApplyRefl</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="BoolPluginParameter" id="{1504244b-3ddc-4b32-a4ff-7e3a033f83a4}">
@@ -326,7 +326,7 @@
 			<value>DAType</value>
 		</property>
 		<property name="value">
-			<value>2</value>
+			<value>3</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -340,7 +340,7 @@
 			<value>DAMinDist</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,10000.000000)}</value>
@@ -406,7 +406,7 @@
 			<value>DipoleWeight</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -543,7 +543,7 @@
 			<value>DirectBinaural</value>
 		</property>
 		<property name="value">
-			<value>true</value>
+			<value>false</value>
 		</property>
 	</object>
 	<object class="DataPluginParameter" id="{48ff120e-8507-4dc3-bf5a-2daeb0656836}">
