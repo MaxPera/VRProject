@@ -121,45 +121,43 @@ public class AudioManager : MonoBehaviour
     /// <param name="emitterGameObject">GameObject where the sound originates from, if empty initializes it on the AudioManager</param>
     /// <param name="emitterSource">If using SteamAudio add Preset</param>
     /// <returns></returns>
-    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, [Optional]SteamAudioPreset emitterSource,[Optional]GameObject emitterGameObject)
+    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, [Optional]SteamAudioPreset emitterSource, GameObject emitterGameObject)
     {
-        if (emitterGameObject != null)
+        //Debug.Log(eventReference);
+        StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();
+        if (usingSteamAudio)
         {
-            //Debug.Log(eventReference);
-            StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();
-            if (usingSteamAudio)
+            SteamAudioSource source = emitterGameObject.AddComponent<SteamAudioSource>();
+            if (emitterSource != null)
             {
-                SteamAudioSource source = emitterGameObject.AddComponent<SteamAudioSource>();
-                if (emitterSource != null)
-                {
-                    emitterSource.ChangeSourceSettings(source);
-                }
+                emitterSource.ChangeSourceSettings(source);
             }
-            emitter.EventReference = eventReference;
-            emitter.OverrideAttenuation = true;
-            emitter.OverrideMinDistance = 100;
-            emitter.OverrideMaxDistance = 1000;
-            eventEmitters.Add(emitter);
-            return emitter;
         }
-        else
+        emitter.EventReference = eventReference;
+        eventEmitters.Add(emitter);
+        return emitter;
+    }
+
+    /// <summary>
+    /// Creates new sound emitter and adds it to the object the sound originates from
+    /// </summary>
+    /// <param name="eventReference">The sound that should be played</param>
+    /// <param name="emitterSource">If using SteamAudio add Preset</param>
+    /// <returns></returns>
+    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, [Optional] SteamAudioPreset emitterSource)
+    {
+        StudioEventEmitter emitter = gameObject.AddComponent<StudioEventEmitter>();
+        if (usingSteamAudio)
         {
-            StudioEventEmitter emitter = gameObject.AddComponent<StudioEventEmitter>();
-            if (usingSteamAudio)
+            SteamAudioSource source = gameObject.AddComponent<SteamAudioSource>();
+            if (emitterSource != null)
             {
-                SteamAudioSource source = gameObject.AddComponent<SteamAudioSource>();
-                if (emitterSource != null)
-                {
-                    emitterSource.ChangeSourceSettings(source);
-                }
+                emitterSource.ChangeSourceSettings(source);
             }
-            emitter.EventReference = eventReference;
-            emitter.OverrideAttenuation = true;
-            emitter.OverrideMinDistance = 100;
-            emitter.OverrideMaxDistance = 1000;
-            eventEmitters.Add(emitter);
-            return emitter;
         }
+        emitter.EventReference = eventReference;
+        eventEmitters.Add(emitter);
+        return emitter;        
     }
 
     /// <summary>
@@ -192,18 +190,21 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="eventInstance">The event you want to change the parameter for</param>
     /// <param name="parameterName">The parameter you want to change</param>
-    /// <param name="paramaterFloatValue">Float to change</param>
     /// <param name="parameterBoolValue">Bool to change</param>
-    public void SetEventInstanceParameter(EventInstance eventInstance, string parameterName, [Optional]float? paramaterFloatValue, [Optional]bool? parameterBoolValue)
+    public void SetEventInstanceParameter(EventInstance eventInstance, string parameterName, bool parameterBoolValue)
     {
-        if (paramaterFloatValue.HasValue)
-        {
-            eventInstance.setParameterByName(parameterName, (float)paramaterFloatValue);
-        }
-        if (parameterBoolValue.HasValue)
-        {
-            eventInstance.setParameterByName(parameterName, Convert.ToInt32(parameterBoolValue));
-        }
+        eventInstance.setParameterByName(parameterName, Convert.ToInt32(parameterBoolValue));
+    }
+
+    /// <summary>
+    /// Let's you change the parameter of an event according to if its a float or bool
+    /// </summary>
+    /// <param name="eventInstance">The event you want to change the parameter for</param>
+    /// <param name="parameterName">The parameter you want to change</param>
+    /// <param name="paramaterFloatValue">Float to change</param>
+    public void SetEventInstanceParameter(EventInstance eventInstance, string parameterName, float paramaterFloatValue)
+    {
+        eventInstance.setParameterByName(parameterName, (float)paramaterFloatValue);
     }
 
     //Stops all audio on disable and clears audio cashe
