@@ -60,6 +60,9 @@
 		<property name="dopplerEnabled">
 			<value>true</value>
 		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
 		<property name="maximumDistance">
 			<value>10000</value>
 		</property>
@@ -137,6 +140,9 @@
 		<property name="bypass">
 			<value>true</value>
 		</property>
+		<property name="minimumDistance">
+			<value>10</value>
+		</property>
 		<property name="maximumDistance">
 			<value>10000</value>
 		</property>
@@ -192,7 +198,6 @@
 		<property name="name">
 			<value>SourcePos</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -201,7 +206,6 @@
 		<property name="name">
 			<value>OverallGain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
@@ -530,7 +534,6 @@
 		<property name="name">
 			<value>SimOutputs</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>0</value>
 		</property>
@@ -547,7 +550,6 @@
 		<property name="name">
 			<value>DistRange</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>

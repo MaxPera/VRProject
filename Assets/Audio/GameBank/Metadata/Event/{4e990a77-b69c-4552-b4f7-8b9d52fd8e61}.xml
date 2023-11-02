@@ -60,6 +60,9 @@
 		<property name="dopplerEnabled">
 			<value>true</value>
 		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
 		<property name="maximumDistance">
 			<value>10000</value>
 		</property>
@@ -130,6 +133,9 @@
 	<object class="MixerBusPanner" id="{7a352d49-08b1-4003-a32b-568790fa480e}" />
 	<object class="MixerBusFader" id="{64124c41-cd75-40b4-9c6e-78c599a24389}" />
 	<object class="SpatialiserEffect" id="{7046dd20-41b0-4a8e-b820-c93a62d348c5}">
+		<property name="minimumDistance">
+			<value>9600</value>
+		</property>
 		<property name="maximumDistance">
 			<value>10000</value>
 		</property>
