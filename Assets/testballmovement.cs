@@ -6,13 +6,22 @@ public class BallAutoMovement : MonoBehaviour
 {
     public float forwardSpeed = 2.0f;   // Forward movement speed
     public float rotationSpeed = 20.0f; // Rotation speed
+    [SerializeField] Rigidbody rBody;
+
+    void Start()
+    {
+        rBody = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
-        // Move the ball forward
+        rBody.AddForce(forwardSpeed * Vector3.forward);
+
+
+/*        // Move the ball forward
         transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
 
         // Apply a slight rotation (e.g., around the Y-axis)
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);*/
     }
 }
