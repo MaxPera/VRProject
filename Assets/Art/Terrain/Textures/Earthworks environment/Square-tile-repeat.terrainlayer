@@ -6,11 +6,11 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NewLayer 2
-  m_DiffuseTexture: {fileID: 2800000, guid: 448f1e2f486d7924e86aa38b32608d53, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 6f0f915d1af3fdf44be212de29f366a1, type: 3}
+  m_Name: Square-tile-repeat
+  m_DiffuseTexture: {fileID: 2800000, guid: 1fc9c88282bb1e542852cc6583887c40, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: e0cd85ba3c2c113468be1c58fb0f15dc, type: 3}
   m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 0.5, y: 0.5}
+  m_TileSize: {x: 1, y: 1.5}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
