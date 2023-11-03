@@ -3,7 +3,12 @@ guid: 6c2a0b9171fbaa54bbcb39e29f2625ed
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drumkit.015
+    second: {fileID: 2100000, guid: df4329d24645be84baa84bb75099ee46, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
