@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using SteamAudio;
 using System;
 
 public class SteamAudioPresets : MonoBehaviour

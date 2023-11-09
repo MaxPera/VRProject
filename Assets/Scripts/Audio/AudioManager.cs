@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance { get; private set; }
     private List<StudioEventEmitter> eventEmitters;
     private List<EventInstance> eventInstances;
+    [SerializeField]
+    private List<string> banks = new List<string>();
 
     [SerializeField]
     private bool usingSteamAudio;
@@ -49,10 +51,23 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     private void CheckSetup()
     {
-        if (!mainCamera.GetComponent<StudioListener>())
-            mainCamera.gameObject.AddComponent<StudioListener>();
-        if (!mainCamera.GetComponent<SteamAudioListener>() && usingSteamAudio)
-            mainCamera.gameObject.AddComponent<SteamAudioListener>();
+        if (!TryGetComponent<StudioBankLoader>(out StudioBankLoader studioBankLoader))
+        {
+            studioBankLoader = gameObject.AddComponent<StudioBankLoader>();
+            studioBankLoader.Banks = banks;
+            studioBankLoader.Load();
+        }
+
+        if (!mainCamera.TryGetComponent<StudioListener>(out StudioListener studioListener))
+        {
+            studioListener = mainCamera.gameObject.AddComponent<StudioListener>();
+            studioListener.attenuationObject = mainCamera.gameObject;
+        }
+        if (!mainCamera.TryGetComponent<SteamAudioListener>(out SteamAudioListener steamAudioListener) && usingSteamAudio)
+        {
+            steamAudioListener = mainCamera.gameObject.AddComponent<SteamAudioListener>();
+            steamAudioListener.applyReverb = true;
+        }
 
     }
 
