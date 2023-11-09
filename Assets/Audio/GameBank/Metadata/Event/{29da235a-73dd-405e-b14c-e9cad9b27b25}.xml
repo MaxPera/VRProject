@@ -61,7 +61,7 @@
 			<value>true</value>
 		</property>
 		<property name="minimumDistance">
-			<value>0</value>
+			<value>5</value>
 		</property>
 		<property name="maximumDistance">
 			<value>10000</value>
@@ -543,7 +543,7 @@
 			<value>DirectBinaural</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="DataPluginParameter" id="{48ff120e-8507-4dc3-bf5a-2daeb0656836}">

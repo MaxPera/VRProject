@@ -122,7 +122,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="emitterGameObject">GameObject where the sound originates from, if empty initializes it on the AudioManager</param>
     /// <param name="emitterSource">If using SteamAudio add Preset</param>
     /// <returns></returns>
-    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, [Optional]SteamAudioPreset emitterSource, GameObject emitterGameObject)
+    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, SteamAudioPreset emitterSource, GameObject emitterGameObject)
     {
         //Debug.Log(eventReference);
         StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();

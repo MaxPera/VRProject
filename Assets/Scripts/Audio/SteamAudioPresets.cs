@@ -7,6 +7,9 @@ public class SteamAudioPresets : MonoBehaviour
 {
     public static SteamAudioPresets instance;
 
+    [field: SerializeField]
+    public List<SteamAudioPreset> presets { get; private set; }
+
     private void Awake()
     {
         //Checks if there is no instance in which case it creates a new one
@@ -16,9 +19,6 @@ public class SteamAudioPresets : MonoBehaviour
         else
             DontDestroyOnLoad(instance);
     }
-
-    [field: SerializeField]
-    public List<SteamAudioPreset> presets { get; private set; }
 
     public SteamAudioPreset FindPreset(string presetName)
     {
