@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c2a0b9171fbaa54bbcb39e29f2625ed
+guid: 91036e164a45c6f4a91ed89794e13542
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: drumkit.015
+      name: drumkit
     second: {fileID: 2100000, guid: df4329d24645be84baa84bb75099ee46, type: 2}
   materials:
     materialImportMode: 2
