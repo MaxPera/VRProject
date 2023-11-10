@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -302,6 +302,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1720563708}
   m_SourcePrefab: {fileID: 100100000, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+--- !u!54 &1008086122 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4156800919451937891, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
+  m_PrefabInstance: {fileID: 7237098519353595614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1162012613
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,13 +671,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 4665375073823228109, guid: fe2a799d9d9761d4eaf97e02e50028bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4684771629291742462, guid: fe2a799d9d9761d4eaf97e02e50028bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4684771629291742462, guid: fe2a799d9d9761d4eaf97e02e50028bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3748
+      value: 0.635
       objectReference: {fileID: 0}
     - target: {fileID: 4684771629291742462, guid: fe2a799d9d9761d4eaf97e02e50028bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -704,6 +713,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4684771629291742462, guid: fe2a799d9d9761d4eaf97e02e50028bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482582429425735753, guid: fe2a799d9d9761d4eaf97e02e50028bf, type: 3}
+      propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -725,7 +738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964608151576174692, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.361
+      value: 0.605
       objectReference: {fileID: 0}
     - target: {fileID: 1964608151576174692, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -759,9 +772,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4156800919451937891, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156800919451937891, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
+      propertyPath: m_Constraints
+      value: 46
+      objectReference: {fileID: 0}
     - target: {fileID: 5107435285827039120, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
       propertyPath: m_Name
       value: VinylMaze
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304424787693199398, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186391419512603657, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437353351966490774, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998617547477120496, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1008086122}
+    - target: {fileID: 7998617547477120496, guid: 048270b09d17aa744abcbf3dbb9a0acd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -780,13 +821,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 1073526207408997580, guid: 4d51a2e9a0ca18545a251d47b91dc2b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873091211458177966, guid: 4d51a2e9a0ca18545a251d47b91dc2b8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7873091211458177966, guid: 4d51a2e9a0ca18545a251d47b91dc2b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 7873091211458177966, guid: 4d51a2e9a0ca18545a251d47b91dc2b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.058
+      value: 0.089
       objectReference: {fileID: 0}
     - target: {fileID: 7873091211458177966, guid: 4d51a2e9a0ca18545a251d47b91dc2b8, type: 3}
       propertyPath: m_LocalPosition.z
