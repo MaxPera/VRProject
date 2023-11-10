@@ -10,10 +10,15 @@ public class SoundEmitter : MonoBehaviour
     protected EventReference eventReference;
     [SerializeField]
     protected SteamAudioPreset steamAudioPreset;
+    [SerializeField]
+    protected bool isStatic;
 
     private void Start()
     {
-        AudioManager.instance.InitializeEventEmitter(eventReference, steamAudioPreset, gameObject);
+        if (!isStatic)
+            AudioManager.instance.InitializeEventEmitter(eventReference, steamAudioPreset, gameObject);
+        else
+            AudioManager.instance.InitializeStaticEventEmitter(eventReference, steamAudioPreset, gameObject);
     }
 
 

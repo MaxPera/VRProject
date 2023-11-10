@@ -204,13 +204,60 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 22da32f9d1979ff48bec82942719ae1a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3579899632127797137}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 22da32f9d1979ff48bec82942719ae1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4482923956261355598}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 22da32f9d1979ff48bec82942719ae1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3627359263890344184}
   m_SourcePrefab: {fileID: 100100000, guid: 22da32f9d1979ff48bec82942719ae1a, type: 3}
 --- !u!4 &8291050530009365565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 22da32f9d1979ff48bec82942719ae1a, type: 3}
   m_PrefabInstance: {fileID: 8396121452691643350}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8666168319687386759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 22da32f9d1979ff48bec82942719ae1a, type: 3}
+  m_PrefabInstance: {fileID: 8396121452691643350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4482923956261355598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666168319687386759}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.21753548, y: 0.18932676, z: 0.29237607}
+  m_Center: {x: 0, y: 0.094834805, z: 0}
+--- !u!114 &3627359263890344184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666168319687386759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e829c87dc2a2ed2419c5f67848317fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 11400000, guid: 5272c55b882edd34a9d80b11bd6f240c, type: 2}
+  exportAllChildren: 1
+  terrainSimplificationLevel: 0
 --- !u!1001 &8488013670288427854
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -41,9 +41,6 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         CheckSetup();
-
-        StudioEventEmitter ambience = InitializeEventEmitter(FMODSounds.instance.FindAudio("Crash"),SteamAudioPresets.instance.FindPreset("Test"), GameObject.Find("ToPlay"));
-        ambience.Play();
     }
 
     /// <summary>
@@ -184,6 +181,30 @@ public class AudioManager : MonoBehaviour
     public StudioEventEmitter InitializeEventEmitter(EventReference eventReference)
     {
         StudioEventEmitter emitter = gameObject.AddComponent<StudioEventEmitter>();
+        emitter.EventReference = eventReference;
+        eventEmitters.Add(emitter);
+        return emitter;
+    }
+
+    /// <summary>
+    /// Creates new sound emitter and adds it to the object the sound originates from
+    /// </summary>
+    /// <param name="eventReference">The sound that should be played</param>
+    /// <param name="emitterGameObject">GameObject where the sound originates from, if empty initializes it on the AudioManager</param>
+    /// <param name="emitterSource">If using SteamAudio add Preset</param>
+    /// <returns></returns>
+    public StudioEventEmitter InitializeStaticEventEmitter(EventReference eventReference, SteamAudioPreset emitterSource, GameObject emitterGameObject)
+    {
+        //Debug.Log(eventReference);
+        StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();
+        if (usingSteamAudio)
+        {
+            SteamAudioSource source = emitterGameObject.AddComponent<SteamAudioSource>();
+            if (emitterSource != null)
+            {
+                emitterSource.ChangeSourceSettings(source);
+            }
+        }
         emitter.EventReference = eventReference;
         eventEmitters.Add(emitter);
         return emitter;
