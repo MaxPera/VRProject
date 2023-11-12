@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class MazeRotationScript : MonoBehaviour
 {
@@ -27,29 +24,19 @@ public class MazeRotationScript : MonoBehaviour
 
         if (CurrentZRotation >= MaxRotation|| CurrentZRotation <= MinRotation)
         {
-            ClampZRotation();
+            CurrentZRotation = Mathf.Clamp(CurrentZRotation, MinRotation, MaxRotation);
+            transform.rotation = Quaternion.Euler(CurrentXRotation, 0, CurrentZRotation);
         }
 
         if (CurrentXRotation >= MaxRotation || CurrentXRotation <= MinRotation)
         {
-            ClampXRotation(); 
+            CurrentXRotation = Mathf.Clamp(CurrentXRotation, MinRotation, MaxRotation);
+            transform.rotation = Quaternion.Euler(CurrentXRotation, 0, CurrentZRotation);
         } 
     }
 
     private void FixedUpdate()
     {
         transform.position = startingPosition;
-    }
-
-    private void ClampZRotation() 
-    {
-        CurrentZRotation = Mathf.Clamp(CurrentZRotation, MinRotation, MaxRotation);
-        transform.rotation = Quaternion.Euler(CurrentXRotation, 0, CurrentZRotation);
-    }
-
-    private void ClampXRotation()
-    {
-        CurrentXRotation = Mathf.Clamp(CurrentXRotation, MinRotation, MaxRotation);
-        transform.rotation = Quaternion.Euler(CurrentXRotation, 0, CurrentZRotation);
     }
 }

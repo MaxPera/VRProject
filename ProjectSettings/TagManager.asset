@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Stick
   - Ball
-  - Anchor
   layers:
   - Default
   - TransparentFX
@@ -15,7 +14,7 @@ TagManager:
   - Water
   - UI
   - 
-  - Test
+  - 
   - 
   - 
   - 
