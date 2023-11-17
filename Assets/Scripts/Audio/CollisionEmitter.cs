@@ -8,7 +8,10 @@ public class CollisionEmitter : SoundEmitter
 {
     [SerializeField]
     private float cooldownTimer;
+    private bool canPlay = true;
     private bool hasStarted = false;
+    [SerializeField]
+    private bool usesVelocity;
 
     private void OnEnable()
     {
@@ -23,20 +26,32 @@ public class CollisionEmitter : SoundEmitter
 
     private IEnumerator PlaySound()
     {
-        Rigidbody rBody = GetComponent<Rigidbody>();
-        EventInstance eventInstance = GetComponent<StudioEventEmitter>().EventInstance;
-        float volumeVelocit = Mathf.Clamp01(rBody.velocity.magnitude * 50f);
+        if (usesVelocity)
+        {
+            Rigidbody rBody = GetComponent<Rigidbody>();
+            EventInstance eventInstance = GetComponent<StudioEventEmitter>().EventInstance;
+            float volumeVelocit = Mathf.Clamp01(rBody.velocity.magnitude * 50f);
 
-        AudioManager.instance.SetEventInstanceParameter(eventInstance, "VolumeVelocity", volumeVelocit);
+            AudioManager.instance.SetEventInstanceParameter(eventInstance, "VolumeVelocity", volumeVelocit);
+        }
+        canPlay = false;
         yield return new WaitForEndOfFrame();
         AudioManager.instance.PlayEmitter(gameObject);
     }
 
+    private IEnumerator StartTimer()
+    {
+        yield return new WaitForSeconds(cooldownTimer);
+        canPlay = true;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Collider>() && hasStarted)
+        if (collision.gameObject.GetComponent<Collider>() && hasStarted && canPlay)
         {
-            StartCoroutine(PlaySound());
+            StartCoroutine(StartTimer());
+            if(canPlay == true)
+                StartCoroutine(PlaySound());
         }
     }
 }

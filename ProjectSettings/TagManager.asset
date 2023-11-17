@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Stick
+  - Anchor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Drum
   - Water
   - UI
-  - 
+  - Drumsticks
   - 
   - 
   - 
