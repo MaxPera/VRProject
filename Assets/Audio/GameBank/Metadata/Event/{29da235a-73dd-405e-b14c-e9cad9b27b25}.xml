@@ -141,7 +141,7 @@
 			<value>true</value>
 		</property>
 		<property name="minimumDistance">
-			<value>0</value>
+			<value>5</value>
 		</property>
 		<property name="maximumDistance">
 			<value>10000</value>
@@ -497,7 +497,7 @@
 			<value>ReflBinaural</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{765249f1-25d2-4cb2-b944-d33694a164a6}">
