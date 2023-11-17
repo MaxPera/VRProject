@@ -539,9 +539,10 @@ MonoBehaviour:
   applyReverb: 1
   reverbType: 0
   useAllProbeBatches: 0
-  probeBatches: []
-  mTotalDataSize: 0
-  mProbeDataSizes: 
+  probeBatches:
+  - {fileID: 1735433907}
+  mTotalDataSize: 4812
+  mProbeDataSizes: cc120000
   mIdentifier:
     type: 0
     variation: 0
@@ -551,7 +552,8 @@ MonoBehaviour:
         y: 0
         z: 0
       radius: 0
-  mProbeBatchesUsed: []
+  mProbeBatchesUsed:
+  - {fileID: 1735433907}
 --- !u!4 &88223754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6711545770420750180, guid: 2cf3b7875a68f2d46863b349710bcede, type: 3}
@@ -1928,7 +1930,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7260014698985228689, guid: f6d48263b372a0442abee845afa2c3b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 644328281}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d48263b372a0442abee845afa2c3b5, type: 3}
 --- !u!4 &451193437 stripped
@@ -2039,7 +2044,7 @@ MonoBehaviour:
       Data4: 1445780361
     Path: event:/Ride
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &489619593
@@ -2935,6 +2940,57 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1631811345}
   m_SourcePrefab: {fileID: 100100000, guid: 3ee4b0fe88e11824b9270aa43945eeda, type: 3}
+--- !u!1 &644328280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 644328281}
+  - component: {fileID: 644328282}
+  m_Layer: 0
+  m_Name: ProbeBatches
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &644328281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644328280}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1174375148}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &644328282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644328280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787ea6183a6fe7147a3680fe58dcaac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  matches:
+  - probeBatch: {fileID: 1735433907}
+    audioPresets:
+    - {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
+  - probeBatch: {fileID: 1735433907}
+    audioPresets:
+    - {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
 --- !u!1001 &657923862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3798,7 +3854,7 @@ MonoBehaviour:
       Data4: -1075086074
     Path: event:/Snare
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &917564751
@@ -4840,6 +4896,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1174375148 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7260014698985228689, guid: f6d48263b372a0442abee845afa2c3b5, type: 3}
+  m_PrefabInstance: {fileID: 437701670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1188086956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291050530009365565, guid: 5e2262eae60452b469a885633b307dc3, type: 3}
@@ -4875,7 +4936,7 @@ MonoBehaviour:
       Data4: 628863705
     Path: event:/Crash
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &1205491110
@@ -5072,7 +5133,7 @@ MonoBehaviour:
       Data4: 164474062
     Path: event:/TomHi
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!4 &1356281559 stripped
@@ -5257,7 +5318,7 @@ MonoBehaviour:
       Data4: 1487266257
     Path: event:/TomMi
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &1507408407
@@ -6104,6 +6165,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6711545770420750180, guid: 2cf3b7875a68f2d46863b349710bcede, type: 3}
   m_PrefabInstance: {fileID: 1707094590}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1735433906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1735433908}
+  - component: {fileID: 1735433907}
+  m_Layer: 0
+  m_Name: EarthWorksProbeBatch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1735433907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735433906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286962cac82a4fa4e9ec38ab663c9578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementStrategy: 0
+  horizontalSpacing: 5
+  heightAboveFloor: 1.5
+  asset: {fileID: 11400000, guid: 3070dd36e284825489621d2dc24397ed, type: 2}
+  probeDataSize: 5132
+  mProbeSpheres:
+  - center:
+      x: 21.54
+      y: 1.48
+      z: -10.383
+    radius: 1.47
+  mBakedDataLayerInfo:
+  - gameObject: {fileID: 1123012670}
+    identifier:
+      type: 0
+      variation: 0
+      endpointInfluence:
+        center:
+          x: 0
+          y: 0
+          z: 0
+        radius: 0
+    dataSize: 4812
+  - gameObject: {fileID: 1735433906}
+    identifier:
+      type: 1
+      variation: 3
+      endpointInfluence:
+        center:
+          x: 0
+          y: 0
+          z: 0
+        radius: 0
+    dataSize: 40
+--- !u!4 &1735433908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735433906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.54, y: 1.48, z: 10.383}
+  m_LocalScale: {x: 13.6, y: 2.94, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741090673
 GameObject:
   m_ObjectHideFlags: 0
@@ -6544,7 +6683,7 @@ MonoBehaviour:
       Data4: -178793532
     Path: event:/HiHat
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1 &1847089329 stripped
@@ -6848,7 +6987,7 @@ MonoBehaviour:
       Data4: 1487266257
     Path: event:/TomMi
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!4 &1955724771 stripped
@@ -7404,3 +7543,4 @@ SceneRoots:
   - {fileID: 556320357}
   - {fileID: 397855133}
   - {fileID: 1123012669}
+  - {fileID: 1735433908}

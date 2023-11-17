@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57be4065c277e1745aa6f307a9454fc3, type: 3}
-  m_Name: New Steam Audio Preset
+  m_Name: StaticEarthworksSource
   m_EditorClassIdentifier: 
   occlusion: 1
   occlusionType: 0
@@ -18,7 +18,7 @@ MonoBehaviour:
   reflections: 1
   reflectionsType: 0
   bakedSource: {fileID: 0}
-  pathing: 0
+  pathing: 1
   probeBatch: {fileID: 0}
   pathValidation: 0
   findAlternativePaths: 0

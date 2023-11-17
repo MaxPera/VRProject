@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+using SteamAudio;
 
 [HideInInspector]
 public class SoundEmitter : MonoBehaviour
@@ -9,7 +10,7 @@ public class SoundEmitter : MonoBehaviour
     [SerializeField]
     protected EventReference eventReference;
     [SerializeField]
-    protected SteamAudioPreset steamAudioPreset;
+    public SteamAudioPreset steamAudioPreset;
     [SerializeField]
     protected bool isStatic;
 
@@ -18,7 +19,9 @@ public class SoundEmitter : MonoBehaviour
         if (!isStatic)
             AudioManager.instance.InitializeEventEmitter(eventReference, steamAudioPreset, gameObject);
         else
-            AudioManager.instance.InitializeStaticEventEmitter(eventReference, steamAudioPreset, gameObject);
+        {
+            AudioManager.instance.InitializeEventEmitter(eventReference, steamAudioPreset, gameObject, isStatic);
+        }
     }
 
 
