@@ -135,7 +135,6 @@ public class AudioManager : MonoBehaviour
     /// <returns></returns>
     public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, SteamAudioPreset emitterSource, GameObject emitterGameObject, bool isStatic)
     {
-        //Debug.Log(eventReference);
         StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();
         SteamAudioSource source = emitterGameObject.AddComponent<SteamAudioSource>();
         emitterSource.ChangeSourceSettings(source);
@@ -154,7 +153,6 @@ public class AudioManager : MonoBehaviour
     /// <returns></returns>
     public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, SteamAudioPreset emitterSource, GameObject emitterGameObject)
     {
-        //Debug.Log(eventReference);
         StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();
         if (usingSteamAudio)
         {
@@ -215,7 +213,6 @@ public class AudioManager : MonoBehaviour
             return;
         else
         {
-            Debug.Log($"Playing {emitter.EventReference}");
             emitter.Play();
         }
     }
