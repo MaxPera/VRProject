@@ -214,7 +214,7 @@
 			<value>ApplyAA</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -228,7 +228,7 @@
 			<value>ApplyDir</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -278,7 +278,7 @@
 			<value>ApplyPath</value>
 		</property>
 		<property name="value">
-			<value>true</value>
+			<value>false</value>
 		</property>
 	</object>
 	<object class="IntPluginParameter" id="{1790f32b-f336-4ab5-a0f7-7d7f7184fc7a}">
@@ -311,7 +311,7 @@
 			<value>DAType</value>
 		</property>
 		<property name="value">
-			<value>2</value>
+			<value>3</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -325,7 +325,7 @@
 			<value>DAMinDist</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,10000.000000)}</value>
@@ -336,7 +336,7 @@
 			<value>DAMaxDist</value>
 		</property>
 		<property name="value">
-			<value>20</value>
+			<value>10000</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,10000.000000)}</value>
@@ -391,7 +391,7 @@
 			<value>DipoleWeight</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -482,7 +482,7 @@
 			<value>ReflBinaural</value>
 		</property>
 		<property name="value">
-			<value>true</value>
+			<value>false</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{9fbb5c2c-188b-45cc-be73-4b4b8c349620}">
@@ -501,7 +501,7 @@
 			<value>PathBinaural</value>
 		</property>
 		<property name="value">
-			<value>true</value>
+			<value>false</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{09a95e17-b650-4c8e-9e6a-8ba4ce5b1443}">
@@ -528,7 +528,7 @@
 			<value>DirectBinaural</value>
 		</property>
 		<property name="value">
-			<value>true</value>
+			<value>false</value>
 		</property>
 	</object>
 	<object class="DataPluginParameter" id="{12359cf9-eb50-4f7a-ae6a-768119d5bb42}">
