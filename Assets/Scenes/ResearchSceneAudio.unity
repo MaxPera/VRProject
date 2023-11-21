@@ -820,21 +820,7 @@ MonoBehaviour:
     value: {x: 5, y: 1, z: 5}
   - key: {x: 2, y: 1, z: -2}
     value: {x: -2, y: 1, z: 2}
-  - key: {x: -2, y: 1, z: -2}
-    value: {x: -2, y: 1, z: 2}
-  - key: {x: -2, y: 2, z: -2}
-    value: {x: -2, y: 2, z: 2}
-  - key: {x: 2, y: 2, z: -4}
-    value: {x: -4, y: 2, z: 2}
-  - key: {x: -4, y: 2, z: -2}
-    value: {x: -4, y: 2, z: 2}
-  - key: {x: -6, y: 2, z: 2}
-    value: {x: 6, y: 2, z: -2}
   pickList: []
-  input: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  pickedSide: 0
-  canPick: 0
-  currentName: Kees
 --- !u!114 &1572742699
 MonoBehaviour:
   m_ObjectHideFlags: 0
