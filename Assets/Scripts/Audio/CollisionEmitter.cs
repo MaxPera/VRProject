@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
@@ -28,11 +27,12 @@ public class CollisionEmitter : SoundEmitter
     {
         if (usesVelocity)
         {
-            Rigidbody rBody = GetComponent<Rigidbody>();
-            EventInstance eventInstance = GetComponent<StudioEventEmitter>().EventInstance;
-            float volumeVelocit = Mathf.Clamp01(rBody.velocity.magnitude * 50f);
+            TryGetComponent(out Rigidbody rBody);
+            TryGetComponent(out StudioEventEmitter eventEmitter);
+            EventInstance eventInstance = eventEmitter.EventInstance;
+            float volumeVelocity = Mathf.Clamp01(rBody.velocity.magnitude * 50f);
 
-            AudioManager.instance.SetEventInstanceParameter(eventInstance, "VolumeVelocity", volumeVelocit);
+            AudioManager.instance.SetEventInstanceParameter(eventInstance, "VolumeVelocity", volumeVelocity);
         }
         canPlay = false;
         yield return new WaitForEndOfFrame();
@@ -47,7 +47,7 @@ public class CollisionEmitter : SoundEmitter
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Collider>() && hasStarted && canPlay)
+        if (collision.gameObject.GetComponent<Collider>() && hasStarted && !canPlay)
         {
             StartCoroutine(StartTimer());
             if(canPlay == true)

@@ -1,12 +1,11 @@
-using System.Collections;
+using SteamAudio;
 using System.Collections.Generic;
 using UnityEngine;
-using SteamAudio;
 
 public class ProbeDistributer : MonoBehaviour
 {
     [SerializeField]
-    private List<ProbeMatches> matches = new List<ProbeMatches>();
+    private List<ProbeMatches> matches = new();
 
     private void Awake()
     {

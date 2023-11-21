@@ -48,19 +48,19 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     private void CheckSetup()
     {
-        if (!TryGetComponent<StudioBankLoader>(out StudioBankLoader studioBankLoader))
+        if (!TryGetComponent(out StudioBankLoader studioBankLoader))
         {
             studioBankLoader = gameObject.AddComponent<StudioBankLoader>();
             studioBankLoader.Banks = banks;
             studioBankLoader.Load();
         }
 
-        if (!mainCamera.TryGetComponent<StudioListener>(out StudioListener studioListener))
+        if (!mainCamera.TryGetComponent(out StudioListener studioListener))
         {
             studioListener = mainCamera.gameObject.AddComponent<StudioListener>();
             studioListener.attenuationObject = mainCamera.gameObject;
         }
-        if (!mainCamera.TryGetComponent<SteamAudioListener>(out SteamAudioListener steamAudioListener) && usingSteamAudio)
+        if (!mainCamera.TryGetComponent(out SteamAudioListener steamAudioListener) && usingSteamAudio)
         {
             steamAudioListener = mainCamera.gameObject.AddComponent<SteamAudioListener>();
             steamAudioListener.applyReverb = true;

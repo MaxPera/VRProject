@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
-using SteamAudio;
 
 [HideInInspector]
 public class SoundEmitter : MonoBehaviour
