@@ -209,8 +209,8 @@ public class AudioManager : MonoBehaviour
     /// <param name="emitter">The emitter you want to play</param>
     public void PlayEmitter(GameObject thisObject)
     {
-        if (!thisObject.TryGetComponent<StudioEventEmitter>(out StudioEventEmitter emitter))
-            return;
+        if (!thisObject.TryGetComponent(out StudioEventEmitter emitter))
+            Debug.LogError($"No StudioEventEmitter on{thisObject.name}");
         else
         {
             emitter.Play();

@@ -27,8 +27,10 @@ public class CollisionEmitter : SoundEmitter
     {
         if (usesVelocity)
         {
-            TryGetComponent(out Rigidbody rBody);
-            TryGetComponent(out StudioEventEmitter eventEmitter);
+            if (!TryGetComponent(out Rigidbody rBody))
+                Debug.LogError($"No rigidbody on{gameObject.name}");
+            if (!TryGetComponent(out StudioEventEmitter eventEmitter))
+                Debug.LogError($"No StudioEventEmitter on{gameObject.name}");
             EventInstance eventInstance = eventEmitter.EventInstance;
             float volumeVelocity = Mathf.Clamp01(rBody.velocity.magnitude * 50f);
 
