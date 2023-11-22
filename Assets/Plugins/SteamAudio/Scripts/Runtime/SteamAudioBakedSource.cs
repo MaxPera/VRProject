@@ -5,6 +5,7 @@
 
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace SteamAudio
 {
@@ -15,7 +16,7 @@ namespace SteamAudio
         [Range(0.0f, 1000.0f)]
         public float influenceRadius = 1000.0f;
         public bool useAllProbeBatches = false;
-        public SteamAudioProbeBatch[] probeBatches = null;
+        public List<SteamAudioProbeBatch> probeBatches;
 
         [SerializeField]
         int mTotalDataSize = 0;
@@ -112,7 +113,7 @@ namespace SteamAudio
             tasks[0].component = this;
             tasks[0].name = gameObject.name;
             tasks[0].identifier = mIdentifier;
-            tasks[0].probeBatches = (useAllProbeBatches) ? FindObjectsOfType<SteamAudioProbeBatch>() : probeBatches;
+            tasks[0].probeBatches = (useAllProbeBatches) ? FindObjectsOfType<SteamAudioProbeBatch>() : probeBatches.ToArray();
             tasks[0].probeBatchNames = new string[tasks[0].probeBatches.Length];
             tasks[0].probeBatchAssets = new SerializedData[tasks[0].probeBatches.Length];
             for (var i = 0; i < tasks[0].probeBatchNames.Length; ++i)
@@ -131,7 +132,7 @@ namespace SteamAudio
 
         void CacheProbeBatchesUsed()
         {
-            mProbeBatchesUsed = (useAllProbeBatches) ? FindObjectsOfType<SteamAudioProbeBatch>() : probeBatches;
+            mProbeBatchesUsed = (useAllProbeBatches) ? FindObjectsOfType<SteamAudioProbeBatch>() : probeBatches.ToArray();
         }
     }
 }

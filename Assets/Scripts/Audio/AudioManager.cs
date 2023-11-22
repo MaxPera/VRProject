@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance { get; private set; }
     private List<StudioEventEmitter> eventEmitters;
     private List<EventInstance> eventInstances;
+    [SerializeField]
+    private List<string> banks = new List<string>();
 
     [SerializeField]
     private bool usingSteamAudio;
@@ -39,9 +41,6 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         CheckSetup();
-
-        StudioEventEmitter ambience = InitializeEventEmitter(FMODSounds.instance.FindAudio("Crash"),SteamAudioPresets.instance.FindPreset("Test"), GameObject.Find("ToPlay"));
-        ambience.Play();
     }
 
     /// <summary>
@@ -49,10 +48,23 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     private void CheckSetup()
     {
-        if (!mainCamera.GetComponent<StudioListener>())
-            mainCamera.gameObject.AddComponent<StudioListener>();
-        if (!mainCamera.GetComponent<SteamAudioListener>() && usingSteamAudio)
-            mainCamera.gameObject.AddComponent<SteamAudioListener>();
+        if (!TryGetComponent(out StudioBankLoader studioBankLoader))
+        {
+            studioBankLoader = gameObject.AddComponent<StudioBankLoader>();
+            studioBankLoader.Banks = banks;
+            studioBankLoader.Load();
+        }
+
+        if (!mainCamera.TryGetComponent(out StudioListener studioListener))
+        {
+            studioListener = mainCamera.gameObject.AddComponent<StudioListener>();
+            studioListener.attenuationObject = mainCamera.gameObject;
+        }
+        if (!mainCamera.TryGetComponent(out SteamAudioListener steamAudioListener) && usingSteamAudio)
+        {
+            steamAudioListener = mainCamera.gameObject.AddComponent<SteamAudioListener>();
+            steamAudioListener.applyReverb = true;
+        }
 
     }
 
@@ -114,7 +126,6 @@ public class AudioManager : MonoBehaviour
                 toPlay.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
     }
-
     /// <summary>
     /// Creates new sound emitter and adds it to the object the sound originates from
     /// </summary>
@@ -122,9 +133,26 @@ public class AudioManager : MonoBehaviour
     /// <param name="emitterGameObject">GameObject where the sound originates from, if empty initializes it on the AudioManager</param>
     /// <param name="emitterSource">If using SteamAudio add Preset</param>
     /// <returns></returns>
-    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, [Optional]SteamAudioPreset emitterSource, GameObject emitterGameObject)
+    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, SteamAudioPreset emitterSource, GameObject emitterGameObject, bool isStatic)
     {
-        //Debug.Log(eventReference);
+        StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();
+        SteamAudioSource source = emitterGameObject.AddComponent<SteamAudioSource>();
+        emitterSource.ChangeSourceSettings(source);
+        SteamAudioBakedSource bakedSource = emitterGameObject.AddComponent<SteamAudioBakedSource>();
+        bakedSource.useAllProbeBatches = isStatic;
+        emitter.EventReference = eventReference;
+        eventEmitters.Add(emitter);
+        return emitter;
+    }
+    /// <summary>
+    /// Creates new sound emitter and adds it to the object the sound originates from
+    /// </summary>
+    /// <param name="eventReference">The sound that should be played</param>
+    /// <param name="emitterGameObject">GameObject where the sound originates from, if empty initializes it on the AudioManager</param>
+    /// <param name="emitterSource">If using SteamAudio add Preset</param>
+    /// <returns></returns>
+    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, SteamAudioPreset emitterSource, GameObject emitterGameObject)
+    {
         StudioEventEmitter emitter = emitterGameObject.AddComponent<StudioEventEmitter>();
         if (usingSteamAudio)
         {
@@ -160,18 +188,33 @@ public class AudioManager : MonoBehaviour
         eventEmitters.Add(emitter);
         return emitter;        
     }
+    /// <summary>
+    /// Creates new sound emitter and adds it to the object the sound originates from
+    /// </summary>
+    /// <param name="eventReference">The sound that should be played</param>
+    /// <param name="emitterSource">If using SteamAudio add Preset</param>
+    /// <returns></returns>
+    public StudioEventEmitter InitializeEventEmitter(EventReference eventReference)
+    {
+        StudioEventEmitter emitter = gameObject.AddComponent<StudioEventEmitter>();
+        emitter.EventReference = eventReference;
+        eventEmitters.Add(emitter);
+        return emitter;
+    }
 
     /// <summary>
     /// Plays emitter created by InitializeEventEmitter()
     /// </summary>
     /// <param name="thisObject">This GameObject</param>
     /// <param name="emitter">The emitter you want to play</param>
-    public void PlayEmitter(GameObject thisObject, StudioEventEmitter emitter)
+    public void PlayEmitter(GameObject thisObject)
     {
-        if (!thisObject.GetComponent<StudioEventEmitter>())
-            return;
+        if (!thisObject.TryGetComponent(out StudioEventEmitter emitter))
+            Debug.LogError($"No StudioEventEmitter on{thisObject.name}");
         else
+        {
             emitter.Play();
+        }
     }
     /// <summary>
     /// Stops emitter created by InitializeEventEmitter()

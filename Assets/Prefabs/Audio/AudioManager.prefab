@@ -140,5 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6689e252a14bb44186dce846d11202a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  banks:
+  - Master
   usingSteamAudio: 1
   mainCamera: {fileID: 0}
