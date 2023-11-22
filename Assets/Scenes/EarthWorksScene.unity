@@ -299,7 +299,7 @@ MonoBehaviour:
     Path: event:/BirdsChirping
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
-  timer: 4
+  timer: 12
 --- !u!4 &17394145
 Transform:
   m_ObjectHideFlags: 0
@@ -312,7 +312,8 @@ Transform:
   m_LocalPosition: {x: 64, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1614792588}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!4 &19872573 stripped
@@ -947,6 +948,60 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cf3b7875a68f2d46863b349710bcede, type: 3}
+--- !u!1 &161238027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 161238028}
+  - component: {fileID: 161238029}
+  m_Layer: 0
+  m_Name: Wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &161238028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161238027}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2001017582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &161238029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161238027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9908b126077a24a9c2a9976e6701ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: 568457672
+      Data2: 1113803211
+      Data3: 1918756235
+      Data4: -836648740
+    Path: event:/WindAmbience
+  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
+  isStatic: 1
+  timer: 11
 --- !u!1001 &164066273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1312,7 +1367,7 @@ MonoBehaviour:
     Path: event:/BirdsChirping
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
-  timer: 4
+  timer: 10
 --- !u!4 &204094411
 Transform:
   m_ObjectHideFlags: 0
@@ -1325,7 +1380,8 @@ Transform:
   m_LocalPosition: {x: 64, y: 30, z: 128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1463432842}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!1 &206719864
@@ -2131,7 +2187,7 @@ MonoBehaviour:
     Path: event:/BirdsChirping
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
-  timer: 4
+  timer: 8
 --- !u!4 &353278552
 Transform:
   m_ObjectHideFlags: 0
@@ -2144,7 +2200,8 @@ Transform:
   m_LocalPosition: {x: -64, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1426222923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1 &358204015
@@ -4617,7 +4674,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 445ccce917108bd46821a70b06e3d72c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1638526561}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 445ccce917108bd46821a70b06e3d72c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1620897428}
   m_SourcePrefab: {fileID: 100100000, guid: 445ccce917108bd46821a70b06e3d72c, type: 3}
 --- !u!4 &857075003 stripped
 Transform:
@@ -7605,6 +7665,60 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2262eae60452b469a885633b307dc3, type: 3}
+--- !u!1 &1426222922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426222923}
+  - component: {fileID: 1426222924}
+  m_Layer: 0
+  m_Name: Wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426222923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426222922}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353278552}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426222924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426222922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9908b126077a24a9c2a9976e6701ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: 568457672
+      Data2: 1113803211
+      Data3: 1918756235
+      Data4: -836648740
+    Path: event:/WindAmbience
+  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
+  isStatic: 1
+  timer: 9
 --- !u!1001 &1442659572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7674,6 +7788,60 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cf3b7875a68f2d46863b349710bcede, type: 3}
+--- !u!1 &1463432841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463432842}
+  - component: {fileID: 1463432843}
+  m_Layer: 0
+  m_Name: Wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1463432842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463432841}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 204094411}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1463432843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463432841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9908b126077a24a9c2a9976e6701ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: 568457672
+      Data2: 1113803211
+      Data3: 1918756235
+      Data4: -836648740
+    Path: event:/WindAmbience
+  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
+  isStatic: 1
+  timer: 8
 --- !u!4 &1470109911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6711545770420750180, guid: 2cf3b7875a68f2d46863b349710bcede, type: 3}
@@ -8344,6 +8512,60 @@ Transform:
   - {fileID: 1971080822}
   m_Father: {fileID: 1741090674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1614792587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614792588}
+  - component: {fileID: 1614792589}
+  m_Layer: 0
+  m_Name: Wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1614792588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614792587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 17394145}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1614792589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614792587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9908b126077a24a9c2a9976e6701ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: 568457672
+      Data2: 1113803211
+      Data3: 1918756235
+      Data4: -836648740
+    Path: event:/WindAmbience
+  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
+  isStatic: 1
+  timer: 15
 --- !u!1001 &1619094862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8422,6 +8644,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4928381417617157343, guid: 3ee4b0fe88e11824b9270aa43945eeda, type: 3}
   m_PrefabInstance: {fileID: 1619094862}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1620897427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 445ccce917108bd46821a70b06e3d72c, type: 3}
+  m_PrefabInstance: {fileID: 857075002}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620897428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620897427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e829c87dc2a2ed2419c5f67848317fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 11400000, guid: a086f686223eed942816c70be67841b0, type: 2}
+  exportAllChildren: 1
+  terrainSimplificationLevel: 0
 --- !u!1 &1622063429
 GameObject:
   m_ObjectHideFlags: 0
@@ -10221,7 +10463,7 @@ MonoBehaviour:
     Path: event:/BirdsChirping
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
-  timer: 4
+  timer: 7
 --- !u!4 &2001017582
 Transform:
   m_ObjectHideFlags: 0
@@ -10234,7 +10476,8 @@ Transform:
   m_LocalPosition: {x: -64, y: 30, z: 128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 161238028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1001 &2004923498
