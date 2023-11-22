@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bilboard : MonoBehaviour
+public class BillboardScript : MonoBehaviour
 {
     // Start is called before the first frame update
     Camera mainCamera;
@@ -15,7 +15,9 @@ public class bilboard : MonoBehaviour
     {
         if (mainCamera != null)
         {
-            transform.LookAt(mainCamera.transform);
+           transform.LookAt(mainCamera.transform);
+            Vector3 angles = transform.eulerAngles;
+           transform.eulerAngles =new Vector3(0f, angles.y, 0f);
         }
     }
 }
