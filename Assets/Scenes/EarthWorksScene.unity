@@ -1610,6 +1610,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1659646609}
     m_Modifications:
+    - target: {fileID: -2505624526344843118, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
+      propertyPath: exportAllChildren
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7085419096674079418, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.28
@@ -2851,7 +2855,7 @@ MonoBehaviour:
       Data4: 1445780361
     Path: event:/Ride
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &489619593
@@ -4255,6 +4259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1659646609}
     m_Modifications:
+    - target: {fileID: -2505624526344843118, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
+      propertyPath: exportAllChildren
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7085419096674079418, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 61.8
@@ -4937,7 +4945,7 @@ MonoBehaviour:
       Data4: -1075086074
     Path: event:/Snare
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &917564751
@@ -6863,6 +6871,7 @@ GameObject:
   - component: {fileID: 1161375270}
   - component: {fileID: 1161375269}
   - component: {fileID: 1161375268}
+  - component: {fileID: 1161375271}
   m_Layer: 0
   m_Name: ValvePlaceHolder
   m_TagString: Untagged
@@ -6956,6 +6965,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161375266}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1161375271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161375266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e829c87dc2a2ed2419c5f67848317fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 11400000, guid: a086f686223eed942816c70be67841b0, type: 2}
+  exportAllChildren: 0
+  terrainSimplificationLevel: 0
 --- !u!1001 &1171154612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6964,6 +6988,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1659646609}
     m_Modifications:
+    - target: {fileID: -2505624526344843118, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
+      propertyPath: exportAllChildren
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7085419096674079418, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.329998
@@ -7113,7 +7141,7 @@ MonoBehaviour:
       Data4: 628863705
     Path: event:/Crash
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &1205491110
@@ -7402,7 +7430,7 @@ MonoBehaviour:
       Data4: 164474062
     Path: event:/TomHi
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!4 &1356281559 stripped
@@ -7788,7 +7816,7 @@ MonoBehaviour:
       Data4: 1487266257
     Path: event:/TomMi
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &1507408407
@@ -8759,6 +8787,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1659646609}
     m_Modifications:
+    - target: {fileID: -2505624526344843118, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
+      propertyPath: exportAllChildren
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7085419096674079418, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10015,7 +10047,7 @@ MonoBehaviour:
       Data4: -178793532
     Path: event:/HiHat
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1 &1847089329 stripped
@@ -10319,7 +10351,7 @@ MonoBehaviour:
       Data4: 1487266257
     Path: event:/TomMi
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 0
+  isStatic: 1
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!4 &1955724771 stripped
