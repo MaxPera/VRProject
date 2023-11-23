@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b9c68ff5f8f63994cb2384d5feea245b
+guid: d92f7d0534a51ee438e419956042678f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tree Branch.002
+      name: Tree Branch
     second: {fileID: 2100000, guid: 8043f30c38a5b60418819f4a7b85ca37, type: 2}
   - first:
       type: UnityEngine:Material
