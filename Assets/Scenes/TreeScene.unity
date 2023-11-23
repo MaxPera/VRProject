@@ -732,6 +732,10 @@ PrefabInstance:
       propertyPath: m_LODs.Array.data[2].screenRelativeHeight
       value: 0.028286854
       objectReference: {fileID: 0}
+    - target: {fileID: 5133345147941309568, guid: 1f5a1ac6d3efceb49b2920775c483424, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.62
+      objectReference: {fileID: 0}
     - target: {fileID: 5362901942608600417, guid: 1f5a1ac6d3efceb49b2920775c483424, type: 3}
       propertyPath: m_Name
       value: Tree
@@ -742,7 +746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6801793186457867850, guid: 1f5a1ac6d3efceb49b2920775c483424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.47
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6801793186457867850, guid: 1f5a1ac6d3efceb49b2920775c483424, type: 3}
       propertyPath: m_LocalPosition.z
