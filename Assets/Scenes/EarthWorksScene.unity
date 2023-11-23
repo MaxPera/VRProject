@@ -2854,8 +2854,8 @@ MonoBehaviour:
       Data3: -1632537722
       Data4: 1445780361
     Path: event:/Ride
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &489619593
@@ -4990,8 +4990,8 @@ MonoBehaviour:
       Data3: -1090391124
       Data4: -1075086074
     Path: event:/Snare
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &917564751
@@ -7186,8 +7186,8 @@ MonoBehaviour:
       Data3: -890680143
       Data4: 628863705
     Path: event:/Crash
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &1205491110
@@ -7475,8 +7475,8 @@ MonoBehaviour:
       Data3: 1810731931
       Data4: 164474062
     Path: event:/TomHi
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!4 &1356281559 stripped
@@ -7861,8 +7861,8 @@ MonoBehaviour:
       Data3: 323905187
       Data4: 1487266257
     Path: event:/TomMi
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1001 &1507408407
@@ -10070,8 +10070,8 @@ MonoBehaviour:
       Data3: -506718805
       Data4: -178793532
     Path: event:/HiHat
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!1 &1847089329 stripped
@@ -10374,8 +10374,8 @@ MonoBehaviour:
       Data3: 323905187
       Data4: 1487266257
     Path: event:/TomMi
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   cooldownTimer: 0.1
   usesVelocity: 0
 --- !u!4 &1955724771 stripped
