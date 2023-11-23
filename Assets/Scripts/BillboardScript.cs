@@ -12,9 +12,9 @@ public class BillboardScript : MonoBehaviour
     {
         if (mainCamera != null)
         {
-           transform.LookAt(mainCamera.transform);
-           Vector3 angles = transform.eulerAngles;
-           transform.eulerAngles =new Vector3(0f, angles.y, 0f);
+           transform.LookAt(mainCamera.transform, Vector3.up);
+           /*Vector3 angles = transform.eulerAngles;
+           transform.eulerAngles =new Vector3(0f, angles.y, 0f);*/
         }
     }
 }
