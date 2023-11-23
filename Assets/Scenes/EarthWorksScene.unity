@@ -687,7 +687,7 @@ MonoBehaviour:
   reverbType: 0
   useAllProbeBatches: 0
   probeBatches:
-  - {fileID: 1735433907}
+  - {fileID: 0}
   mTotalDataSize: 4812
   mProbeDataSizes: cc120000
   mIdentifier:
@@ -700,7 +700,7 @@ MonoBehaviour:
         z: 0
       radius: 0
   mProbeBatchesUsed:
-  - {fileID: 1735433907}
+  - {fileID: 0}
 --- !u!4 &88223754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6711545770420750180, guid: 2cf3b7875a68f2d46863b349710bcede, type: 3}
@@ -3866,57 +3866,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1631811345}
   m_SourcePrefab: {fileID: 100100000, guid: 3ee4b0fe88e11824b9270aa43945eeda, type: 3}
---- !u!1 &644328280
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 644328281}
-  - component: {fileID: 644328282}
-  m_Layer: 0
-  m_Name: ProbeBatches
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &644328281
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644328280}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 59.879635, y: -155.03064, z: 35.901863}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 956317240}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &644328282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644328280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787ea6183a6fe7147a3680fe58dcaac5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  matches:
-  - probeBatch: {fileID: 1735433907}
-    audioPresets:
-    - {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  - probeBatch: {fileID: 1735433907}
-    audioPresets:
-    - {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
 --- !u!1001 &657923862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5223,7 +5172,6 @@ Transform:
   m_Children:
   - {fileID: 415805379}
   - {fileID: 1735433908}
-  - {fileID: 644328281}
   - {fileID: 1717370655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9400,7 +9348,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1735433908}
-  - component: {fileID: 1735433907}
   m_Layer: 0
   m_Name: EarthWorksProbeBatch
   m_TagString: Untagged
@@ -9408,30 +9355,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1735433907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735433906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 286962cac82a4fa4e9ec38ab663c9578, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placementStrategy: 0
-  horizontalSpacing: 5
-  heightAboveFloor: 1.5
-  asset: {fileID: 11400000, guid: 3070dd36e284825489621d2dc24397ed, type: 2}
-  probeDataSize: 48
-  mProbeSpheres:
-  - center:
-      x: 27.23
-      y: 1.48
-      z: -25.509998
-    radius: 1.47
-  mBakedDataLayerInfo: []
 --- !u!4 &1735433908
 Transform:
   m_ObjectHideFlags: 0
