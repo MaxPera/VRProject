@@ -31,7 +31,7 @@ public class CollisionEmitter : SoundEmitter
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Collider>() && hasStarted && !canPlay)
+        if (collision.gameObject.GetComponent<Collider>() && hasStarted)
         {
             StartCoroutine(StartTimer());
             if (canPlay == true)

@@ -4777,6 +4777,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8203602531340944434, guid: 8ab7fd3eab18cac479e1a100790d51d8, type: 3}
   m_PrefabInstance: {fileID: 811572048}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &833548288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833548290}
+  - component: {fileID: 833548289}
+  m_Layer: 0
+  m_Name: Steam Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &833548289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833548288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11066ff95bbf3344b868394742f7002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHRTF: 0
+  hrtfNames: []
+--- !u!4 &833548290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833548288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &863619820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6711545770420750180, guid: 2cf3b7875a68f2d46863b349710bcede, type: 3}
@@ -9378,36 +9424,14 @@ MonoBehaviour:
   horizontalSpacing: 5
   heightAboveFloor: 1.5
   asset: {fileID: 11400000, guid: 3070dd36e284825489621d2dc24397ed, type: 2}
-  probeDataSize: 5132
+  probeDataSize: 48
   mProbeSpheres:
   - center:
-      x: 21.54
+      x: 27.23
       y: 1.48
-      z: -10.383
+      z: -25.509998
     radius: 1.47
-  mBakedDataLayerInfo:
-  - gameObject: {fileID: 1123012670}
-    identifier:
-      type: 0
-      variation: 0
-      endpointInfluence:
-        center:
-          x: 0
-          y: 0
-          z: 0
-        radius: 0
-    dataSize: 4812
-  - gameObject: {fileID: 1735433906}
-    identifier:
-      type: 1
-      variation: 3
-      endpointInfluence:
-        center:
-          x: 0
-          y: 0
-          z: 0
-        radius: 0
-    dataSize: 40
+  mBakedDataLayerInfo: []
 --- !u!4 &1735433908
 Transform:
   m_ObjectHideFlags: 0
@@ -9417,7 +9441,7 @@ Transform:
   m_GameObject: {fileID: 1735433906}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.420001, y: 1.46, z: -12.256999}
+  m_LocalPosition: {x: 12.11, y: 1.46, z: 2.87}
   m_LocalScale: {x: 13.6, y: 2.94, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11057,3 +11081,4 @@ SceneRoots:
   - {fileID: 1659646609}
   - {fileID: 956317240}
   - {fileID: 1687699672}
+  - {fileID: 833548290}
