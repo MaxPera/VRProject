@@ -5299,7 +5299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 11400000, guid: 386e047de7f3df843afaf618fd667ce6, type: 2}
-  exportAllChildren: 1
+  exportAllChildren: 0
   terrainSimplificationLevel: 0
 --- !u!1 &976475561
 GameObject:
