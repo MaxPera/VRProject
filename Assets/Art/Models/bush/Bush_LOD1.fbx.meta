@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c394804858b1af34db0c9c0e4b9d7f43
+guid: d293e45ac12b4b849a9a405e7bc259e9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,12 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tree Branch
+      name: Tree Branch.001
     second: {fileID: 2100000, guid: 8043f30c38a5b60418819f4a7b85ca37, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: bush
+      name: bush.001
     second: {fileID: 2100000, guid: ed00ed7e58d10084a82a333e45c21736, type: 2}
   materials:
     materialImportMode: 2
@@ -77,7 +77,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
