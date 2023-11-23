@@ -656,6 +656,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4777462168182426353, guid: 4de270a2a07b1d6479cdd99e6d9e46c5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ff2c560738655e4680d789e50f8a646, type: 2}
+    - target: {fileID: 5147975044106762033, guid: 4de270a2a07b1d6479cdd99e6d9e46c5, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.3944724
+      objectReference: {fileID: 0}
     - target: {fileID: 7327423075094701710, guid: 4de270a2a07b1d6479cdd99e6d9e46c5, type: 3}
       propertyPath: m_Name
       value: Bush
