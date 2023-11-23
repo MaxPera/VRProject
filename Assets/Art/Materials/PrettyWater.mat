@@ -135,7 +135,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Jumps: 0.25
-    - _MaxWaterHeight: 2
+    - _MaxWaterHeight: 1.8
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -149,7 +149,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Test: 0.25
-    - _WaterLevel: 1
+    - _WaterLevel: 0.966
     - _WaveHeigh: 1
     - _WaveHeight: 1.54
     - _WaveStrength: 1
