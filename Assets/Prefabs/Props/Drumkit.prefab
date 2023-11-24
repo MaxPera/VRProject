@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 781403430500579335}
   - component: {fileID: 1403553884956462506}
   m_Layer: 0
-  m_Name: Drumkit2.0
+  m_Name: Drumkit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
