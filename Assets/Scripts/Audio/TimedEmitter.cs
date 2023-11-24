@@ -6,7 +6,7 @@ public class TimedEmitter : SoundEmitter
     [SerializeField]
     private int timer;
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(PlaySound());
     }

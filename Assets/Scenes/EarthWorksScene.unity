@@ -297,8 +297,8 @@ MonoBehaviour:
       Data3: 1892926643
       Data4: 1232708240
     Path: event:/BirdsChirping
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   timer: 12
 --- !u!4 &17394145
 Transform:
@@ -893,8 +893,8 @@ MonoBehaviour:
       Data3: 1918756235
       Data4: -836648740
     Path: event:/WindAmbience
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   timer: 11
 --- !u!1001 &164066273
 PrefabInstance:
@@ -970,6 +970,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6711545770420750180, guid: 2cf3b7875a68f2d46863b349710bcede, type: 3}
   m_PrefabInstance: {fileID: 164066273}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &173204797
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.242
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 99.318
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9540837
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.29954043
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -34.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210907803480440000, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_Name
+      value: Shrog (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
 --- !u!1001 &175696033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1259,8 +1316,8 @@ MonoBehaviour:
       Data3: 1892926643
       Data4: 1232708240
     Path: event:/BirdsChirping
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   timer: 10
 --- !u!4 &204094411
 Transform:
@@ -2238,8 +2295,8 @@ MonoBehaviour:
       Data3: 1892926643
       Data4: 1232708240
     Path: event:/BirdsChirping
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   timer: 8
 --- !u!4 &353278552
 Transform:
@@ -3911,6 +3968,50 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1631811345}
   m_SourcePrefab: {fileID: 100100000, guid: 3ee4b0fe88e11824b9270aa43945eeda, type: 3}
+--- !u!1 &653563787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653563789}
+  - component: {fileID: 653563788}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &653563788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653563787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437d4ee24e60af64e8e2af619711ea14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &653563789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653563787}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &657923862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7996,8 +8097,8 @@ MonoBehaviour:
       Data3: 1918756235
       Data4: -836648740
     Path: event:/WindAmbience
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   timer: 9
 --- !u!1001 &1442659572
 PrefabInstance:
@@ -8119,8 +8220,8 @@ MonoBehaviour:
       Data3: 1918756235
       Data4: -836648740
     Path: event:/WindAmbience
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   timer: 8
 --- !u!4 &1470109911 stripped
 Transform:
@@ -8900,8 +9001,8 @@ MonoBehaviour:
       Data3: 1918756235
       Data4: -836648740
     Path: event:/WindAmbience
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   timer: 15
 --- !u!1001 &1619094862
 PrefabInstance:
@@ -10619,6 +10720,63 @@ MonoBehaviour:
   isStatic: 0
   cooldownTimer: 0.1
   usesVelocity: 0
+--- !u!1001 &1846009319
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3294382189527903562, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_Name
+      value: Lilypad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 92.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535558762306325761, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44f2588eb5ffd1a4894563815dead820, type: 3}
 --- !u!1 &1847089329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4243951137758592299, guid: 5e2262eae60452b469a885633b307dc3, type: 3}
@@ -11112,8 +11270,8 @@ MonoBehaviour:
       Data3: 1892926643
       Data4: 1232708240
     Path: event:/BirdsChirping
-  steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
-  isStatic: 1
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
   timer: 7
 --- !u!4 &2001017582
 Transform:
@@ -11525,6 +11683,63 @@ Transform:
   - {fileID: 1470109911}
   m_Father: {fileID: 1741090674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2081977916
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.761
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 92.435
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.48312956
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8755489
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -122.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835473629337839226, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210907803480440000, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
+      propertyPath: m_Name
+      value: Shrog (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9ac560d239a8424981e5f9c9591ea9c, type: 3}
 --- !u!4 &2092134437 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291050530009365565, guid: 5e2262eae60452b469a885633b307dc3, type: 3}
@@ -11660,3 +11875,7 @@ SceneRoots:
   - {fileID: 1687699672}
   - {fileID: 833548290}
   - {fileID: 1567638011}
+  - {fileID: 653563789}
+  - {fileID: 173204797}
+  - {fileID: 1846009319}
+  - {fileID: 2081977916}
