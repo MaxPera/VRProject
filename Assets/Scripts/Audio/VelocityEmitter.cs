@@ -12,12 +12,12 @@ public class VelocityEmitter : SoundEmitter
     [SerializeField]
     protected bool usesVelocity;
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         StartCoroutine(SetBool());
     }
 
-    private IEnumerator SetBool()
+    protected IEnumerator SetBool()
     {
         yield return new WaitForSeconds(cooldownTimer);
         hasStarted = true;

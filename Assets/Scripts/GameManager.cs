@@ -10,10 +10,13 @@ public class GameManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+        else
+            return;
+
         if (postProcessing == null)
-        {
             postProcessing = FindFirstObjectByType<Volume>();
-        }
+        else
+            return;
 
         DontDestroyOnLoad(instance);
         DontDestroyOnLoad(postProcessing);
