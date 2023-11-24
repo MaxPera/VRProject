@@ -119,6 +119,9 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{ee4dfc32-a7a6-40fd-81b5-f5e23e18b0c2}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>7.5</value>
 		</property>
@@ -137,9 +140,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{42819539-babd-41e4-9bac-bbc70278d178}">
-		<property name="volume">
-			<value>-26</value>
-		</property>
 		<property name="name">
 			<value>Audio 2</value>
 		</property>
@@ -186,7 +186,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>16.6666679</value>
+			<value>8</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{8bab4a73-caad-4628-8c9c-868253289c86}">
@@ -194,7 +194,7 @@
 			<value>volume</value>
 		</property>
 		<property name="amount">
-			<value>2</value>
+			<value>0.5</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{37dbbd24-cd15-433d-9d36-6915a96528ac}">

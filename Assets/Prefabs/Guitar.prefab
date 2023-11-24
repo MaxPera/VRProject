@@ -164,6 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e829c87dc2a2ed2419c5f67848317fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 11400000, guid: 5272c55b882edd34a9d80b11bd6f240c, type: 2}
+  material: {fileID: 11400000, guid: e07de780eed305f41b996cc142af2e5e, type: 2}
   exportAllChildren: 0
   terrainSimplificationLevel: 0

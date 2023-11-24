@@ -135,7 +135,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Jumps: 0.25
-    - _MaxWaterHeight: 2
+    - _MaxWaterHeight: 1.8
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -149,7 +149,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Test: 0.25
-    - _WaterLevel: 1
+    - _WaterLevel: 0.966
     - _WaveHeigh: 1
     - _WaveHeight: 1.54
     - _WaveStrength: 1
@@ -157,7 +157,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _CleanWaterColor: {r: 0.21423987, g: 0.5163222, b: 0.6415094, a: 0.64705884}
+    - _CleanWaterColor: {r: 0.035733357, g: 0.49698883, b: 0.6886792, a: 0.3647059}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DeepWaterColor: {r: 0, g: 0.10710043, b: 0.509434, a: 0}
     - _DirtyWaterColor: {r: 0.21568614, g: 0.3725489, b: 0.43529403, a: 0.8666667}
