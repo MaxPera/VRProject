@@ -296,7 +296,7 @@ MonoBehaviour:
       Data2: 1210256813
       Data3: 1892926643
       Data4: 1232708240
-    Path: event:/BirdsChirping
+    Path: event:/Ambience/BirdsChirping
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
   timer: 12
@@ -892,7 +892,7 @@ MonoBehaviour:
       Data2: 1113803211
       Data3: 1918756235
       Data4: -836648740
-    Path: event:/WindAmbience
+    Path: event:/Ambience/WindAmbience
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
   timer: 11
@@ -1258,7 +1258,7 @@ MonoBehaviour:
       Data2: 1210256813
       Data3: 1892926643
       Data4: 1232708240
-    Path: event:/BirdsChirping
+    Path: event:/Ambience/BirdsChirping
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
   timer: 10
@@ -2213,7 +2213,7 @@ MonoBehaviour:
       Data2: 1210256813
       Data3: 1892926643
       Data4: 1232708240
-    Path: event:/BirdsChirping
+    Path: event:/Ambience/BirdsChirping
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
   timer: 8
@@ -2853,7 +2853,7 @@ MonoBehaviour:
       Data2: 1293485614
       Data3: -1632537722
       Data4: 1445780361
-    Path: event:/Ride
+    Path: event:/Drums/Ride
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   cooldownTimer: 0.1
@@ -4938,7 +4938,7 @@ MonoBehaviour:
       Data2: 1295913575
       Data3: -1090391124
       Data4: -1075086074
-    Path: event:/Snare
+    Path: event:/Drums/Snare
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   cooldownTimer: 0.1
@@ -7133,7 +7133,7 @@ MonoBehaviour:
       Data2: 1079931869
       Data3: -890680143
       Data4: 628863705
-    Path: event:/Crash
+    Path: event:/Drums/Crash
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   cooldownTimer: 0.1
@@ -7422,7 +7422,7 @@ MonoBehaviour:
       Data2: 1328199880
       Data3: 1810731931
       Data4: 164474062
-    Path: event:/TomHi
+    Path: event:/Drums/TomHi
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   cooldownTimer: 0.1
@@ -7648,7 +7648,7 @@ MonoBehaviour:
       Data2: 1113803211
       Data3: 1918756235
       Data4: -836648740
-    Path: event:/WindAmbience
+    Path: event:/Ambience/WindAmbience
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
   timer: 9
@@ -7771,7 +7771,7 @@ MonoBehaviour:
       Data2: 1113803211
       Data3: 1918756235
       Data4: -836648740
-    Path: event:/WindAmbience
+    Path: event:/Ambience/WindAmbience
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
   timer: 8
@@ -7808,7 +7808,7 @@ MonoBehaviour:
       Data2: 1222413188
       Data3: 323905187
       Data4: 1487266257
-    Path: event:/TomMi
+    Path: event:/Drums/TomMi
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   cooldownTimer: 0.1
@@ -8495,7 +8495,7 @@ MonoBehaviour:
       Data2: 1113803211
       Data3: 1918756235
       Data4: -836648740
-    Path: event:/WindAmbience
+    Path: event:/Ambience/WindAmbience
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
   timer: 15
@@ -9992,7 +9992,7 @@ MonoBehaviour:
       Data2: 1316556096
       Data3: -506718805
       Data4: -178793532
-    Path: event:/HiHat
+    Path: event:/Drums/HiHat
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   cooldownTimer: 0.1
@@ -10296,7 +10296,7 @@ MonoBehaviour:
       Data2: 1222413188
       Data3: 323905187
       Data4: 1487266257
-    Path: event:/TomMi
+    Path: event:/Drums/TomMi
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   cooldownTimer: 0.1
@@ -10457,7 +10457,7 @@ MonoBehaviour:
       Data2: 1210256813
       Data3: 1892926643
       Data4: 1232708240
-    Path: event:/BirdsChirping
+    Path: event:/Ambience/BirdsChirping
   steamAudioPreset: {fileID: 11400000, guid: 3de3e50e2490fe84ea87d15b61cbd03c, type: 2}
   isStatic: 1
   timer: 7

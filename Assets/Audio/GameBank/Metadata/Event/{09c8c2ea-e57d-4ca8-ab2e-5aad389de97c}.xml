@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{f7edb9d1-6208-46a4-9b53-8fa3d78bbf90}</destination>
+			<destination>{bc51eb8a-33d7-4cc1-a288-474fcaba3b42}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{ce37a520-71d3-4caf-aa53-0e46e765c62a}</destination>
@@ -66,6 +66,9 @@
 	</object>
 	<object class="MarkerTrack" id="{36cc4ef6-680c-46a0-91c5-73f02fd71e62}" />
 	<object class="GroupTrack" id="{b8d37e70-faaf-4a51-8bfe-131bb8ba2f33}">
+		<relationship name="automationTracks">
+			<destination>{979e5973-6629-47f3-9ad3-21d8af91033e}</destination>
+		</relationship>
 		<relationship name="modules">
 			<destination>{495b2026-4cd5-4f78-a5d8-3868b4497d7d}</destination>
 			<destination>{26a647f5-ebe6-406e-a862-0eb23ee9ba5b}</destination>
@@ -100,6 +103,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{df334ac2-92e5-4ab2-98b6-849f78798c9a}" />
+	<object class="AutomationTrack" id="{979e5973-6629-47f3-9ad3-21d8af91033e}">
+		<relationship name="automator">
+			<destination>{94933c19-ba51-40e4-8bdc-21d7a670298d}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{495b2026-4cd5-4f78-a5d8-3868b4497d7d}">
 		<property name="length">
 			<value>1.4114285714285715</value>
@@ -132,6 +140,9 @@
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
+		<relationship name="automators">
+			<destination>{94933c19-ba51-40e4-8bdc-21d7a670298d}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{c96187dc-2a52-4e2c-8786-320905afd793}</destination>
 		</relationship>
@@ -164,6 +175,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{ad8d3c91-0606-42ba-8043-65e1355c9f15}" />
 	<object class="MixerBusFader" id="{9a98901d-95bd-4988-8160-ad19f8ea661d}" />
+	<object class="Automator" id="{94933c19-ba51-40e4-8bdc-21d7a670298d}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{c96187dc-2a52-4e2c-8786-320905afd793}">
 		<relationship name="effects">
 			<destination>{87becb58-758d-4547-b532-3896696594be}</destination>

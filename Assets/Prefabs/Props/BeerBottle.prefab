@@ -343,7 +343,7 @@ MonoBehaviour:
       Data2: 1334350799
       Data3: 1973359538
       Data4: -1910373911
-    Path: event:/BottleBounce
+    Path: event:/Props/BottleBounce
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   cooldownTimer: 1
