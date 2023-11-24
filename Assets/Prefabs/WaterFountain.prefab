@@ -4907,6 +4907,7 @@ GameObject:
   - component: {fileID: 7572969873680458341}
   - component: {fileID: 5787273863244200010}
   - component: {fileID: 6302540746913051947}
+  - component: {fileID: 5635790354408504345}
   m_Layer: 0
   m_Name: WaterFountain
   m_TagString: Untagged
@@ -9738,3 +9739,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d862b7a5bdc28a4192a5e605d957f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5635790354408504345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732703887120501583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9908b126077a24a9c2a9976e6701ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: -404020158
+      Data2: 1207989418
+      Data3: -2102058349
+      Data4: 1572379439
+    Path: event:/WaterFountain
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
+  timer: 5

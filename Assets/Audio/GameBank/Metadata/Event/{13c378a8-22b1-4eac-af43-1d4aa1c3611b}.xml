@@ -69,6 +69,9 @@
 	</object>
 	<object class="MarkerTrack" id="{7c793264-7f45-4687-aa24-317c913d8940}" />
 	<object class="GroupTrack" id="{7e90956a-95ff-4b3c-93a0-f3bab53d07ae}">
+		<relationship name="automationTracks">
+			<destination>{48c01c0c-ff7b-493c-8889-017975220f44}</destination>
+		</relationship>
 		<relationship name="modules">
 			<destination>{f8408b52-dc69-41c4-9790-cc113578c1c0}</destination>
 		</relationship>
@@ -98,6 +101,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{133d3808-23c6-45b4-939c-88ae303bac70}" />
+	<object class="AutomationTrack" id="{48c01c0c-ff7b-493c-8889-017975220f44}">
+		<relationship name="automator">
+			<destination>{f250adbc-1451-442a-a670-03ec170d3ccf}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{f8408b52-dc69-41c4-9790-cc113578c1c0}">
 		<property name="length">
 			<value>8.0195918367346941</value>
@@ -110,6 +118,9 @@
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
+		<relationship name="automators">
+			<destination>{f250adbc-1451-442a-a670-03ec170d3ccf}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{759eb16a-43d7-4c53-8fe9-6194a0d89535}</destination>
 		</relationship>
@@ -128,6 +139,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{42a8e096-a2da-4016-9bb7-cd6df72ac462}" />
 	<object class="MixerBusFader" id="{08897899-30ab-4c2c-9906-df8825f07617}" />
+	<object class="Automator" id="{f250adbc-1451-442a-a670-03ec170d3ccf}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{a11f0e17-12af-4aa7-aa9d-93574d89bbb5}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{759eb16a-43d7-4c53-8fe9-6194a0d89535}">
 		<relationship name="effects">
 			<destination>{aa7c342f-8fb1-4f69-9d94-f991388955cd}</destination>
@@ -138,6 +157,17 @@
 	<object class="PluginEffect" id="{291ac3e8-1b69-4b01-9454-af9ee8d06033}">
 		<relationship name="plugin">
 			<destination>{97e9f65f-fdd0-4084-b41d-42c3fecd8d74}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{a11f0e17-12af-4aa7-aa9d-93574d89bbb5}">
+		<relationship name="parameter">
+			<destination>{5868b461-c24e-42fb-8a7c-575255dc1ea9}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{8c03a9d8-31fe-465d-8669-0d373077c73e}</destination>
+			<destination>{cc95c878-3e47-4979-824d-3aada5ef2f51}</destination>
+			<destination>{e4248b93-7722-4558-b8fd-791fe0b974d8}</destination>
+			<destination>{fc5fc8ae-fcf8-4f76-8242-e73dedd6e60f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{aa7c342f-8fb1-4f69-9d94-f991388955cd}" />
@@ -181,6 +211,44 @@
 			<destination>{4f818f79-a009-498a-9799-e7ce090f52d8}</destination>
 			<destination>{01447140-3c8f-46c2-83e7-062ba2a2f846}</destination>
 		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{8c03a9d8-31fe-465d-8669-0d373077c73e}">
+		<property name="position">
+			<value>1.998972152407761</value>
+		</property>
+		<property name="value">
+			<value>3.81469727e-06</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{cc95c878-3e47-4979-824d-3aada5ef2f51}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+		<property name="curveShape">
+			<value>-1</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{e4248b93-7722-4558-b8fd-791fe0b974d8}">
+		<property name="position">
+			<value>5.9969164572232829</value>
+		</property>
+		<property name="value">
+			<value>3.81469727e-06</value>
+		</property>
+		<property name="curveShape">
+			<value>-1</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{fc5fc8ae-fcf8-4f76-8242-e73dedd6e60f}">
+		<property name="position">
+			<value>8</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="DataPluginParameter" id="{b2d76f48-16a3-4bc8-bf2c-27ef2f948d43}">
 		<property name="name">
