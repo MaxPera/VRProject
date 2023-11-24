@@ -325,7 +325,7 @@
 			<value>DAMinDist</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>500</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,10000.000000)}</value>
@@ -482,7 +482,7 @@
 			<value>ReflBinaural</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{bbfb670e-0b21-477e-bd78-b913a4380041}">
@@ -528,7 +528,7 @@
 			<value>DirectBinaural</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="DataPluginParameter" id="{73911495-92f6-48ae-ad77-8ca16ca543b7}">

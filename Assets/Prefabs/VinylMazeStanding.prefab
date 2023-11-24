@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 4138256551230652877}
   - component: {fileID: 6846827436027067153}
   - component: {fileID: 2575726292315827193}
+  - component: {fileID: 2913801675115827436}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -274,6 +275,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &2913801675115827436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7271047738757794643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0417b80f05108ab4fb9be12165ce89c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: 1387167727
+      Data2: 1245277910
+      Data3: -899339889
+      Data4: 385134114
+    Path: event:/MarbleRolling
+  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
+  isStatic: 0
+  cooldownTimer: 0
+  usesVelocity: 1
 --- !u!1001 &1430790283444082069
 PrefabInstance:
   m_ObjectHideFlags: 0
