@@ -4906,6 +4906,7 @@ GameObject:
   - component: {fileID: 8360211421397709464}
   - component: {fileID: 7572969873680458341}
   - component: {fileID: 5787273863244200010}
+  - component: {fileID: 6302540746913051947}
   m_Layer: 0
   m_Name: WaterFountain
   m_TagString: Untagged
@@ -9725,3 +9726,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6302540746913051947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732703887120501583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d862b7a5bdc28a4192a5e605d957f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
