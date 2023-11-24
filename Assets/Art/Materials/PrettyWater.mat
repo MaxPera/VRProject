@@ -149,7 +149,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Test: 0.25
-    - _WaterLevel: 0.966
+    - _WaterLevel: 0.97
     - _WaveHeigh: 1
     - _WaveHeight: 1.54
     - _WaveStrength: 1
