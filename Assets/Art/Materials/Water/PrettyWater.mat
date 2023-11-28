@@ -149,7 +149,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Test: 0.25
-    - _WaterLevel: 0.966
+    - _WaterLevel: 0
     - _WaveHeigh: 1
     - _WaveHeight: 1.54
     - _WaveStrength: 1
@@ -160,7 +160,7 @@ Material:
     - _CleanWaterColor: {r: 0.035733357, g: 0.49698883, b: 0.6886792, a: 0.3647059}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DeepWaterColor: {r: 0, g: 0.10710043, b: 0.509434, a: 0}
-    - _DirtyWaterColor: {r: 0.21568614, g: 0.3725489, b: 0.43529403, a: 0.8666667}
+    - _DirtyWaterColor: {r: 0.5, g: 0.3712264, b: 0.2424528, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 0}
     - _Jumps: {r: 0.25, g: 0.25, b: 0, a: 0}
