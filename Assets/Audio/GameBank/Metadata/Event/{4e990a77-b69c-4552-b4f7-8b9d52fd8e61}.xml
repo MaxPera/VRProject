@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{f7edb9d1-6208-46a4-9b53-8fa3d78bbf90}</destination>
+			<destination>{b4a65125-83b9-400a-a64e-fbb724f5b777}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{d82c3809-e727-4c92-ae0b-c40a276e16e4}</destination>
@@ -183,7 +183,6 @@
 		<property name="name">
 			<value>SourcePos</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -192,7 +191,6 @@
 		<property name="name">
 			<value>OverallGain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
@@ -521,7 +519,6 @@
 		<property name="name">
 			<value>SimOutputs</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>0</value>
 		</property>
@@ -538,7 +535,6 @@
 		<property name="name">
 			<value>DistRange</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
