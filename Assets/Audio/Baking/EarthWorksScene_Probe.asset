@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb82a87a4954a947923856a12b49b38, type: 3}
-  m_Name: Water
+  m_Script: {fileID: 11500000, guid: 3a82078fb50fbcb46a7e4402721b1a31, type: 3}
+  m_Name: EarthWorksScene_Probe
   m_EditorClassIdentifier: 
-  lowFreqAbsorption: 0.189
-  midFreqAbsorption: 0.323
-  highFreqAbsorption: 0.642
-  scattering: 0.2
-  lowFreqTransmission: 0.05
-  midFreqTransmission: 0.1
-  highFreqTransmission: 0.2
+  data: 0c00000008000c0004000800080000000c000000040000000000000001000000ec51d4410000000085ebd3c10000003f
