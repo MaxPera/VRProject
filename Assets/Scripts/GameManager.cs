@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Volume postProcessing;
 
     private void Awake()
     {
@@ -13,12 +13,15 @@ public class GameManager : MonoBehaviour
         else
             return;
 
-        if (postProcessing == null)
-            postProcessing = FindFirstObjectByType<Volume>();
-        else
-            return;
-
         DontDestroyOnLoad(instance);
-        DontDestroyOnLoad(postProcessing);
     }
+
+    public IEnumerator LoadNextSceneAsync(string scene)
+    {
+        AsyncOperation asyncOp = SceneManager.LoadSceneAsync(scene);
+        yield return new WaitUntil(() => asyncOp.isDone == true);
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+
+    }
+
 }
