@@ -1,0 +1,14 @@
+{
+	"dialogueElementsJson": 
+	[
+		{
+			"dialogueName": "Jan",
+			"dialogueLines": 
+			[
+			"Hallo",
+			"Hoe gaat het",
+			"Tot ziens"
+			]
+		}
+	]
+}

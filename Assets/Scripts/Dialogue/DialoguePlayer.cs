@@ -1,34 +1,43 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using System.Collections.Generic;
 
 public class DialoguePlayer : MonoBehaviour
 {
     public string dialogueElementName;
     private TextMeshPro textBox;
     private Canvas canvas;
-    public DialogueElementXML thisElement {private get;  set; }
+    public DialogueElementJson thisElement;
     private void Start()
     {
-        canvas = gameObject.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.WorldSpace;
-        canvas.worldCamera = Camera.main;
-        textBox = gameObject.AddComponent<TextMeshPro>();
+        if (canvas == null)
+        {
+            canvas = gameObject.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.WorldSpace;
+            canvas.worldCamera = Camera.main;
+        }
+        else
+        {
+            return;
+        }
+        if (textBox == null)
+        {
+            textBox = gameObject.AddComponent<TextMeshPro>();
+        }
+        else
+        {
+            return;
+        }
         StartCoroutine(WriteNextLine());
     }
 
     private IEnumerator WriteNextLine()
     {
-        yield return new WaitUntil(() => thisElement != null);
-
+        yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
         foreach (string aLine in thisElement.dialogueLines)
         {
-            if (thisElement.dialogueLines.Count != 1)
-                textBox.text += $"{aLine}, ";
-            else
-                textBox.text += $"{aLine}.";    
+            textBox.text += aLine;
             Debug.Log(textBox.text);
             yield return new WaitForSeconds(.5f);
         }

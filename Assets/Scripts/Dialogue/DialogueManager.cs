@@ -1,24 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System.Xml;
-using System.IO;
+using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager instance;/*
-    [HideInInspector]
-    public List<DialogueElementXML> dialogueElementsXml = new List<DialogueElementXML>();*/
-    [HideInInspector]
-    public DialogueElementsJson dialogueElementsJson = new DialogueElementsJson();
-/*
-    [SerializeField]
-    private TextAsset xmlRawFile;*/
+    public static DialogueManager instance;
     [SerializeField]
     private TextAsset jsonRawFile;
 
     [SerializeField]
     private DialoguePlayer[] dialoguePlayers;
+
+    [HideInInspector]
+    public DialogueElementsJson dialogueElementsJsonList = new DialogueElementsJson();
+
 
     private void Awake()
     {
@@ -32,70 +26,36 @@ public class DialogueManager : MonoBehaviour
             Destroy(this);
 
         DontDestroyOnLoad(instance);
-/*
-        string xmlData = xmlRawFile.text;
-        ParseXML(xmlData);*/
-
-        string jsonData = jsonRawFile.text;
-        Debug.Log(jsonData);
-        ParseJson(jsonData);
 
         dialoguePlayers = FindObjectsOfType<DialoguePlayer>();
     }
-
-    private void OnDisable()
+    private void Start()
     {
-        CleanUpDialogue();
-    }/*
-
-    private void ParseXML(string xmlData)
-    {
-        XmlDocument xmlDoc = new XmlDocument();
-        xmlDoc.Load(new StringReader(xmlData));
-
-        foreach (DialoguePlayer anElement in dialoguePlayers)
-        {
-            XmlNodeList thisList = xmlDoc.SelectNodes($"//data/{anElement.dialogueElementName}");
-            foreach (XmlNode aNode in thisList)
-            {
-                anElement.thisElement = GetDialogueXML(aNode);
-            }
-        }
-    }*/
+        string jsonData = jsonRawFile.text;
+        ParseJson(jsonData);
+    }
 
     private void ParseJson(string jsonData)
     {
-        dialogueElementsJson = JsonUtility.FromJson<DialogueElementsJson>(jsonData);
-        Debug.Log(dialogueElementsJson);
-    }/*
-
-    private DialogueElementXML GetDialogueXML(XmlNode xmlNode)
-    {
-        XmlNode name = xmlNode;
-
-        DialogueElementXML dialogueElement = ScriptableObject.CreateInstance<DialogueElementXML>();
-        dialogueElement.name = name.Name;
-        dialogueElement.dialogueName = name.Name;
-        Debug.Log(dialogueElement.dialogueName);
-        foreach (XmlNode dialogueNode in name)
-        {
-            dialogueElement.dialogueLines.Add(dialogueNode.Name);
-            Debug.Log(dialogueNode.InnerText);
-        }
-        dialogueElementsXml.Add(dialogueElement);
-        return dialogueElement;
-    }*/
-
-    private void CleanUpDialogue()
-    {/*
-        if (dialogueElementsXml.Count != 0)
-        {
-            dialogueElementsXml.Clear();
-        }*/
+        dialogueElementsJsonList = JsonUtility.FromJson<DialogueElementsJson>(jsonData);
+        StartCoroutine(AssignDialogue(dialogueElementsJsonList));
     }
 
-    private void AssignDialogue()
+    private IEnumerator AssignDialogue(DialogueElementsJson dialogueElements)
     {
-
+        yield return new WaitUntil(() => dialogueElementsJsonList != null);
+        yield return new WaitUntil(() => dialoguePlayers != null);
+        foreach (DialoguePlayer aPlayer in dialoguePlayers)
+        {
+            foreach (DialogueElementJson anElement in dialogueElements.dialogueElementsJson)
+            {
+                if (aPlayer.dialogueElementName == anElement.dialogueName)
+                {
+                    aPlayer.thisElement = anElement;
+                }
+                else
+                    yield return null;
+            }
+        }
     }
 }
