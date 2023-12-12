@@ -32370,16 +32370,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 1420304135}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.954645
+      value: -10.888
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.281272
+      value: 13.465
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.1527863
+      value: -4.3873
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32408,6 +32420,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 25898443f9af43848967907bb5807379, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 25898443f9af43848967907bb5807379, type: 3}
       propertyPath: m_Name
@@ -51650,7 +51666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1420304135}
   m_Layer: 0
-  m_Name: tutorial 2
+  m_Name: tutorial version 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51665,7 +51681,7 @@ Transform:
   m_GameObject: {fileID: 1420304134}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.288355, y: -12.600272, z: 71.417786}
+  m_LocalPosition: {x: -19.288355, y: -12.546, z: 71.417786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59583,7 +59599,7 @@ Transform:
   m_GameObject: {fileID: 1636840511}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -11.243, y: 13.354, z: -3.937}
+  m_LocalPosition: {x: -11.243, y: 13.544, z: -3.937}
   m_LocalScale: {x: 0.100000076, y: 0.1, z: 0.100000076}
   m_ConstrainProportionsScale: 1
   m_Children: []
