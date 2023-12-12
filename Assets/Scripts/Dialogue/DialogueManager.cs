@@ -51,6 +51,7 @@ public class DialogueManager : MonoBehaviour
             {
                 if (aPlayer.dialogueElementName == anElement.dialogueName)
                 {
+                    Debug.Log(aPlayer);
                     aPlayer.thisElement = anElement;
                 }
                 else

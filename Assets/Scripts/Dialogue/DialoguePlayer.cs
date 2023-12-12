@@ -8,6 +8,7 @@ public class DialoguePlayer : MonoBehaviour
     public string dialogueElementName;
     private TextMeshPro textBox;
     private Canvas canvas;
+    [HideInInspector]
     public DialogueElementJson thisElement;
     private void Start()
     {
@@ -24,6 +25,7 @@ public class DialoguePlayer : MonoBehaviour
         if (textBox == null)
         {
             textBox = gameObject.AddComponent<TextMeshPro>();
+            textBox.alignment = TextAlignmentOptions.MidlineLeft;
         }
         else
         {
@@ -37,9 +39,12 @@ public class DialoguePlayer : MonoBehaviour
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
         foreach (string aLine in thisElement.dialogueLines)
         {
-            textBox.text += aLine;
-            Debug.Log(textBox.text);
-            yield return new WaitForSeconds(.5f);
+            foreach (char aLetter in aLine)
+            {
+                textBox.text += aLetter;
+                yield return new WaitForSeconds(.05f);
+            }
+            yield return new WaitForSeconds(2f);
         }
     }
 }
