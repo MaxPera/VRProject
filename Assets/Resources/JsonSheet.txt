@@ -5,10 +5,7 @@
 			"dialogueName": "Jan",
 			"dialogueLines": 
 			[
-			"Hallo, ",
-			"Hoe gaat het, ",
-			"Tot ziens,",
-			"Nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger."
+			"Good day, "
 			]
 		}
 	]
