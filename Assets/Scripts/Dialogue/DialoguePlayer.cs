@@ -10,6 +10,7 @@ public class DialoguePlayer : MonoBehaviour
     private Canvas canvas;
     [HideInInspector]
     public DialogueElementJson thisElement;
+    private int currentLine = 0;
     private void Start()
     {
         if (canvas == null)
@@ -31,20 +32,26 @@ public class DialoguePlayer : MonoBehaviour
         {
             return;
         }
-        StartCoroutine(WriteNextLine());
+        
     }
 
-    private IEnumerator WriteNextLine()
+    private IEnumerator CallLine()
+    {
+        yield return WriteNextLine(thisElement.dialogueLines[currentLine]);
+        currentLine++;
+    }
+
+    private IEnumerator WriteNextLine(string aLine)
     {
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
-        foreach (string aLine in thisElement.dialogueLines)
-        {
             foreach (char aLetter in aLine)
             {
                 textBox.text += aLetter;
-                yield return new WaitForSeconds(.05f);
+
+                if (aLetter != '.' || aLetter != ',')
+                    yield return new WaitForSeconds(.05f);
+                else
+                    yield return new WaitForSeconds(1f);
             }
-            yield return new WaitForSeconds(2f);
-        }
     }
 }

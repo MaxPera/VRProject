@@ -5,10 +5,10 @@
 			"dialogueName": "Jan",
 			"dialogueLines": 
 			[
-			"Hallo, ",
-			"Hoe gaat het, ",
-			"Tot ziens,",
-			"Nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger."
+			"Hallo, hoe gaat het, ik wou je wat vragen, ben je debiel.",
+			"",
+			",
+			""
 			]
 		}
 	]
