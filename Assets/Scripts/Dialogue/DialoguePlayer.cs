@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class DialoguePlayer : MonoBehaviour
 {
@@ -9,49 +8,44 @@ public class DialoguePlayer : MonoBehaviour
     private TextMeshPro textBox;
     private Canvas canvas;
     [HideInInspector]
-    public DialogueElementJson thisElement;
+    public DialogueElement thisElement;
     private int currentLine = 0;
+    [SerializeField]
+    private GameObject prefab;
+
     private void Start()
     {
-        if (canvas == null)
-        {
-            canvas = gameObject.AddComponent<Canvas>();
-            canvas.renderMode = RenderMode.WorldSpace;
-            canvas.worldCamera = Camera.main;
-        }
-        else
-        {
+        GameObject thisInstance = Instantiate(prefab, transform);
+
+        if (!thisInstance.TryGetComponent(out canvas))
             return;
-        }
-        if (textBox == null)
-        {
-            textBox = gameObject.AddComponent<TextMeshPro>();
-            textBox.alignment = TextAlignmentOptions.MidlineLeft;
-        }
-        else
-        {
+        canvas.renderMode = RenderMode.WorldSpace;
+        canvas.worldCamera = Camera.main;
+
+        if (!thisInstance.TryGetComponent(out textBox))
             return;
-        }
-        
+        textBox.alignment = TextAlignmentOptions.MidlineLeft;
+
+        StartCoroutine(CallLine());
     }
 
     private IEnumerator CallLine()
     {
+        yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
         yield return WriteNextLine(thisElement.dialogueLines[currentLine]);
         currentLine++;
     }
 
     private IEnumerator WriteNextLine(string aLine)
     {
-        yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
-            foreach (char aLetter in aLine)
-            {
-                textBox.text += aLetter;
+        foreach (char aLetter in aLine)
+        {
+            textBox.text += aLetter;
 
-                if (aLetter != '.' || aLetter != ',')
-                    yield return new WaitForSeconds(.05f);
-                else
-                    yield return new WaitForSeconds(1f);
-            }
+            if (aLetter != '.' || aLetter != ',')
+                yield return new WaitForSeconds(.05f);
+            else
+                yield return new WaitForSeconds(1f);
+        }
     }
 }
