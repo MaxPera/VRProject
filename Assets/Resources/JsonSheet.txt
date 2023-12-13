@@ -1,5 +1,5 @@
 {
-	"dialogueElementsJson": 
+	"dialogueElements": 
 	[
 		{
 			"dialogueName": "Jan",

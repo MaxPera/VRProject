@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     private DialoguePlayer[] dialoguePlayers;
 
     [HideInInspector]
-    public DialogueElements dialogueElementsJsonList = new DialogueElements();
+    public DialogueElements dialogueElementsList = new DialogueElements();
 
 
     private void Awake()
@@ -37,13 +37,13 @@ public class DialogueManager : MonoBehaviour
 
     private void ParseJson(string jsonData)
     {
-        dialogueElementsJsonList = JsonUtility.FromJson<DialogueElements>(jsonData);
-        StartCoroutine(AssignDialogue(dialogueElementsJsonList));
+        dialogueElementsList = JsonUtility.FromJson<DialogueElements>(jsonData);
+        StartCoroutine(AssignDialogue(dialogueElementsList));
     }
 
     private IEnumerator AssignDialogue(DialogueElements dialogueElements)
     {
-        yield return new WaitUntil(() => dialogueElementsJsonList != null);
+        yield return new WaitUntil(() => dialogueElementsList != null);
         yield return new WaitUntil(() => dialoguePlayers != null);
         foreach (DialoguePlayer aPlayer in dialoguePlayers)
         {

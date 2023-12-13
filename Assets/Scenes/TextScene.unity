@@ -576,8 +576,8 @@ MonoBehaviour:
   jsonRawFile: {fileID: 4900000, guid: 89ef40cc4af686f45b8b7d6d6370bc3c, type: 3}
   dialoguePlayers:
   - {fileID: 1896628134}
-  dialogueElementsJsonList:
-    dialogueElementsJson: []
+  dialogueElementsList:
+    dialogueElements: []
 --- !u!224 &893637177
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1148,25 +1148,22 @@ MonoBehaviour:
   thisElement:
     dialogueName: 
     dialogueLines: []
---- !u!224 &1896628135
-RectTransform:
+  prefab: {fileID: 1468924351949996739, guid: acdf38a76424e2f4a85bd01eef95fd7e, type: 3}
+--- !u!4 &1896628135
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896628133}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -5, y: 2, z: 94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: 4}
-  m_SizeDelta: {x: 150, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2109715870
 GameObject:
   m_ObjectHideFlags: 0
