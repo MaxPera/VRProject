@@ -5,7 +5,7 @@
 			"dialogueName": "Jan",
 			"dialogueLines": 
 			[
-			"Hallo, hoe gaat het, ik wou je wat vragen, ben je debiel.",
+			"Hallo, hoe gaat het, ik wou je wat vragen.",
 			"",
 			"",
 			""
