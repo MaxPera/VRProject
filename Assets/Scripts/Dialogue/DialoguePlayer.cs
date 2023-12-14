@@ -37,6 +37,7 @@ public class DialoguePlayer : MonoBehaviour
 
     private IEnumerator WriteNextLine(string aLine)
     {
+        textBox.text = "";
         foreach (char aLetter in aLine)
         {
             textBox.text += aLetter;
