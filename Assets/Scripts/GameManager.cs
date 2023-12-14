@@ -18,9 +18,10 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator LoadNextSceneAsync(string scene)
     {
+        Scene currentScene = SceneManager.GetActiveScene();
         AsyncOperation asyncOp = SceneManager.LoadSceneAsync(scene);
         yield return new WaitUntil(() => asyncOp.isDone == true);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        SceneManager.UnloadSceneAsync(currentScene);
 
     }
 

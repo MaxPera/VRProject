@@ -6,7 +6,6 @@ public class DialoguePlayer : MonoBehaviour
 {
     public string dialogueElementName;
     private TextMeshPro textBox;
-    private Canvas canvas;
     [HideInInspector]
     public DialogueElement thisElement;
     private int currentLine = 0;
@@ -17,7 +16,7 @@ public class DialoguePlayer : MonoBehaviour
     {
         GameObject thisInstance = Instantiate(prefab, transform);
 
-        if (!thisInstance.TryGetComponent(out canvas))
+        if (!thisInstance.TryGetComponent(out Canvas canvas))
             return;
         canvas.renderMode = RenderMode.WorldSpace;
         canvas.worldCamera = Camera.main;
@@ -37,6 +36,29 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     private IEnumerator WriteNextLine(string aLine)
+    {
+        foreach (char aLetter in aLine)
+        {
+            textBox.text += aLetter;
+
+            if (aLetter != '.' || aLetter != ',')
+                yield return new WaitForSeconds(.05f);
+            else
+                yield return new WaitForSeconds(1f);
+        }
+    }
+
+    private IEnumerator WriteNextLine(string aLine, float clipLength)
+    {
+        float waitForLetter = clipLength / aLine.ToCharArray().Length;
+        foreach (char aLetter in aLine)
+        {
+            textBox.text += aLetter;
+            yield return new WaitForSeconds(waitForLetter);
+        }
+    }
+
+    private IEnumerator WriteNextLine(string aLine, float clipLength, bool conditionIsMet)
     {
         foreach (char aLetter in aLine)
         {

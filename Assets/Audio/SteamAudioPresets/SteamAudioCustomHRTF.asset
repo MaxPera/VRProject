@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3efcebd75ef2af49badc83215c91685, type: 3}
-  m_Name: New Steam Audio Settings
+  m_Name: SteamAudioCustomHRTF
   m_EditorClassIdentifier: 
   audioEngine: 0
   perspectiveCorrection: 0
