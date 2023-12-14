@@ -2,11 +2,27 @@
 	"dialogueElements": 
 	[
 		{
-			"dialogueName": "Jan",
+			"dialogueName": "Ben",
 			"dialogueLines": 
 			[
-			"Hallo, hoe gaat het, ik wou je wat vragen.",
-			"Hoe kan ik je helpen"
+			"Welcome to EarthWorks, here we make LP records and function as a studio, we give chances to young talents who don’t have the money or reputation to go record at larger studios.",
+			"If you could fix that record over there for us, we could really use the help."
+			]
+		},
+		{
+			"dialogueName": "Erica",
+			"dialogueLines":
+			[
+			"Welcome to the culture garden, here we worked on the soil to make it fertile again and improve the water quality in the water basins. Everybody of Het Groene Veld helps improve the water and soil.",
+			"Go over to the water pump so you can help as well."
+			]
+		},
+		{
+			"dialogueName": "Fatima",
+			"dialogueLines":
+			[
+			"I am waiting for my mommy who runs Stichting Malak, but she is busy right now.",
+			"Can you help me get my balloon from the tree I lost it."
 			]
 		}
 	]

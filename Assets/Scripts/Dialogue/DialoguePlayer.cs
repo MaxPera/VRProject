@@ -33,6 +33,15 @@ public class DialoguePlayer : MonoBehaviour
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
         yield return WriteNextLine(thisElement.dialogueLines[currentLine]);
         currentLine++;
+        if (currentLine >= thisElement.dialogueLines.Length)
+        {
+            currentLine = 0;
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+            StartCoroutine(CallLine());
+        }
     }
 
     private IEnumerator WriteNextLine(string aLine)
