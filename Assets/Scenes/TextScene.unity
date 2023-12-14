@@ -527,7 +527,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485252932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.33}
+  m_LocalPosition: {x: 0, y: 0, z: 8.81}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -536,7 +536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.76}
+  m_AnchoredPosition: {x: -0.7, y: 4.02}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!20 &493366752 stripped
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab7790055872b548906339244b650de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueElementName: Jan
+  dialogueElementName: Ben
   thisElement:
     dialogueName: 
     dialogueLines: []
@@ -1158,7 +1158,7 @@ Transform:
   m_GameObject: {fileID: 1896628133}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.6, z: 4.6}
+  m_LocalPosition: {x: 0, y: 2.13, z: 7.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
