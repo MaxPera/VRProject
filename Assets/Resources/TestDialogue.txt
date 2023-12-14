@@ -1,0 +1,14 @@
+{
+	"dialogueElements": 
+	[
+		{
+			"dialogueName": "Test",
+			"dialogueLines": 
+			[
+			"Hi! this is test line 1.",
+			"I will continue with line 2.",
+			"The dialogue finishes with this third line."
+			]
+		}
+	]
+}
