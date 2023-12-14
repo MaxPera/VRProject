@@ -6,9 +6,7 @@
 			"dialogueLines": 
 			[
 			"Hallo, hoe gaat het, ik wou je wat vragen.",
-			"",
-			"",
-			""
+			"Hoe kan ik je helpen"
 			]
 		}
 	]
