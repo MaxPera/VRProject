@@ -15,7 +15,7 @@ public class BalloonController : MonoBehaviour
     private XRGrabInteractable grabController; 
 
     [SerializeField]
-    private float timeScale = 1.2f;
+    private float timeScale;
 
     private void Start()
     {
