@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Callbacks;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Filtering;
 
 public class BalloonController : MonoBehaviour
 {
     public Rigidbody rb;
-    private Vector3 targetAngle = new Vector3(-90f, 0, 0);
+    private Vector3 targetAngle = new Vector3(0, 0, 90f);
     private Vector3 currentAngle;
     private bool isAttached = false;
     private float force = 15f;
+    private XRGrabInteractable grabController; 
 
     [SerializeField]
     private float timeScale = 1.2f;
+
+    private void Start()
+    {
+        grabController = GetComponent<XRGrabInteractable>(); 
+    }
+
     private void FixedUpdate()
     {
         rb.AddForce(new Vector3(0, 1, 0) * force);
@@ -43,5 +52,7 @@ public class BalloonController : MonoBehaviour
         isAttached = true;
         rb.useGravity = false;
         rb.isKinematic = true;
+        //Disable grabbing after collision
+        grabController.enabled = false; 
     }
 }
