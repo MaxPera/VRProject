@@ -24,7 +24,9 @@ public class DialoguePlayer : MonoBehaviour
         if (!thisInstance.TryGetComponent(out textBox))
             return;
         textBox.alignment = TextAlignmentOptions.MidlineLeft;
-
+    }
+    public void PlaceHolderDialogueCall()
+    {
         StartCoroutine(CallLine());
     }
 
