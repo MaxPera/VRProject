@@ -24,7 +24,10 @@ public class DialoguePlayer : MonoBehaviour
         if (!thisInstance.TryGetComponent(out textBox))
             return;
         textBox.alignment = TextAlignmentOptions.MidlineLeft;
+    }
 
+    public void PlaceHoldStartDialogue()
+    {
         StartCoroutine(CallLine());
     }
 
@@ -39,7 +42,7 @@ public class DialoguePlayer : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
             StartCoroutine(CallLine());
         }
     }
