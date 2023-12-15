@@ -156,7 +156,7 @@ MonoBehaviour:
       Data2: 1286137213
       Data3: -1386598741
       Data4: 2095684920
-    Path: event:/WaterSFX
+    Path: event:/Ambience/WaterSFX
   steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
   isStatic: 0
   timer: 4
