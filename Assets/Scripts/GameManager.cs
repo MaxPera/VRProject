@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         AsyncOperation asyncOp = SceneManager.LoadSceneAsync(scene);
+        Debug.Log(asyncOp.progress);
         yield return new WaitUntil(() => asyncOp.isDone == true);
         SceneManager.UnloadSceneAsync(currentScene);
 

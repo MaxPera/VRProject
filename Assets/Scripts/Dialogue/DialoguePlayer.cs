@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialoguePlayer : MonoBehaviour
 {
     public string dialogueElementName;
+    [SerializeField]
     private TextMeshPro textBox;
     [HideInInspector]
     public DialogueElement thisElement;
@@ -14,19 +15,24 @@ public class DialoguePlayer : MonoBehaviour
 
     private void Start()
     {
-        GameObject thisInstance = Instantiate(prefab, transform);
+        if (prefab != null)
+        {
+            GameObject thisInstance = Instantiate(prefab, transform);
 
-        if (!thisInstance.TryGetComponent(out Canvas canvas))
-            return;
-        canvas.renderMode = RenderMode.WorldSpace;
-        canvas.worldCamera = Camera.main;
+            if (!thisInstance.TryGetComponent(out Canvas canvas))
+                return;
+            canvas.renderMode = RenderMode.WorldSpace;
+            canvas.worldCamera = Camera.main;
 
-        if (!thisInstance.TryGetComponent(out textBox))
-            return;
-        textBox.alignment = TextAlignmentOptions.MidlineLeft;
+            if (!thisInstance.TryGetComponent(out textBox))
+                return;
+            textBox.alignment = TextAlignmentOptions.MidlineLeft;
+        }
+        PlaceHolderDialogueCall();
     }
     public void PlaceHolderDialogueCall()
     {
+        Debug.Log(gameObject.name);
         StartCoroutine(CallLine());
     }
 
@@ -37,6 +43,8 @@ public class DialoguePlayer : MonoBehaviour
         currentLine++;
         if (currentLine >= thisElement.dialogueLines.Length)
         {
+            if (prefab == null)
+                StartCoroutine(GameManager.instance.LoadNextSceneAsync("TheGreenFieldScene"));
             currentLine = 0;
         }
         else
@@ -48,6 +56,7 @@ public class DialoguePlayer : MonoBehaviour
 
     private IEnumerator WriteNextLine(string aLine)
     {
+        Debug.Log(aLine);
         textBox.text = "";
         foreach (char aLetter in aLine)
         {
