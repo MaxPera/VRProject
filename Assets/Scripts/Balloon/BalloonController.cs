@@ -1,3 +1,4 @@
+using System.Data;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -8,7 +9,7 @@ public class BalloonController : MonoBehaviour
     private Rigidbody rb;
     private Vector3 targetAngle = new Vector3(0, 0, 90f);
     private Vector3 currentAngle;
-    private bool isAttached = false;
+    static bool isAttached = false;
 
     [SerializeField]
     private float force = 15f;
