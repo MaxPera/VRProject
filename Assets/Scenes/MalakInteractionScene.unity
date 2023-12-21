@@ -244,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 134904150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.008, z: 0}
+  m_LocalPosition: {x: 0, y: 4.08, z: 0}
   m_LocalScale: {x: 4, y: 0.11, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -349,7 +349,7 @@ Transform:
   m_GameObject: {fileID: 299142040}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.813, y: 1.056, z: -0.021}
+  m_LocalPosition: {x: 3.581, y: 1.515, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1119,6 +1119,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 511811178870479783, guid: f2a5572f04c1f4e4a8a808e41cc33beb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 511811178870479783, guid: f2a5572f04c1f4e4a8a808e41cc33beb, type: 3}
       propertyPath: stickCollider
       value: 
       objectReference: {fileID: 25783727}
@@ -1173,6 +1177,14 @@ PrefabInstance:
     - target: {fileID: 6380174430818757006, guid: f2a5572f04c1f4e4a8a808e41cc33beb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869596546892273774, guid: f2a5572f04c1f4e4a8a808e41cc33beb, type: 3}
+      propertyPath: m_Mass
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869596546892273774, guid: f2a5572f04c1f4e4a8a808e41cc33beb, type: 3}
+      propertyPath: m_Constraints
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

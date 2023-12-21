@@ -15,6 +15,6 @@ public class StickController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        parentController.OnCollisionEnter(other);
+        if (parentController != null) parentController.OnCollisionEnter(other);
     }
 }
