@@ -1,4 +1,6 @@
 using System;
+
+#if UNITY_EDITOR
 using UnityEditor;
 
 [CustomEditor(typeof(DialogueManager))]
@@ -22,3 +24,4 @@ public class DialogueManagerEditor : Editor
 		}
 	}
 }
+#endif
