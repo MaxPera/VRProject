@@ -400,11 +400,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8229381647660791993}
   - {fileID: 4590169855267898982}
   - {fileID: 3974390770841825261}
   - {fileID: 4178491281294645819}
   - {fileID: 2440390024799601488}
+  - {fileID: 3881817570470712687}
   m_Father: {fileID: 3347311792150982477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4678092698121466325
@@ -5746,6 +5746,18 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6901219341677321171, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.778
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901219341677321171, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901219341677321171, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.497
+      objectReference: {fileID: 0}
     - target: {fileID: 6953696962746191091, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -5769,228 +5781,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6360753355652644007, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3496793805011438119}
-    - targetCorrespondingSourceObject: {fileID: 2883534431988816355, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9136686293641621951}
-    - targetCorrespondingSourceObject: {fileID: 8635134207904875555, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1469481634274343451}
-    - targetCorrespondingSourceObject: {fileID: 91453370359917446, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2345575194391713809}
-    - targetCorrespondingSourceObject: {fileID: 504811273975495573, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1068585199280091760}
-    - targetCorrespondingSourceObject: {fileID: 6741967367918699151, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8561678469069361391}
-    - targetCorrespondingSourceObject: {fileID: 7326116196737533160, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1765532253684455593}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
---- !u!1 &1131359204250700372 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7326116196737533160, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-  m_PrefabInstance: {fileID: 7645127472207204028}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1765532253684455593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131359204250700372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865c2058cffe9404e9c3f7d1e2c7f563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventReference:
-    Guid:
-      Data1: 628389076
-      Data2: 1295913575
-      Data3: -1090391124
-      Data4: -1075086074
-    Path: event:/Drums/Snare
-  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
-  isStatic: 0
-  cooldownTimer: 0.1
-  usesVelocity: 0
---- !u!1 &2147893909760707231 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8635134207904875555, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-  m_PrefabInstance: {fileID: 7645127472207204028}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1469481634274343451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2147893909760707231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865c2058cffe9404e9c3f7d1e2c7f563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventReference:
-    Guid:
-      Data1: 2064390740
-      Data2: 1316556096
-      Data3: -506718805
-      Data4: -178793532
-    Path: event:/Drums/HiHat
-  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
-  isStatic: 0
-  cooldownTimer: 0.1
-  usesVelocity: 0
---- !u!1 &3629089412344787483 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6360753355652644007, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-  m_PrefabInstance: {fileID: 7645127472207204028}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3496793805011438119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3629089412344787483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865c2058cffe9404e9c3f7d1e2c7f563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventReference:
-    Guid:
-      Data1: 702161754
-      Data2: 1079931869
-      Data3: -890680143
-      Data4: 628863705
-    Path: event:/Drums/Crash
-  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
-  isStatic: 0
-  cooldownTimer: 0.1
-  usesVelocity: 0
---- !u!1 &4001647795641273395 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6741967367918699151, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-  m_PrefabInstance: {fileID: 7645127472207204028}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8561678469069361391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4001647795641273395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865c2058cffe9404e9c3f7d1e2c7f563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventReference:
-    Guid:
-      Data1: 1850552883
-      Data2: 1293485614
-      Data3: -1632537722
-      Data4: 1445780361
-    Path: event:/Drums/Ride
-  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
-  isStatic: 0
-  cooldownTimer: 0.1
-  usesVelocity: 0
---- !u!1 &4763873442501007199 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2883534431988816355, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-  m_PrefabInstance: {fileID: 7645127472207204028}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9136686293641621951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4763873442501007199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865c2058cffe9404e9c3f7d1e2c7f563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventReference:
-    Guid:
-      Data1: 1979237557
-      Data2: 1222413188
-      Data3: 323905187
-      Data4: 1487266257
-    Path: event:/Drums/TomMi
-  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
-  isStatic: 0
-  cooldownTimer: 0.1
-  usesVelocity: 0
---- !u!1 &7736087625658606906 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 91453370359917446, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-  m_PrefabInstance: {fileID: 7645127472207204028}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2345575194391713809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7736087625658606906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865c2058cffe9404e9c3f7d1e2c7f563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventReference:
-    Guid:
-      Data1: 214730326
-      Data2: 1328199880
-      Data3: 1810731931
-      Data4: 164474062
-    Path: event:/Drums/TomHi
-  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
-  isStatic: 0
-  cooldownTimer: 0.1
-  usesVelocity: 0
---- !u!1 &7861457303308236073 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 504811273975495573, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
-  m_PrefabInstance: {fileID: 7645127472207204028}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1068585199280091760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7861457303308236073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 865c2058cffe9404e9c3f7d1e2c7f563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventReference:
-    Guid:
-      Data1: 1979237557
-      Data2: 1222413188
-      Data3: 323905187
-      Data4: 1487266257
-    Path: event:/Drums/TomMi
-  steamAudioPreset: {fileID: 11400000, guid: 5fd8660165486374e865a4d17da20ff4, type: 2}
-  isStatic: 0
-  cooldownTimer: 0.1
-  usesVelocity: 0
---- !u!4 &8229381647660791993 stripped
+--- !u!4 &3881817570470712687 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1741857246289933829, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6901219341677321171, guid: d879c24d0eb33ec458e615af59dae829, type: 3}
   m_PrefabInstance: {fileID: 7645127472207204028}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7695327544698927763
