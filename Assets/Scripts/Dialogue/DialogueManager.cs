@@ -1,61 +1,54 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager instance;
-    [SerializeField]
-    private TextAsset jsonRawFile;
+	public static DialogueManager Instance;
 
-    [SerializeField]
-    private DialoguePlayer[] dialoguePlayers;
+	public TextAsset[] DialogueFiles;
 
-    [HideInInspector]
-    public DialogueElements dialogueElementsList = new DialogueElements();
+	[HideInInspector] public TextAsset ChosenDialogueFile;
+	[HideInInspector] public DialogueElements DialogueElementsList;
 
+	private DialoguePlayer[] dialoguePlayers;
 
-    private void Awake()
-    {
-        //Checks if there is no instance in which case it creates a new one
-        if (instance == null)
-        {
-            instance = this;
-        }
-        //If there is an instance save it
-        else
-            Destroy(this);
+	private void Awake()
+	{
+		//Checks if there is no instance in which case it creates a new one
+		if(Instance == null) {
+			Instance = this;
+		}
+		//If there is an instance save it
+		else
+			Destroy(this);
 
-        DontDestroyOnLoad(instance);
+		DontDestroyOnLoad(Instance);
 
-        dialoguePlayers = FindObjectsOfType<DialoguePlayer>();
-    }
-    private void Start()
-    {
-        string jsonData = jsonRawFile.text;
-        ParseJson(jsonData);
-    }
+		dialoguePlayers = FindObjectsOfType<DialoguePlayer>();
+	}
+	private void Start()
+	{
+		string jsonData = ChosenDialogueFile.text;
+		ParseJson(jsonData);
+	}
 
-    private void ParseJson(string jsonData)
-    {
-        dialogueElementsList = JsonUtility.FromJson<DialogueElements>(jsonData);
-        StartCoroutine(AssignDialogue(dialogueElementsList));
-    }
+	private void ParseJson(string jsonData)
+	{
+		DialogueElementsList = JsonUtility.FromJson<DialogueElements>(jsonData);
+		StartCoroutine(AssignDialogue(DialogueElementsList));
+	}
 
-    private IEnumerator AssignDialogue(DialogueElements dialogueElements)
-    {
-        yield return new WaitUntil(() => dialogueElementsList != null);
-        yield return new WaitUntil(() => dialoguePlayers != null);
-        foreach (DialoguePlayer aPlayer in dialoguePlayers)
-        {
-            foreach (DialogueElement anElement in dialogueElements.dialogueElements)
-            {
-                if (aPlayer.dialogueElementName == anElement.dialogueName)
-                {
-                    aPlayer.thisElement = anElement;
-                }
-                else
-                    yield return null;
-            }
-        }
-    }
+	private IEnumerator AssignDialogue(DialogueElements dialogueElements)
+	{
+		yield return new WaitUntil(() => DialogueElementsList != null);
+		yield return new WaitUntil(() => dialoguePlayers != null);
+		foreach(DialoguePlayer aPlayer in dialoguePlayers) {
+			foreach(DialogueElement anElement in dialogueElements.dialogueElements) {
+				if(aPlayer.dialogueElementName == anElement.dialogueName) {
+					aPlayer.thisElement = anElement;
+				} else
+					yield return null;
+			}
+		}
+	}
 }
