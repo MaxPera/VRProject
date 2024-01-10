@@ -11,12 +11,13 @@ public class DialoguePlayer : MonoBehaviour
     private int currentLine = 0;
     [SerializeField]
     private GameObject prefab;
+    private Canvas canvas;
 
     private void Start()
     {
         GameObject thisInstance = Instantiate(prefab, transform);
 
-        if (!thisInstance.TryGetComponent(out Canvas canvas))
+        if(!thisInstance.TryGetComponent(out canvas))
             return;
         canvas.renderMode = RenderMode.WorldSpace;
         canvas.worldCamera = Camera.main;
@@ -25,6 +26,12 @@ public class DialoguePlayer : MonoBehaviour
             return;
         textBox.alignment = TextAlignmentOptions.MidlineLeft;
 
+        canvas.enabled = false;
+    }
+
+    public void StartDialogue()
+    {
+        canvas.enabled = true;
         StartCoroutine(CallLine());
     }
 
