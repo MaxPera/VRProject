@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 public class DialoguePlayer : MonoBehaviour
 {
     public string dialogueElementName;
-    private TextMeshPro textBox;
+    private TextMeshProUGUI textbox;
     [HideInInspector]
     public DialogueElement thisElement;
     private int currentLine = 0;
@@ -22,11 +23,19 @@ public class DialoguePlayer : MonoBehaviour
         canvas.renderMode = RenderMode.WorldSpace;
         canvas.worldCamera = Camera.main;
 
-        if (!thisInstance.TryGetComponent(out textBox))
+        
+        if (!(textbox = thisInstance.GetComponentInChildren<TextMeshProUGUI>()))
             return;
-        textBox.alignment = TextAlignmentOptions.MidlineLeft;
-
+           textbox.alignment = TextAlignmentOptions.MidlineLeft;
+        
         canvas.enabled = false;
+        
+        if (dialogueElementName == "Hay1")
+        {
+            canvas.enabled = true;
+            StartCoroutine(CallLine());
+        }
+        
     }
 
     public void StartDialogue()
@@ -34,7 +43,12 @@ public class DialoguePlayer : MonoBehaviour
         canvas.enabled = true;
         StartCoroutine(CallLine());
     }
-
+    public void EndDialogue()
+    {
+        canvas.enabled = false;
+        textbox.text = "";
+        
+    }
     private IEnumerator CallLine()
     {
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
@@ -53,10 +67,10 @@ public class DialoguePlayer : MonoBehaviour
 
     private IEnumerator WriteNextLine(string aLine)
     {
-        textBox.text = "";
+        textbox.text = "";
         foreach (char aLetter in aLine)
         {
-            textBox.text += aLetter;
+            textbox.text += aLetter;
 
             if (aLetter != '.' || aLetter != ',')
                 yield return new WaitForSeconds(.05f);
