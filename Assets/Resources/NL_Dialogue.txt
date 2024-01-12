@@ -24,6 +24,14 @@
 			"Ik wacht op mijn moeder die binnen druk bezig is, zou jij mij kunnen helpen?",
 			"Mijn ballon zit vast in de boom maar ik kom er niet bij."
 			]
+		},
+		{
+			"dialogueName": "Intro",
+			"dialogueLines":
+			[
+			"Welkom! Dit is placeholder tekst.",
+			"Veel plezier!"
+			]
 		}
 	]
 }

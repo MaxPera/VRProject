@@ -5,7 +5,7 @@
 			"dialogueName": "Ben",
 			"dialogueLines": 
 			[
-			"Welcome to EarthWorks, here we make LP records and function as a studio, we give chances to young talents who don’t have the money or reputation to go record at larger studios.",
+			"Welcome to EarthWorks, here we make LP records and function as a studio, we give chances to young talents who donï¿½t have the money or reputation to go record at larger studios.",
 			"If you could fix that record over there for us, we could really use the help."
 			]
 		},
@@ -23,6 +23,14 @@
 			[
 			"I am waiting for my mommy who runs Stichting Malak, but she is busy right now.",
 			"Can you help me get my balloon from the tree I lost it."
+			]
+		},
+		{
+			"dialogueName": "Intro",
+			"dialogueLines":
+			[
+			"Hi there! This is temporary text.",
+			"Enjoy!"
 			]
 		}
 	]

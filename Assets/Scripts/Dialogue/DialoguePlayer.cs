@@ -5,12 +5,14 @@ using UnityEngine;
 public class DialoguePlayer : MonoBehaviour
 {
     public string dialogueElementName;
+
+    [HideInInspector] public DialogueElement thisElement;
+
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private bool _hideOnStart = true;
+
     private TextMeshPro textBox;
-    [HideInInspector]
-    public DialogueElement thisElement;
     private int currentLine = 0;
-    [SerializeField]
-    private GameObject prefab;
     private Canvas canvas;
 
     private void Start()
@@ -22,16 +24,21 @@ public class DialoguePlayer : MonoBehaviour
         canvas.renderMode = RenderMode.WorldSpace;
         canvas.worldCamera = Camera.main;
 
-        if (!thisInstance.TryGetComponent(out textBox))
+        if(!thisInstance.TryGetComponent(out textBox))
             return;
         textBox.alignment = TextAlignmentOptions.MidlineLeft;
 
-        canvas.enabled = false;
+        if(_hideOnStart)
+            canvas.enabled = false;
+        else
+            StartCoroutine(CallLine());
     }
 
     public void StartDialogue()
     {
-        canvas.enabled = true;
+        if(_hideOnStart)
+            canvas.enabled = true;
+
         StartCoroutine(CallLine());
     }
 
@@ -40,12 +47,9 @@ public class DialoguePlayer : MonoBehaviour
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
         yield return WriteNextLine(thisElement.dialogueLines[currentLine]);
         currentLine++;
-        if (currentLine >= thisElement.dialogueLines.Length)
-        {
+        if(currentLine >= thisElement.dialogueLines.Length) {
             currentLine = 0;
-        }
-        else
-        {
+        } else {
             yield return new WaitForSeconds(1f);
             StartCoroutine(CallLine());
         }
@@ -54,11 +58,10 @@ public class DialoguePlayer : MonoBehaviour
     private IEnumerator WriteNextLine(string aLine)
     {
         textBox.text = "";
-        foreach (char aLetter in aLine)
-        {
+        foreach(char aLetter in aLine) {
             textBox.text += aLetter;
 
-            if (aLetter != '.' || aLetter != ',')
+            if(aLetter != '.' || aLetter != ',')
                 yield return new WaitForSeconds(.05f);
             else
                 yield return new WaitForSeconds(1f);
