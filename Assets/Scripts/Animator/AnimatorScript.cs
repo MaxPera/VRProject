@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.XR.CoreUtils;
 using System.Collections;
 
 [RequireComponent(typeof(Animator))]
@@ -14,6 +15,7 @@ public class AnimatorScript : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    
     public bool walkingBool
     {
         get { return animator.GetBool("Walking"); }
@@ -30,18 +32,19 @@ public class AnimatorScript : MonoBehaviour
         set { animator.SetBool("HandUp", value); }
     }
 
-    public void StartWalking()
+    private void FixedUpdate()
     {
-        StartCoroutine(WalkingAnimation());
+        if (walkingBool && positionToReach != null)
+            WalkingAnimation();
     }
-    private IEnumerator WalkingAnimation()
+
+    private void WalkingAnimation()
     {
-        walkingBool = true;
-        while (transform.position != positionToReach.position)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, positionToReach.position, speed * Time.deltaTime);
-        }
-        yield return new WaitUntil(() => transform.position == positionToReach.position);
-        walkingBool = false;
+        if (FindObjectOfType<XROrigin>().TryGetComponent(out XROrigin xROrigin))
+            transform.LookAt(new Vector3(xROrigin.transform.position.x, transform.position.y, xROrigin.transform.position.z));
+
+        transform.position = Vector3.MoveTowards(transform.position, positionToReach.position, speed * Time.deltaTime);
+        if (transform.position == positionToReach.position)
+            walkingBool = false;
     }
 }
