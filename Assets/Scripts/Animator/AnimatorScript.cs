@@ -1,10 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(Animator))]
 public class AnimatorScript : MonoBehaviour
 {
     private Animator animator;
-
+    [SerializeField]
+    private Transform positionToReach;
+    [SerializeField]
+    private float speed;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -24,5 +28,20 @@ public class AnimatorScript : MonoBehaviour
     {
         get { return animator.GetBool("HandUp"); }
         set { animator.SetBool("HandUp", value); }
+    }
+
+    public void StartWalking()
+    {
+        StartCoroutine(WalkingAnimation());
+    }
+    private IEnumerator WalkingAnimation()
+    {
+        walkingBool = true;
+        while (transform.position != positionToReach.position)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, positionToReach.position, speed * Time.deltaTime);
+        }
+        yield return new WaitUntil(() => transform.position == positionToReach.position);
+        walkingBool = false;
     }
 }
