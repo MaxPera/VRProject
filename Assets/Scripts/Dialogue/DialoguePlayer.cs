@@ -26,7 +26,7 @@ public class DialoguePlayer : MonoBehaviour
         
         if (!(textbox = thisInstance.GetComponentInChildren<TextMeshProUGUI>()))
             return;
-           textbox.alignment = TextAlignmentOptions.MidlineLeft;
+        textbox.alignment = TextAlignmentOptions.MidlineLeft;
         
         canvas.enabled = false;
         
