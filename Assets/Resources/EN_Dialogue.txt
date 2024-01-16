@@ -24,6 +24,20 @@
 			"I am waiting for my mommy who runs Stichting Malak, but she is busy right now.",
 			"Can you help me get my balloon from the tree I lost it."
 			]
+		},
+		{
+			"dialogueName": "Hay1",
+			"dialogueLines":
+			[
+			"See the object on the ground here? You can teleport to it by pushing the joystick on your right controller forward and then letting go."
+			]
+		},
+		{
+			"dialogueName": "Hay2",
+			"dialogueLines":
+			[
+			"You can grab this ball by using the button on the side of your controller. This can be pressed by squeezing the controller."
+			]
 		}
 	]
 }

@@ -51,6 +51,8 @@ public class ValveInteractable : XRBaseInteractable
 
 				if(angleDifference < -SpeedFailSafe) {
 					angleDifference = 360 + angleDifference;
+				} else if(angleDifference > SpeedFailSafe) {
+					angleDifference = 360 - angleDifference;
 				}
 
 				_currentAngle = totalAngle;
