@@ -24,6 +24,20 @@
 			"Ik wacht op mijn moeder die binnen druk bezig is, zou jij mij kunnen helpen?",
 			"Mijn ballon zit vast in de boom maar ik kom er niet bij."
 			]
+		},
+		{
+			"dialogueName": "Hay1",
+			"dialogueLines":
+			[
+			"Zie je het object op de grond hier? Je kan hier naar toe teleporteren door de rechter joystick naar voren te duwen en dan los te laten."
+			]
+		},
+		{
+			"dialogueName": "Hay2",
+			"dialogueLines":
+			[
+			"je kan deze bal oppakken door de knop op de zijkant van de controller in te drukken. Dit kan worden gedaan door de controller licht in te knijpen."
+			]
 		}
 	]
 }
