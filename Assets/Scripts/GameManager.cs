@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public FadeToBlack fadeEffect;
     private bool hasFaded = false;
     private string[] scenes = { "TheGreenFieldScene", "EndingScene", "TextScene" };
-    private static int nextScene = 0; 
+    private static int nextScene;
+    private static int sceneIndex;
 
     private void Awake()
     {
@@ -26,7 +27,8 @@ public class GameManager : MonoBehaviour
     {
         EventBus.Instance.Subscribe<FadeOutEvent>(HandleLoad);
         EventBus.Instance.Subscribe<FadeInEvent>(fadeInOnload);
-        EventBus.Instance.SendEvent(this, new FadeInEvent()); 
+        EventBus.Instance.SendEvent(this, new FadeInEvent());
+        sceneIndex = SceneManager.GetActiveScene().buildIndex; 
     }
 
     public void FadeOutAndLoadScene() 
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleLoad(object sender, EventArgs args) 
     {
-        nextScene = SceneManager.GetActiveScene().buildIndex >= 2 ? 0 : nextScene += 1;  
+        nextScene = sceneIndex >= 2 ? 0 : sceneIndex += 1;  
         StartCoroutine(LoadNextSceneAsync(scenes[nextScene], true));
     }
 
