@@ -12,6 +12,7 @@ public class DialoguePlayer : MonoBehaviour
     [SerializeField]
     private GameObject prefab;
     private Canvas canvas;
+    IEnumerator runningNumerator;
 
     private void Start()
     {
@@ -37,15 +38,14 @@ public class DialoguePlayer : MonoBehaviour
 
     private IEnumerator CallLine()
     {
+        if (runningNumerator != null)
+            StopCoroutine(runningNumerator);
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
-        if (transform.parent.TryGetComponent(out AnimatorScript animatorScript))
-            animatorScript.talkingBool = true;
-        yield return WriteNextLine(thisElement.dialogueLines[currentLine]);
+        yield return runningNumerator = WriteNextLine(thisElement.dialogueLines[currentLine]);
         currentLine++;
         if (currentLine >= thisElement.dialogueLines.Length)
         {
             currentLine = 0;
-            animatorScript.talkingBool = false;
         }
         else
         {
