@@ -29,7 +29,7 @@ public class FadeToBlack : MonoBehaviour
         {           
             alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime);
             _material.SetFloat("_Alpha", alpha);
-            Debug.Log(alpha);
+            //Debug.Log(alpha);
             elapsedTime += Time.deltaTime * timeMultiplier;
             yield return null;
         }

@@ -7,8 +7,10 @@ using UnityEngine.Rendering;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public FadeToBlack fadeEffect; 
+    public FadeToBlack fadeEffect;
     private bool hasFaded = false;
+    private string[] scenes = { "TheGreenFieldScene", "EndingScene", "TextScene" };
+    private static int nextScene = 0; 
 
     private void Awake()
     {
@@ -23,17 +25,24 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         EventBus.Instance.Subscribe<FadeOutEvent>(HandleLoad);
+        EventBus.Instance.Subscribe<FadeInEvent>(fadeInOnload);
+        EventBus.Instance.SendEvent(this, new FadeInEvent()); 
+    }
+
+    public void FadeOutAndLoadScene() 
+    {
         EventBus.Instance.SendEvent(this, new FadeOutEvent());
     }
 
-    public void StartFade() 
+    private void fadeInOnload(object sender, EventArgs args) 
     {
-        EventBus.Instance.SendEvent(this, new FadeOutEvent()); 
+        StartCoroutine(HandleFade(false)); 
     }
 
     private void HandleLoad(object sender, EventArgs args) 
     {
-        StartCoroutine(LoadNextSceneAsync("EndingScene", true));      
+        nextScene = SceneManager.GetActiveScene().buildIndex >= 2 ? 0 : nextScene += 1;  
+        StartCoroutine(LoadNextSceneAsync(scenes[nextScene], true));
     }
 
     public IEnumerator LoadNextSceneAsync(string scene, bool fadeOut)
@@ -43,13 +52,11 @@ public class GameManager : MonoBehaviour
         AsyncOperation asyncOp = SceneManager.LoadSceneAsync(scene);
         yield return new WaitUntil(() => asyncOp.isDone == true);
         SceneManager.UnloadSceneAsync(currentScene);
-
     }
 
-    private IEnumerator HandleFade(bool fadeOut) 
-    {
+    private IEnumerator HandleFade(bool fadeOut)
+    {   
         if (hasFaded && fadeOut) yield return null;
-        //if (!hasFaded && !fadeOut) yield return null;
         yield return fadeEffect.PlayEffect(fadeOut);
         hasFaded = fadeOut;
         yield return new WaitForSeconds(1.5f); 
