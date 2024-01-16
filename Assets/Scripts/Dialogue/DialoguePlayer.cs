@@ -57,9 +57,12 @@ public class DialoguePlayer : MonoBehaviour
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
         yield return runningNumerator = WriteNextLine(thisElement.dialogueLines[currentLine]);
         currentLine++;
+        if (transform.parent.TryGetComponent(out AnimatorScript animatorScript))
+            animatorScript.talkingBool = true;
         if (currentLine >= thisElement.dialogueLines.Length)
         {
             currentLine = 0;
+            animatorScript.talkingBool = false;
         }
         else
         {
