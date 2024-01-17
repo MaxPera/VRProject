@@ -51,7 +51,7 @@
 			"dialogueName": "Outro",
 			"dialogueLines":
 			[
-			"As you have just experienced the Green Fields is a beautiful place that improves the sustainability, inclusivity and aesthics of the Netherlands.",
+			"As you have just experienced the Green Fields is a beautiful place that improves the sustainability, inclusivity and aesthics of Amsterdam.",
 			"Sadly this is all about to dissapear due to the inhabitants being moved out.",
 			"Help us change this, so we can save the Green Fields together."
 			]

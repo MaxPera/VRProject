@@ -5,7 +5,7 @@
 			"dialogueName": "Intro",
 			"dialogueLines":
 			[
-			"Het Groene Veld is vrij plaats in Amsterdam Noord, het is een prachtige plek die ook dient als culturele broeiplaats",
+			"Het Groene Veld is vrije plaats in Amsterdam Noord, het is een prachtige plek die ook dient als culturele broeiplaats",
 			"Alles wordt hier geregeld door de bewoners, kom mee dan laten we je het zien"
 			]
 		},
@@ -51,7 +51,7 @@
 			"dialogueName": "Outro",
 			"dialogueLines":
 			[
-			"Zoals je net hebt ervaren is het Groene Veld een prachtige plek die mee helpt aan de duurzaamheid, creativiteit en inclusiviteit van Nederland.",
+			"Zoals je net hebt ervaren is het Groene Veld een prachtige plek die mee helpt aan de duurzaamheid, creativiteit en inclusiviteit van Amsterdam.",
 			"Echter staat het op het punt om te verdwijnen, dit omdat de inwoners moeten verplaatsen.",
 			"Zet je in om dit te veranderen en help ons om het Groene Veld te behouden."
 			]
