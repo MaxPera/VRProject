@@ -42,7 +42,8 @@ public class GameManager : MonoBehaviour
 
     private void HandleLoad(object sender, EventArgs args)
     {
-        nextScene = sceneIndex >= 2 ? 0 : sceneIndex++;
+        nextScene = sceneIndex >= 2 ? 0 : ++sceneIndex;
+        Debug.Log(nextScene);
         StartCoroutine(LoadNextSceneAsync(scenes[nextScene], true));
     }
 
