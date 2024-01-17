@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
-using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,22 +27,24 @@ public class GameManager : MonoBehaviour
         EventBus.Instance.Subscribe<FadeOutEvent>(HandleLoad);
         EventBus.Instance.Subscribe<FadeInEvent>(fadeInOnload);
         EventBus.Instance.SendEvent(this, new FadeInEvent());
-        sceneIndex = SceneManager.GetActiveScene().buildIndex; 
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public void FadeOutAndLoadScene() 
+    public void FadeOutAndLoadScene()
     {
         EventBus.Instance.SendEvent(this, new FadeOutEvent());
     }
 
-    private void fadeInOnload(object sender, EventArgs args) 
+    private void fadeInOnload(object sender, EventArgs args)
     {
-        StartCoroutine(HandleFade(false)); 
+        StartCoroutine(HandleFade(false));
     }
 
-    private void HandleLoad(object sender, EventArgs args) 
+    private void HandleLoad(object sender, EventArgs args)
     {
-        nextScene = sceneIndex >= 2 ? 0 : sceneIndex += 1;  
+        nextScene = sceneIndex >= 2 ? 0 : sceneIndex += 1;
+        Debug.Log(sceneIndex);
+        Debug.Log("next scene " + nextScene);
         StartCoroutine(LoadNextSceneAsync(scenes[nextScene], true));
     }
 
@@ -57,10 +58,10 @@ public class GameManager : MonoBehaviour
     }
 
     private IEnumerator HandleFade(bool fadeOut)
-    {   
+    {
         if (hasFaded && fadeOut) yield return null;
         yield return fadeEffect.PlayEffect(fadeOut);
         hasFaded = fadeOut;
-        yield return new WaitForSeconds(1.5f); 
+        yield return new WaitForSeconds(1.5f);
     }
 }
