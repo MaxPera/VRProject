@@ -2,6 +2,14 @@
 	"dialogueElements": 
 	[
 		{
+			"dialogueName": "Intro",
+			"dialogueLines":
+			[
+			"Het Groene Veld is a free space located in Amsterdam. It is a beautiful public place with a lot of combined cultural and environmental activities.",
+			"The public space is maintained by the inhabitants of Het Groene Veld. We will now show you some of the most prominent activities there."
+			]
+		}
+		{
 			"dialogueName": "Ben",
 			"dialogueLines": 
 			[
@@ -37,6 +45,15 @@
 			"dialogueLines":
 			[
 			"You can grab this ball by using the button on the side of your controller. This can be pressed by squeezing the controller."
+			]
+		},
+		{
+			"dialogueName": "Outro",
+			"dialogueLines":
+			[
+			"As you have just experienced the Green Fields is a beautiful place that improves the sustainability, inclusivity and aesthics of the Netherlands.",
+			"Sadly this is all about to dissapear due to the inhabitants being moved out.",
+			"Help us change this, so we can save the Green Fields together."
 			]
 		}
 	]

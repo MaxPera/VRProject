@@ -2,6 +2,14 @@
 	"dialogueElements": 
 	[
 		{
+			"dialogueName": "Intro",
+			"dialogueLines":
+			[
+			"Het Groene Veld is vrij plaats in Amsterdam Noord, het is een prachtige plek die ook dient als culturele broeiplaats",
+			"Alles wordt hier geregeld door de bewoners, kom mee dan laten we je het zien"
+			]
+		},
+		{
 			"dialogueName": "Ben",
 			"dialogueLines": 
 			[
@@ -36,7 +44,16 @@
 			"dialogueName": "Hay2",
 			"dialogueLines":
 			[
-			"je kan deze bal oppakken door de knop op de zijkant van de controller in te drukken. Dit kan worden gedaan door de controller licht in te knijpen."
+			"Je kan deze bal oppakken door de knop op de zijkant van de controller in te drukken. Dit kan worden gedaan door de controller licht in te knijpen."
+			]
+		},
+		{
+			"dialogueName": "Outro",
+			"dialogueLines":
+			[
+			"Zoals je net hebt ervaren is het Groene Veld een prachtige plek die mee helpt aan de duurzaamheid, creativiteit en inclusiviteit van Nederland.",
+			"Echter staat het op het punt om te verdwijnen, dit omdat de inwoners moeten verplaatsen.",
+			"Zet je in om dit te veranderen en help ons om het Groene Veld te behouden."
 			]
 		}
 	]
