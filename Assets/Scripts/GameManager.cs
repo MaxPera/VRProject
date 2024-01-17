@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public FadeToBlack fadeEffect;
     private bool hasFaded = false;
-    private string[] scenes = { "TheGreenFieldScene", "EndingScene", "TextScene" };
+    private string[] scenes = { "TextScene", "TheGreenFieldScene", "EndingScene" };
     private static int nextScene;
     private static int sceneIndex;
 
@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour
     private void HandleLoad(object sender, EventArgs args)
     {
         nextScene = sceneIndex >= 2 ? 0 : ++sceneIndex;
-        Debug.Log(nextScene);
         StartCoroutine(LoadNextSceneAsync(scenes[nextScene], true));
     }
 
