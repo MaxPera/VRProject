@@ -46,6 +46,7 @@ public class DialogueManager : MonoBehaviour
 		nextLanguageIndex = nextLanguageIndex > DialogueFiles.Length - 1 ? 0 : nextLanguageIndex;
 		ChosenDialogueFile = DialogueFiles[nextLanguageIndex];
 		text.text = ChosenDialogueFile.name;
+		ParseJson(ChosenDialogueFile.text);
 	}
 
 	private IEnumerator AssignDialogue(DialogueElements dialogueElements)
