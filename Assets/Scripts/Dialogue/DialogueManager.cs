@@ -9,8 +9,8 @@ public class DialogueManager : MonoBehaviour
 
 	public TextAsset[] DialogueFiles;
 
-	[HideInInspector] public TextAsset ChosenDialogueFile;
-	[HideInInspector] public DialogueElements DialogueElementsList;
+	[HideInInspector] public static TextAsset ChosenDialogueFile;
+	[HideInInspector] public static DialogueElements DialogueElementsList;
 
 	private DialoguePlayer[] dialoguePlayers;
 
@@ -23,8 +23,6 @@ public class DialogueManager : MonoBehaviour
 		//If there is an instance save it
 		else
 			Destroy(this);
-
-		DontDestroyOnLoad(Instance);
 
 		dialoguePlayers = FindObjectsOfType<DialoguePlayer>();
 	}

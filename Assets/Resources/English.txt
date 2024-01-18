@@ -9,7 +9,7 @@
 			"The space is maintained by its inhabitants. A community of diverse people who live, work and create on the Green Field.",
 			"Embark on a short journey through this wondrous place."  
 			]
-		}
+		},
 		{
 			"dialogueName": "Ben",
 			"dialogueLines": 
