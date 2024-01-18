@@ -38,6 +38,14 @@
 			[
 			"You can grab this ball by using the button on the side of your controller. This can be pressed by squeezing the controller."
 			]
+		},
+		{
+			"dialogueName": "Earthworks",
+			"dialogueLines":
+			[
+			"This is Earthworks, it is a music studio. They make music and records here.",
+			"can you help with this record? try pushing it."
+			]
 		}
 	]
 }
