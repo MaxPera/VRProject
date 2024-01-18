@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(MeshRenderer))]
 public class FadeToBlack : MonoBehaviour
 {
     //Increases or decreases the duration of the fading effect. 
