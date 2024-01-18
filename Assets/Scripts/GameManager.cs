@@ -7,9 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public FadeToBlack fadeEffect;
-    private bool hasFaded = false;
     private string[] scenes = { "TextScene", "TheGreenFieldScene", "EndingScene" };
-    private static int nextScene;
     private static int sceneIndex;
 
     private void Awake()
@@ -42,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleLoad(object sender, EventArgs args)
     {
-        nextScene = sceneIndex >= 2 ? 0 : ++sceneIndex;
+        int nextScene = sceneIndex >= 2 ? 0 : ++sceneIndex;
         StartCoroutine(LoadNextSceneAsync(scenes[nextScene], true));
     }
 
@@ -57,9 +55,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator HandleFade(bool fadeOut)
     {
-        if (hasFaded && fadeOut) yield return null;
         yield return fadeEffect.PlayEffect(fadeOut);
-        hasFaded = fadeOut;
         yield return new WaitForSeconds(1.5f);
     }
 }
