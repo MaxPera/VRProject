@@ -5,16 +5,19 @@
 			"dialogueName": "Intro",
 			"dialogueLines":
 			[
-			"Het Groene Veld is a free space located in Amsterdam. It is a beautiful public place with a lot of combined cultural and environmental activities.",
-			"The public space is maintained by the inhabitants of Het Groene Veld. We will now show you some of the most prominent activities there."
+			"The Green Field is a free space located in Amsterdam-north. It is an unique public place with lots of combined cultural, educational and environmental activities.",
+			"The space is maintained by its inhabitants. A community of diverse people who live, work and create on the Green Field.",
+			"Embark on a short journey through this wondrous place."  
 			]
 		}
 		{
 			"dialogueName": "Ben",
 			"dialogueLines": 
 			[
-			"Welcome to EarthWorks, here we make LP records and function as a studio, we give chances to young talents who don’t have the money or reputation to go record at larger studios.",
-			"If you could fix that record over there for us, we could really use the help."
+			"Welcome to EarthWorks! Here we press vinyl records and function as a studio. We give young talent the chance to find their footing in the music industry.", 
+			"Especially artists who dont have the money or reputation to record at larger studios.",
+			"Now that you are here, I could use some help actually.",
+			"Could you fix that vinyl record in the back? I think something is stuck inside..."
 			]
 		},
 		{
