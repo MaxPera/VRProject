@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TextScene.unity
+    guid: c4d937d3ac7c9be4ba4835c9dec16b80
+  - enabled: 1
     path: Assets/Scenes/TheGreenFieldScene/TheGreenFieldScene.unity
-    guid: 5da1f87985c6b7c41ba9ad31375134f5
+    guid: 4a836cc6365b794418d290cf8281f077
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: d0bd852afc34a704d85a689150cff7e7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
