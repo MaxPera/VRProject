@@ -44,7 +44,7 @@
 			"dialogueLines":
 			[
 			"This is Earthworks, it is a music studio. They make music and records here.",
-			"can you help with this record? try pushing it."
+			"can you help with this record? try softly pushing the top."
 			]
 		}
 	]

@@ -7,13 +7,13 @@ public class RaiseWaterOnValveRotation : MonoBehaviour
 	[SerializeField][Range(0.1f, 1.0f)] private float _raiseSpeed = 0.5f;
 
 	private float _waterLevel = 0f;
-	private bool _waterRising;
+    [SerializeField] private bool _waterRising;
 	private Material _material;
 	private Vector3 _initialPosition;
 
 	private void Start()
 	{
-		enabled = false;
+		//enabled = false;
 		_initialPosition = transform.position;
 
 		if(TryGetComponent(out Renderer renderer)) {
