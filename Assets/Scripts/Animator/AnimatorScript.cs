@@ -13,6 +13,7 @@ public class AnimatorScript : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        talkingBool = true;
     }
 
     

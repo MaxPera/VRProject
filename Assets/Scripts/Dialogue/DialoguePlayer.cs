@@ -24,18 +24,17 @@ public class DialoguePlayer : MonoBehaviour
         canvas.renderMode = RenderMode.WorldSpace;
         canvas.worldCamera = Camera.main;
 
-        
+        Debug.Log("help");
         if (!(textbox = thisInstance.GetComponentInChildren<TextMeshProUGUI>()))
             return;
+        Debug.Log(textbox.text);
         textbox.alignment = TextAlignmentOptions.MidlineLeft;
-        
-        canvas.enabled = false;
-        
-        if (dialogueElementName == "Hay1")
-        {
+
+      
+
             canvas.enabled = true;
             StartCoroutine(CallLine());
-        }
+        
         
     }
 
@@ -52,17 +51,25 @@ public class DialoguePlayer : MonoBehaviour
     }
     private IEnumerator CallLine()
     {
+        Debug.Log("h");
         if (runningNumerator != null)
+        {
             StopCoroutine(runningNumerator);
-        if (transform.parent.TryGetComponent(out AnimatorScript animatorScript))
+            Debug.Log("e");
+        }
+       /* if (transform.parent.TryGetComponent(out AnimatorScript animatorScript))
+        {
             animatorScript.talkingBool = true;
+            Debug.Log("l");
+        }*/
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
         yield return runningNumerator = WriteNextLine(thisElement.dialogueLines[currentLine]);
         currentLine++;
+        Debug.Log("p");
         if (currentLine >= thisElement.dialogueLines.Length)
         {
             currentLine = 0;
-            animatorScript.talkingBool = false;
+            //animatorScript.talkingBool = false;
         }
         else
         {
