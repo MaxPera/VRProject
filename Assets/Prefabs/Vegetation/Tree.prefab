@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2547455533640496151
 Transform:
@@ -100,7 +100,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8097459220726034208
 Transform:
@@ -183,7 +183,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6797165884619850267
 Transform:
@@ -266,7 +266,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3960151423300400753
 Transform:
@@ -357,13 +357,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7460776197423307897}
   - component: {fileID: 6383568356706002003}
-  - component: {fileID: 8925084166249805589}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7460776197423307897
 Transform:
@@ -397,44 +396,21 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.33947828
+  - screenRelativeHeight: 0.11451113
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8786267767159700144}
     - renderer: {fileID: 6155943891162445238}
-  - screenRelativeHeight: 0.14137006
+  - screenRelativeHeight: 0.023605922
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 621924840564688471}
     - renderer: {fileID: 6221688680987965985}
-  - screenRelativeHeight: 0.028286854
+  - screenRelativeHeight: 0.00029722054
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1640564006918482471}
   m_Enabled: 1
---- !u!136 &8925084166249805589
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6419510617693188730}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.3141514
-  m_Height: 2.460183
-  m_Direction: 1
-  m_Center: {x: -0.1858486, y: 0.73009145, z: 0}
 --- !u!1 &8709181301514881332
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +427,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4082349799440106333
 Transform:

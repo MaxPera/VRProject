@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -5,37 +6,63 @@ using UnityEngine;
 public class DialoguePlayer : MonoBehaviour
 {
     public string dialogueElementName;
-    private TextMeshPro textBox;
+    private TextMeshProUGUI textbox;
     [HideInInspector]
     public DialogueElement thisElement;
     private int currentLine = 0;
     [SerializeField]
     private GameObject prefab;
+    private Canvas canvas;
+    IEnumerator runningNumerator;
 
     private void Start()
     {
         GameObject thisInstance = Instantiate(prefab, transform);
 
-        if (!thisInstance.TryGetComponent(out Canvas canvas))
+        if(!thisInstance.TryGetComponent(out canvas))
             return;
         canvas.renderMode = RenderMode.WorldSpace;
         canvas.worldCamera = Camera.main;
 
-        if (!thisInstance.TryGetComponent(out textBox))
+        
+        if (!(textbox = thisInstance.GetComponentInChildren<TextMeshProUGUI>()))
             return;
-        textBox.alignment = TextAlignmentOptions.MidlineLeft;
-
-        StartCoroutine(CallLine());
+        textbox.alignment = TextAlignmentOptions.MidlineLeft;
+        
+        canvas.enabled = false;
+        
+        if (dialogueElementName == "Hay1")
+        {
+            canvas.enabled = true;
+            StartCoroutine(CallLine());
+        }
+        
     }
 
+    public void StartDialogue()
+    {
+        canvas.enabled = true;
+        StartCoroutine(CallLine());
+    }
+    public void EndDialogue()
+    {
+        canvas.enabled = false;
+        textbox.text = "";
+        
+    }
     private IEnumerator CallLine()
     {
+        if (runningNumerator != null)
+            StopCoroutine(runningNumerator);
+        if (transform.parent.TryGetComponent(out AnimatorScript animatorScript))
+            animatorScript.talkingBool = true;
         yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
-        yield return WriteNextLine(thisElement.dialogueLines[currentLine]);
+        yield return runningNumerator = WriteNextLine(thisElement.dialogueLines[currentLine]);
         currentLine++;
         if (currentLine >= thisElement.dialogueLines.Length)
         {
             currentLine = 0;
+            animatorScript.talkingBool = false;
         }
         else
         {
@@ -46,10 +73,10 @@ public class DialoguePlayer : MonoBehaviour
 
     private IEnumerator WriteNextLine(string aLine)
     {
-        textBox.text = "";
+        textbox.text = "";
         foreach (char aLetter in aLine)
         {
-            textBox.text += aLetter;
+            textbox.text += aLetter;
 
             if (aLetter != '.' || aLetter != ',')
                 yield return new WaitForSeconds(.05f);
