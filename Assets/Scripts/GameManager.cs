@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
 	public FadeToBlack fadeEffect;
-	private string[] scenes = { "TextScene", "TheGreenFieldScene", "EndingScene" };
+	private string[] scenes = { "IntroScene", "TheGreenFieldScene", "EndingScene" };
 	private static int sceneIndex;
 
 	private void Awake()
