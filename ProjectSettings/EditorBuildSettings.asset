@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TextScene.unity
+    path: Assets/Scenes/IntroScene.unity
     guid: c4d937d3ac7c9be4ba4835c9dec16b80
   - enabled: 1
     path: Assets/Scenes/TheGreenFieldScene/TheGreenFieldScene.unity

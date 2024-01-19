@@ -28,6 +28,9 @@ public class DialogueManager : MonoBehaviour
 	}
 	private void Start()
 	{
+		if(ChosenDialogueFile == null)
+			ChosenDialogueFile = DialogueFiles[0];
+
 		string jsonData = ChosenDialogueFile.text;
 		ParseJson(jsonData);
 	}
