@@ -1,4 +1,4 @@
-using System;
+/*using System;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -24,4 +24,4 @@ public class DialogueManagerEditor : Editor
 		}
 	}
 }
-#endif
+#endif*/

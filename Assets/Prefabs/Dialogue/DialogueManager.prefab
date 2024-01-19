@@ -45,8 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueFiles:
-  - {fileID: 4900000, guid: 5ca38d6be81e6d8439651f8d1379f3d6, type: 3}
   - {fileID: 4900000, guid: f3489d2e7165b9c4c8f0911b8cc6b82b, type: 3}
-  ChosenDialogueFile: {fileID: 4900000, guid: 5ca38d6be81e6d8439651f8d1379f3d6, type: 3}
-  DialogueElementsList:
-    dialogueElements: []
+  - {fileID: 4900000, guid: 5ca38d6be81e6d8439651f8d1379f3d6, type: 3}
