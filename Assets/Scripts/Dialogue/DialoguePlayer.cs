@@ -61,7 +61,7 @@ public class DialoguePlayer : MonoBehaviour
 			currentLine = 0;
 			animatorScript.talkingBool = false;
 		} else {
-			yield return new WaitForSeconds(1f);
+			yield return new WaitForSeconds(4f);
 			StartCoroutine(CallLine());
 		}
 	}
