@@ -56984,6 +56984,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1726318832}
     m_Modifications:
+    - target: {fileID: 1811065643591986614, guid: 2f156f05d7bc78049ab5dbb841cd2be3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226270760875198559, guid: 2f156f05d7bc78049ab5dbb841cd2be3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 2684104676807472631, guid: 2f156f05d7bc78049ab5dbb841cd2be3, type: 3}
       propertyPath: m_Name
       value: EarthWorks
@@ -57027,6 +57035,22 @@ PrefabInstance:
     - target: {fileID: 3347311792150982477, guid: 2f156f05d7bc78049ab5dbb841cd2be3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473221874492657435, guid: 2f156f05d7bc78049ab5dbb841cd2be3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16013308
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473221874492657435, guid: 2f156f05d7bc78049ab5dbb841cd2be3, type: 3}
+      propertyPath: m_Center.x
+      value: 0.07354606
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473221874492657435, guid: 2f156f05d7bc78049ab5dbb841cd2be3, type: 3}
+      propertyPath: m_Center.y
+      value: -0.08071946
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473221874492657435, guid: 2f156f05d7bc78049ab5dbb841cd2be3, type: 3}
+      propertyPath: m_Center.z
+      value: 2.9639657
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
