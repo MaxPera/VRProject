@@ -429,7 +429,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 11cd62256b1d470f922b2c8e6446cc77, type: 3}
+  - {fileID: 2100000, guid: 8989dde966aedee4a8a9d22da4b316c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -460,7 +460,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3475118261464492563}
-  - component: {fileID: 8927358353898336680}
   m_Layer: 0
   m_Name: XR Controller Right
   m_TagString: Untagged
@@ -489,20 +488,6 @@ Transform:
   - {fileID: 3716161019320855118}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8927358353898336680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4283425761326543017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 648443c3c975d7246a18af71eab255f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normal: {fileID: 1000618234980988806}
-  highlight: {fileID: 7670919110547240753}
 --- !u!1 &6118169511635425143
 GameObject:
   m_ObjectHideFlags: 0
