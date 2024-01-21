@@ -24,37 +24,46 @@
 			"dialogueName": "Erica",
 			"dialogueLines":
 			[
-			"Welcome to the culture garden, here we worked on the soil to make it fertile again and improve the water quality in the water basins. Everybody of Het Groene Veld helps improve the water and soil.",
-			"Go over to the water pump so you can help as well."
+			"Welcome to the culture garden, we have made the soil fertile again and worked hard to improve the biodiversity of the Green Field.",
+			"Everybody helps to create a sustainable environment for ourselves and nature.",
+			"Did you know the Green Field is home to a number of protected animal species?", 
+			"We can also improve the water quality by introducing flowing water.", 
+			"Go ahead and turn the valve and watch the basins flourish."
 			]
 		},
 		{
 			"dialogueName": "Fatima",
 			"dialogueLines":
 			[
-			"I am waiting for my mommy who runs Stichting Malak, but she is busy right now.",
-			"Can you help me get my balloon from the tree I lost it."
+			"Erm, hello there.",
+			"I am waiting for my mommy, she is very busy right now.", 
+			"She works in that huuge building! she runs the Malak foundation.",
+			"My mommy helps people from the entire neighbourhood!",
+			"Can you help me get my balloon back? I cant reach it."
 			]
 		},
 		{
 			"dialogueName": "Hay1",
 			"dialogueLines":
 			[
-			"See the object on the ground here? You can teleport to it by pushing the joystick on your right controller forward and then letting go."
+			"Hi there! Welcome to the Green Field.", 
+			"See that ball on the table there? You can teleport to it by pushing the joystick on your right controller forward and then letting go."
 			]
 		},
 		{
 			"dialogueName": "Hay2",
 			"dialogueLines":
 			[
-			"You can grab this ball by using the button on the side of your controller. This can be pressed by squeezing the controller."
+			"Grab the ball by using the button on the side of your controller. This can be pressed by squeezing the controller.", 
+			"You can throw object by releasing this button.", 
+			"Give it a try, try to knock over those bottles."
 			]
 		},
 		{
 			"dialogueName": "Outro",
 			"dialogueLines":
 			[
-			"As you have just experienced the Green Fields is a beautiful place that improves the sustainability, inclusivity and aesthics of Amsterdam.",
+			"As you have just experienced the Green Fields is a beautiful place that improves the sustainability, inclusivity and aesthetics of Amsterdam.",
 			"Sadly this is all about to dissapear due to the inhabitants being moved out.",
 			"Help us change this, so we can save the Green Fields together."
 			]
