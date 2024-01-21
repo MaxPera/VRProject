@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
@@ -7,8 +9,8 @@ public class DialogueManager : MonoBehaviour
 
 	public TextAsset[] DialogueFiles;
 
-	[HideInInspector] public TextAsset ChosenDialogueFile;
-	[HideInInspector] public DialogueElements DialogueElementsList;
+	[HideInInspector] public static TextAsset ChosenDialogueFile;
+	[HideInInspector] public static DialogueElements DialogueElementsList;
 
 	private DialoguePlayer[] dialoguePlayers;
 
@@ -22,12 +24,13 @@ public class DialogueManager : MonoBehaviour
 		else
 			Destroy(this);
 
-		DontDestroyOnLoad(Instance);
-
 		dialoguePlayers = FindObjectsOfType<DialoguePlayer>();
 	}
 	private void Start()
 	{
+		if(ChosenDialogueFile == null)
+			ChosenDialogueFile = DialogueFiles[0];
+
 		string jsonData = ChosenDialogueFile.text;
 		ParseJson(jsonData);
 	}
@@ -36,6 +39,15 @@ public class DialogueManager : MonoBehaviour
 	{
 		DialogueElementsList = JsonUtility.FromJson<DialogueElements>(jsonData);
 		StartCoroutine(AssignDialogue(DialogueElementsList));
+	}
+
+	public void SwitchLanguage(TMP_Text text)
+	{
+		int nextLanguageIndex = Array.IndexOf(DialogueFiles, ChosenDialogueFile) + 1;
+		nextLanguageIndex = nextLanguageIndex > DialogueFiles.Length - 1 ? 0 : nextLanguageIndex;
+		ChosenDialogueFile = DialogueFiles[nextLanguageIndex];
+		text.text = ChosenDialogueFile.name;
+		ParseJson(ChosenDialogueFile.text);
 	}
 
 	private IEnumerator AssignDialogue(DialogueElements dialogueElements)
