@@ -29,8 +29,11 @@
 			"dialogueName": "Fatima",
 			"dialogueLines":
 			[
-			"Ik wacht op mijn moeder die binnen druk bezig is, zou jij mij kunnen helpen?",
-			"Mijn ballon zit vast in de boom maar ik kom er niet bij!"
+			"Ik wacht op mijn moeder, maar ze is nog druk.",
+			"Ze werkt in dat grote gebouw. Bij stichting Malak.", 
+			"Daar helpt ze allemaal mensen uit de buurt!", 
+			"Zou jij mij ook kunnen helpen?", 
+			"Mijn ballon zit vast in de boom en ik kom er niet bij!"
 			]
 		},
 		{
