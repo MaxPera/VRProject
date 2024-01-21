@@ -21519,7 +21519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &638326260
 Transform:
   m_ObjectHideFlags: 0
@@ -24684,7 +24684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &745121027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38795,13 +38795,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191679144}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.007726148, y: -0.008116708, z: 0.0051623494, w: 0.99992394}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1406745153}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.89, y: -0.926, z: 0.584}
 --- !u!114 &1191679146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38817,9 +38817,6 @@ MonoBehaviour:
   DialogueFiles:
   - {fileID: 4900000, guid: 5ca38d6be81e6d8439651f8d1379f3d6, type: 3}
   - {fileID: 4900000, guid: f3489d2e7165b9c4c8f0911b8cc6b82b, type: 3}
-  ChosenDialogueFile: {fileID: 4900000, guid: 5ca38d6be81e6d8439651f8d1379f3d6, type: 3}
-  DialogueElementsList:
-    dialogueElements: []
 --- !u!1 &1192103412
 GameObject:
   m_ObjectHideFlags: 0
@@ -58899,7 +58896,7 @@ Transform:
   m_GameObject: {fileID: 1780434897}
   serializedVersion: 2
   m_LocalRotation: {x: 0.007476779, y: -0.17364326, z: 0.0013183585, w: 0.9847794}
-  m_LocalPosition: {x: -9.09, y: 1.45, z: 90.37}
+  m_LocalPosition: {x: -8.89, y: 1.46, z: 89.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66954,6 +66951,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8223956300700254046, guid: f893404d419ba7c40a568369f786e064, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.16315925
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223956300700254046, guid: f893404d419ba7c40a568369f786e064, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223956300700254046, guid: f893404d419ba7c40a568369f786e064, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.98659974
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223956300700254046, guid: f893404d419ba7c40a568369f786e064, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223956300700254046, guid: f893404d419ba7c40a568369f786e064, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 198.781
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -67835,13 +67852,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040851965}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.068213865, y: 0.917416, z: -0.1795742, w: 0.34849378}
+  m_LocalRotation: {x: 0.19737509, y: 0.7771239, z: -0.5195935, w: 0.29520184}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 22.15, y: 138.4, z: 0}
+  m_LocalEulerAnglesHint: {x: 67.534, y: 138.4, z: 0}
 --- !u!114 &2040851968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73699,13 +73716,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3830922580844386107}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 0.9999926, z: -0, w: -0.0038446786}
   m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3713440189970233027}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.441, z: 0}
 --- !u!1 &3166605659453323938
 GameObject:
   m_ObjectHideFlags: 0
@@ -73957,7 +73974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3834811964280135539
 Transform:
   m_ObjectHideFlags: 0
@@ -75450,12 +75467,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3830922580844386107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ab7790055872b548906339244b650de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueElementName: Earthworks
+  dialogueElementName: Ben
   thisElement:
     dialogueName: 
     dialogueLines: []
