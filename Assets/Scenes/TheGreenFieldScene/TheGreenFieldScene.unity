@@ -50186,17 +50186,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7460776197423307897, guid: 1f5a1ac6d3efceb49b2920775c483424, type: 3}
   m_PrefabInstance: {fileID: 1059417647}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1539327756 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3680701592100563113, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-  m_PrefabInstance: {fileID: 6708332522859985109}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ab7790055872b548906339244b650de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1539371749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7460776197423307897, guid: 1f5a1ac6d3efceb49b2920775c483424, type: 3}
@@ -71729,38 +71718,6 @@ PrefabInstance:
       propertyPath: _playOnStart
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5329624961767765789, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329624961767765789, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1539327756}
-    - target: {fileID: 5329624961767765789, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 6708332522859985111}
-    - target: {fileID: 5329624961767765789, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: StartDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329624961767765789, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: EndDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329624961767765789, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DialoguePlayer, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329624961767765789, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5329624961767765789, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-      propertyPath: m_Teleporting.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5839910043691745499, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1
@@ -71829,17 +71786,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3769674008311507780, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
   m_PrefabInstance: {fileID: 6708332522859985109}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6708332522859985111 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4075049750287576919, guid: 86e8fba8d57818f4eb943c9c22d848a6, type: 3}
-  m_PrefabInstance: {fileID: 6708332522859985109}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ab7790055872b548906339244b650de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
