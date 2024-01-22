@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{81f56fbb-dfbc-494f-b3b6-71ac6d5d3f82}">
+		<property name="assetPath">
+			<value>RandomDrumSample3.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.1869387755102041</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8c908412-dad2-477f-93ec-8be1a1d5815d}</destination>
+		</relationship>
+	</object>
+</objects>

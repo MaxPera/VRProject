@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4b8701f3-6525-4cc5-b634-c2ebc1d2604f}">
+		<property name="assetPath">
+			<value>WaterSFX.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0114285714285716</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8c908412-dad2-477f-93ec-8be1a1d5815d}</destination>
+		</relationship>
+	</object>
+</objects>

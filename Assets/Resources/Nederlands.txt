@@ -1,0 +1,60 @@
+{
+	"dialogueElements": 
+	[
+		{
+			"dialogueName": "Intro",
+			"dialogueLines":
+			[
+			"Het Groene Veld is vrije plaats in Amsterdam Noord, het is een prachtige plek die ook dient als culturele broeiplaats",
+			"Alles wordt hier geregeld door de bewoners, kom mee dan laten we je het zien"
+			]
+		},
+		{
+			"dialogueName": "Ben",
+			"dialogueLines": 
+			[
+			"Welkom bij EarthWorks, hier maken wij LP platen en wij hebben onze eigen studio. Wij geven jonge talenten die grote studio's nog niet kunnen afhuren.",
+			"Zou je die plaat op de paal willen fixen voor ons? Hij loopt vast vanwege dat balletje."
+			]
+		},
+		{
+			"dialogueName": "Erica",
+			"dialogueLines":
+			[
+			"Welkom bij de cultuur tuin, hier maken we harde grond vruchtbaar en verbeteren de waterkwaliteit in de basins.",
+			"Zou je die kraan kunnen opendraaien zodat het water weer kan stromen?"
+			]
+		},
+		{
+			"dialogueName": "Fatima",
+			"dialogueLines":
+			[
+			"Ik wacht op mijn moeder die binnen druk bezig is, zou jij mij kunnen helpen?",
+			"Mijn ballon zit vast in de boom maar ik kom er niet bij."
+			]
+		},
+		{
+			"dialogueName": "Hay1",
+			"dialogueLines":
+			[
+			"Zie je het plateau daar op de grond hier? Je kan hier naar toe teleporteren door de rechter joystick naar voren te duwen en dan los te laten."
+			]
+		},
+		{
+			"dialogueName": "Hay2",
+			"dialogueLines":
+			[
+			"Je kan deze bal oppakken door de knop op de zijkant van de controller in te drukken. Dit kan worden gedaan door de controller licht in te knijpen."
+			]
+		},
+		{
+			"dialogueName": "Outro",
+			"dialogueLines":
+			[
+			"Zoals je net hebt ervaren is het Groene Veld een prachtige plek die mee helpt aan de duurzaamheid, creativiteit en inclusiviteit van Amsterdam.",
+			"Echter staat het op het punt om te verdwijnen, dit omdat de inwoners moeten verplaatsen.",
+			"Zet je in om dit te veranderen en help ons om het Groene Veld te behouden."
+			]
+		}
+	]
+}
