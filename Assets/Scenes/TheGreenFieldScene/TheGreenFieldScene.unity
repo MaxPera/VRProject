@@ -53196,8 +53196,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2812341709212790465, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
-      propertyPath: _waterRising
+      propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812341709212790465, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
+      propertyPath: _waterRising
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2812341709212790465, guid: d18b082a757187c489cca5870f7a1fa5, type: 3}
       propertyPath: _maxWaterHeight
