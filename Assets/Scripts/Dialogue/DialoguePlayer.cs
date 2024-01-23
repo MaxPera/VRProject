@@ -15,9 +15,13 @@ public class DialoguePlayer : MonoBehaviour
 	private bool _playOnStart;
 	private Canvas canvas;
 	IEnumerator runningNumerator;
-	public bool onComplete;
+	public bool onComplete
+    {
+        private get { return onComplete; }
+        set { onComplete = value; }
+    }
 
-	private void Start()
+    private void Start()
 	{
 		GameObject thisInstance = Instantiate(prefab, transform);
 
