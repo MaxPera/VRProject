@@ -20,7 +20,11 @@ public class EventBus : MonoBehaviour
 
 		_instance._subscribersByType = new Dictionary<Type, List<EventHandler>>();
 	}
-
+	/// <summary>
+	/// Subscribes given event
+	/// </summary>
+	/// <typeparam name="T">The type that is used for the event</typeparam>
+	/// <param name="eventHandler"></param>
 	public void Subscribe<T>(EventHandler eventHandler) where T : EventArgs
 	{
 		var type = typeof(T);
@@ -30,7 +34,11 @@ public class EventBus : MonoBehaviour
 
 		_instance._subscribersByType[type].Add(eventHandler);
 	}
-
+	/// <summary>
+	/// Unsubscribes given event
+	/// </summary>
+	/// <typeparam name="T">The type that is used for the event</typeparam>
+	/// <param name="eventHandler"></param>
 	public void UnSubscribe<T>(EventHandler eventHandler) where T : EventArgs
 	{
 		var type = typeof(T);
@@ -38,7 +46,11 @@ public class EventBus : MonoBehaviour
 			_instance._subscribersByType[type].Remove(eventHandler);
 		}
 	}
-
+	/// <summary>
+	/// Sends an Action from the sender
+	/// </summary>
+	/// <param name="sender">Object that sends the action</param>
+	/// <param name="eventArgs"></param>
 	public void SendEvent(object sender, EventArgs eventArgs)
 	{
 		if(_instance._subscribersByType.TryGetValue(eventArgs.GetType(), out List<EventHandler> subscribers)) {

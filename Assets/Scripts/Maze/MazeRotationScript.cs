@@ -18,7 +18,7 @@ public class MazeRotationScript : MonoBehaviour
     void Update()
     {
        
-
+        //Clamps the rotation so that it can't go over a certain trashhold
         CurrentXRotation = transform.eulerAngles.x >= 180 ? transform.eulerAngles.x - 360 : transform.eulerAngles.x;
         CurrentZRotation = transform.eulerAngles.z >= 180 ? transform.eulerAngles.z - 360 : transform.eulerAngles.z;
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);

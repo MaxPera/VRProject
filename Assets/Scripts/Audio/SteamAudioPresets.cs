@@ -18,7 +18,11 @@ public class SteamAudioPresets : MonoBehaviour
         else
             DontDestroyOnLoad(instance);
     }
-
+    /// <summary>
+    /// Finds the preset with teh given name
+    /// </summary>
+    /// <param name="presetName"></param>
+    /// <returns></returns>
     public SteamAudioPreset FindPreset(string presetName)
     {
         foreach (SteamAudioPreset aPreset in presets)

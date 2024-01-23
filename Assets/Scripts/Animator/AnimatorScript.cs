@@ -26,6 +26,7 @@ public class AnimatorScript : MonoBehaviour
         get { return animator.GetBool("Talking"); }
         set { animator.SetBool("Talking", value); }
     }
+
     public bool handUpBool
     {
         get { return animator.GetBool("HandUp"); }
@@ -37,7 +38,9 @@ public class AnimatorScript : MonoBehaviour
         if (walkingBool && positionToReach != null)
             WalkingAnimation();
     }
-
+    /// <summary>
+    /// Triggers the walking animation
+    /// </summary>
     private void WalkingAnimation()
     {
         if (FindObjectOfType<XROrigin>().TryGetComponent(out XROrigin xROrigin))

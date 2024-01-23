@@ -49,6 +49,10 @@ public class DialoguePlayer : MonoBehaviour
 		textbox.text = "";
 
 	}
+	/// <summary>
+	/// Writes all the lines in the dialogue
+	/// </summary>
+	/// <returns></returns>
 	private IEnumerator CallLine()
 	{
 		//Checks if there is another dialogue running, if so it stops it
@@ -61,11 +65,13 @@ public class DialoguePlayer : MonoBehaviour
 		yield return runningNumerator = WriteNextLine(thisElement.dialogueLines[currentLine]);
 
 		currentLine++;
+		//Checks if dialogue has reached end
 		if (currentLine >= thisElement.dialogueLines.Length)
 		{
 			currentLine = 0;
 			animatorScript.talkingBool = false;
 		}
+		//Checks if dialogueLine has Json code
 		else if (thisElement.dialogueLines[currentLine].Contains(DialogueManager.Instance.onComplete))
 		{
 			yield return new WaitUntil(() => onComplete == true);
@@ -82,6 +88,11 @@ public class DialoguePlayer : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Writes every line per character
+	/// </summary>
+	/// <param name="aLine">What line to write</param>
+	/// <returns></returns>
 	private IEnumerator WriteNextLine(string aLine)
 	{
 		textbox.text = "";

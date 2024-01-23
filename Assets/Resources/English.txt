@@ -17,7 +17,8 @@
 			"Welcome to EarthWorks! Here we press vinyl records and function as a studio. We give young talent the chance to find their footing in the music industry.", 
 			"Especially artists who dont have the money or reputation to record at larger studios.",
 			"Now that you are here, I could use some help actually.",
-			"Could you fix that vinyl record in the back? I think something is stuck inside..."
+			"Could you fix that vinyl record in the back? I think something is stuck inside...",
+			".OnComplete.Thanks for fixing the vinyl."
 			]
 		},
 		{
@@ -25,7 +26,8 @@
 			"dialogueLines":
 			[
 			"Welcome to the culture garden, here we worked on the soil to make it fertile again and improve the water quality in the water basins. Everybody of Het Groene Veld helps improve the water and soil.",
-			"Go over to the water pump so you can help as well."
+			"Go over to the water pump so you can help as well.",
+			".OnComplete.You fixed the valve, thank you for helping out."
 			]
 		},
 		{
@@ -33,7 +35,8 @@
 			"dialogueLines":
 			[
 			"I am waiting for my mommy who runs Stichting Malak, but she is busy right now.",
-			"Can you help me get my balloon from the tree I lost it."
+			"Can you help me get my balloon from the tree I lost it.",
+			"Thanks, I thought i lost it."
 			]
 		},
 		{
@@ -47,7 +50,9 @@
 			"dialogueName": "Hay2",
 			"dialogueLines":
 			[
-			"You can grab this ball by using the button on the side of your controller. This can be pressed by squeezing the controller."
+			"Good job.",
+			"You can grab this ball by using the button on the side of your controller. This can be pressed by squeezing the controller.",
+			".OnComplete.Good job, now you are ready to help us out even better."
 			]
 		},
 		{

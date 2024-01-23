@@ -41,11 +41,28 @@ public class GameManager : MonoBehaviour
 		int nextScene = sceneIndex >= 2 ? 0 : ++sceneIndex;
 		StartCoroutine(LoadNextSceneAsync(scenes[nextScene], true));
 	}
-
+	/// <summary>
+	/// Loads another scene async and unloads the current scene using fade out
+	/// </summary>
+	/// <param name="scene">What scene to load</param>
+	/// <param name="fadeOut">Checks if it should fade in</param>
+	/// <returns></returns>
 	public IEnumerator LoadNextSceneAsync(string scene, bool fadeOut)
 	{
 		Scene currentScene = SceneManager.GetActiveScene();
 		yield return HandleFade(fadeOut);
+		AsyncOperation asyncOp = SceneManager.LoadSceneAsync(scene);
+		yield return new WaitUntil(() => asyncOp.isDone == true);
+		SceneManager.UnloadSceneAsync(currentScene);
+	}
+	/// <summary>
+	/// Loads another scene async and unloads the current scene
+	/// </summary>
+	/// <param name="scene"></param>
+	/// <returns></returns>
+	public IEnumerator LoadNextSceneAsync(string scene)
+	{
+		Scene currentScene = SceneManager.GetActiveScene();
 		AsyncOperation asyncOp = SceneManager.LoadSceneAsync(scene);
 		yield return new WaitUntil(() => asyncOp.isDone == true);
 		SceneManager.UnloadSceneAsync(currentScene);

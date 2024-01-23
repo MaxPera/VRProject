@@ -20,7 +20,10 @@ public class SteamAudioPreset : ScriptableObject
     public SteamAudioProbeBatch probeBatch;
     public bool pathValidation;
     public bool findAlternativePaths;
-
+    /// <summary>
+    /// Changes the SteamAudioSource settings to the preset
+    /// </summary>
+    /// <param name="audioSource">What SteamAudioSource to change</param>
     public void ChangeSourceSettings(SteamAudioSource audioSource)
     {
 

@@ -13,6 +13,11 @@ public class FadeToBlack : MonoBehaviour
     {
         _material = GetComponent<MeshRenderer>().material;
     }
+    /// <summary>
+    /// Fades the alpha of the fade out.
+    /// </summary>
+    /// <param name="fadeOut">Determines wether it should fade in or out</param>
+    /// <returns></returns>
     public IEnumerator PlayEffect(bool fadeOut)
     {
         float startAlpha = _material.GetFloat("_Alpha");

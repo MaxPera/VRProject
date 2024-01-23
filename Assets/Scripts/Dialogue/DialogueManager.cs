@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] public static DialogueElements DialogueElementsList;
 
 	private DialoguePlayer[] dialoguePlayers;
+	[field: Header("Json string that defines on completion of task")]
 	public string onComplete;
 
 	private void Awake()
@@ -41,7 +42,10 @@ public class DialogueManager : MonoBehaviour
 		DialogueElementsList = JsonUtility.FromJson<DialogueElements>(jsonData);
 		StartCoroutine(AssignDialogue(DialogueElementsList));
 	}
-
+	/// <summary>
+	/// Switches the language of the dialogue.
+	/// </summary>
+	/// <param name="text">What Json to parse</param>
 	public void SwitchLanguage(TMP_Text text)
 	{
 		int nextLanguageIndex = Array.IndexOf(DialogueFiles, ChosenDialogueFile) + 1;
@@ -50,7 +54,11 @@ public class DialogueManager : MonoBehaviour
 		text.text = ChosenDialogueFile.name;
 		ParseJson(ChosenDialogueFile.text);
 	}
-
+	/// <summary>
+	/// Assigns all the dialogue to the correct player
+	/// </summary>
+	/// <param name="dialogueElements">List of all the dialogueElements from the Json parse</param>
+	/// <returns></returns>
 	private IEnumerator AssignDialogue(DialogueElements dialogueElements)
 	{
 		yield return new WaitUntil(() => DialogueElementsList != null);
