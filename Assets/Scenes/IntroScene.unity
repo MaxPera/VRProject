@@ -1561,6 +1561,10 @@ PrefabInstance:
       propertyPath: language
       value: 
       objectReference: {fileID: 726302064}
+    - target: {fileID: -824861267898151412, guid: 7349ab927d712f744a82a37b1d9150b4, type: 3}
+      propertyPath: onComplete
+      value: .OnComplete.
+      objectReference: {fileID: 0}
     - target: {fileID: 4978363891827994099, guid: 7349ab927d712f744a82a37b1d9150b4, type: 3}
       propertyPath: m_Name
       value: DialogueManager
