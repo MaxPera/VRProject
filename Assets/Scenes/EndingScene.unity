@@ -582,6 +582,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Stick
       objectReference: {fileID: 0}
+    - target: {fileID: 866689140581026028, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3127728407712097234, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       propertyPath: m_LocomotionProvider
       value: 

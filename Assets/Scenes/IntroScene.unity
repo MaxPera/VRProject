@@ -1112,6 +1112,9 @@ PrefabInstance:
     - {fileID: 6694496370488184912, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7696548424635294048, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1123012674}
     - targetCorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 194562799}
@@ -1148,6 +1151,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5628056358492308370, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
   m_PrefabInstance: {fileID: 1123012669}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1123012674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123012671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c931470f01c6d24d90cebb8e8751b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToRotate: {fileID: 1123012671}
 --- !u!1 &1123012675 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 724666597063956618, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
@@ -1620,7 +1636,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1687699672}
   - component: {fileID: 1687699673}
-  - component: {fileID: 1687699674}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1656,19 +1671,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeEffect: {fileID: 253914583}
---- !u!114 &1687699674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687699670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c931470f01c6d24d90cebb8e8751b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectToRotate: {fileID: 1123012671}
 --- !u!1 &1747639429
 GameObject:
   m_ObjectHideFlags: 0
