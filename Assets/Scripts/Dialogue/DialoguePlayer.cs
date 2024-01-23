@@ -15,6 +15,7 @@ public class DialoguePlayer : MonoBehaviour
 	private bool _playOnStart;
 	private Canvas canvas;
 	IEnumerator runningNumerator;
+	public bool onComplete;
 
 	private void Start()
 	{
@@ -50,17 +51,32 @@ public class DialoguePlayer : MonoBehaviour
 	}
 	private IEnumerator CallLine()
 	{
+		//Checks if there is another dialogue running, if so it stops it
 		if(runningNumerator != null)
 			StopCoroutine(runningNumerator);
 		if(transform.parent.TryGetComponent(out AnimatorScript animatorScript))
 			animatorScript.talkingBool = true;
+		//Waits for all the dialogue.
 		yield return new WaitUntil(() => thisElement.dialogueLines.Length > 0);
 		yield return runningNumerator = WriteNextLine(thisElement.dialogueLines[currentLine]);
+
 		currentLine++;
-		if(currentLine >= thisElement.dialogueLines.Length) {
+		if (currentLine >= thisElement.dialogueLines.Length)
+		{
 			currentLine = 0;
 			animatorScript.talkingBool = false;
-		} else {
+		}
+		else if (thisElement.dialogueLines[currentLine].Contains(DialogueManager.Instance.onComplete))
+		{
+			yield return new WaitUntil(() => onComplete == true);
+			foreach (char aChar in DialogueManager.Instance.onComplete)
+            {
+				thisElement.dialogueLines[currentLine].Trim(aChar);
+            }
+			StartCoroutine(CallLine());
+		}
+		else
+		{
 			yield return new WaitForSeconds(2f);
 			StartCoroutine(CallLine());
 		}

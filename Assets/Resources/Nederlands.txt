@@ -14,7 +14,8 @@
 			"dialogueLines": 
 			[
 			"Welkom bij EarthWorks, hier maken wij LP platen en wij hebben onze eigen studio. Wij geven jonge talenten die grote studio's nog niet kunnen afhuren.",
-			"Zou je die plaat op de paal willen fixen voor ons? Hij loopt vast vanwege dat balletje."
+			"Zou je die plaat op de paal willen fixen voor ons? Hij loopt vast vanwege dat balletje.",
+			".OnComplete.Dankjewel voor het helpen met de plaat."
 			]
 		},
 		{
@@ -22,7 +23,8 @@
 			"dialogueLines":
 			[
 			"Welkom bij de cultuur tuin, hier maken we harde grond vruchtbaar en verbeteren de waterkwaliteit in de basins.",
-			"Zou je die kraan kunnen opendraaien zodat het water weer kan stromen?"
+			"Zou je die kraan kunnen opendraaien zodat het water weer kan stromen?",
+			".OnComplete.Goed gedaan, bedankt voor het helpen."
 			]
 		},
 		{
@@ -30,7 +32,8 @@
 			"dialogueLines":
 			[
 			"Ik wacht op mijn moeder die binnen druk bezig is, zou jij mij kunnen helpen?",
-			"Mijn ballon zit vast in de boom maar ik kom er niet bij."
+			"Mijn ballon zit vast in de boom maar ik kom er niet bij.",
+			".OnComplete.Dankje, ik was hem bijna kwijt."
 			]
 		},
 		{
@@ -44,7 +47,9 @@
 			"dialogueName": "Hay2",
 			"dialogueLines":
 			[
-			"Je kan deze bal oppakken door de knop op de zijkant van de controller in te drukken. Dit kan worden gedaan door de controller licht in te knijpen."
+			"Goed gedaan.",
+			"Je kan deze bal oppakken door de knop op de zijkant van de controller in te drukken. Dit kan worden gedaan door de controller licht in te knijpen.",
+			".OnComplete.Goed bezig, je kan nu de rest helpen."
 			]
 		},
 		{

@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] public static DialogueElements DialogueElementsList;
 
 	private DialoguePlayer[] dialoguePlayers;
+	public string onComplete;
 
 	private void Awake()
 	{
