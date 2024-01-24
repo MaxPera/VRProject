@@ -5,15 +5,16 @@
 			"dialogueName": "Intro",
 			"dialogueLines":
 			[
-			"Het Groene Veld is vrije plaats in Amsterdam Noord, het is een prachtige plek die ook dient als culturele broeiplaats",
-			"Alles wordt hier geregeld door de bewoners, kom mee dan laten we je het zien"
+			"Het Groene Veld is een vrije plaats in Amsterdam Noord, het is een bijzondere plek die ook dient als culturele broedplaats",
+			"Alles wordt hier geregeld door de bewoners, kom mee dan laten we je het zien."
 			]
 		},
 		{
 			"dialogueName": "Ben",
 			"dialogueLines": 
 			[
-			"Welkom bij EarthWorks, hier maken wij LP platen en wij hebben onze eigen studio. Wij geven jonge talenten die grote studio's nog niet kunnen afhuren.",
+			"Welkom bij EarthWorks, hier drukken wij LP platen en hebben onze eigen studio.",
+			"Wij bieden jong talent die grote studio's nog niet kunnen afhuren de kans om zich te vestigen in de muziekwereld.",
 			"Zou je die plaat op de paal willen fixen voor ons? Hij loopt vast vanwege dat balletje.",
 			".OnComplete.Dankjewel voor het helpen met de plaat."
 			]
@@ -23,8 +24,8 @@
 			"dialogueLines":
 			[
 			"Welkom bij de cultuur tuin, hier maken we harde grond vruchtbaar en verbeteren de waterkwaliteit in de basins.",
-			"Zou je die kraan kunnen opendraaien zodat het water weer kan stromen?",
-			".OnComplete.Goed gedaan, bedankt voor het helpen."
+			"Zou je die kraan daar kunnen opendraaien? Dan kan het water weer stromen.",
+			".OnComplete.Goed gedaan, bedankt voor je hulp!."
 			]
 		},
 		{
@@ -40,7 +41,7 @@
 			"dialogueName": "Hay1",
 			"dialogueLines":
 			[
-			"Zie je het plateau daar op de grond hier? Je kan hier naar toe teleporteren door de rechter joystick naar voren te duwen en dan los te laten."
+			"Zie je het plateau daar op de grond? Je kan er naartoe teleporteren door de rechter joystick naar voren te duwen en dan los te laten."
 			]
 		},
 		{
@@ -48,7 +49,7 @@
 			"dialogueLines":
 			[
 			"Goed gedaan.",
-			"Je kan deze bal oppakken door de knop op de zijkant van de controller in te drukken. Dit kan worden gedaan door de controller licht in te knijpen.",
+			"Je kan de bal oppakken door de knop op de zijkant van de controller in te drukken. Dit kan worden gedaan door de controller licht in te knijpen.",
 			".OnComplete.Goed bezig, je kan nu de rest helpen."
 			]
 		},
