@@ -23,6 +23,7 @@ public class MazeExitScript : MonoBehaviour
             foreach (GameObject obj in ObjectsToHide) {
                 obj.SetActive(false);
             }
+            EventBus.Instance.SendEvent(this, new MazeCompletedEvent());
         }
     }
 }

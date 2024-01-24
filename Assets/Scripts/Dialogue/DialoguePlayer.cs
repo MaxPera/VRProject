@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -15,11 +16,10 @@ public class DialoguePlayer : MonoBehaviour
 	private bool _playOnStart;
 	private Canvas canvas;
 	IEnumerator runningNumerator;
-	public bool onComplete
-    {
-        private get { return onComplete; }
-        set { onComplete = value; }
-    }
+	public bool onComplete;
+	public bool onValve;
+	public bool onBalloon;
+	public bool onMaze;
 
     private void Start()
 	{
@@ -37,12 +37,39 @@ public class DialoguePlayer : MonoBehaviour
 
 		canvas.enabled = false;
 
-		if(_playOnStart) {
+		if(onValve)
+			EventBus.Instance.Subscribe<ValveTurnedEvent>(SetOnValveComplete);
+        if (onBalloon)
+            EventBus.Instance.Subscribe<BalloonEvent>(SetOnBalloonComplete);
+        if (onMaze)
+            EventBus.Instance.Subscribe<MazeCompletedEvent>(SetOnMazeComplete);
+
+        if (_playOnStart) {
 			StartDialogue();
 		}
 	}
 
-	public void StartDialogue()
+    public void SetOnValveComplete(object sender = null, EventArgs args = null)
+    {
+		onComplete = true;
+    }
+
+    public void SetOnBalloonComplete(object sender = null, EventArgs args = null)
+    {
+        onComplete = true;
+    }
+
+    public void SetOnMazeComplete(object sender = null, EventArgs args = null)
+    {
+        onComplete = true;
+    }
+
+    public void SetOnComplete()
+    {
+        onComplete = true;
+    }
+
+    public void StartDialogue()
 	{
 		canvas.enabled = true;
 		StartCoroutine(CallLine());
@@ -73,22 +100,27 @@ public class DialoguePlayer : MonoBehaviour
 		if (currentLine >= thisElement.dialogueLines.Length)
 		{
 			currentLine = 0;
-			animatorScript.talkingBool = false;
+			if(animatorScript != null)
+				animatorScript.talkingBool = false;
+			Debug.Log("Dialogue done");
 		}
 		//Checks if dialogueLine has Json code
-		else if (thisElement.dialogueLines[currentLine].Contains(DialogueManager.Instance.onComplete))
+		else if (thisElement.dialogueLines[currentLine].Contains(DialogueManager.onComplete))
 		{
-			yield return new WaitUntil(() => onComplete == true);
-			foreach (char aChar in DialogueManager.Instance.onComplete)
-            {
-				thisElement.dialogueLines[currentLine].Trim(aChar);
-            }
-			StartCoroutine(CallLine());
+            if (animatorScript != null)
+                animatorScript.talkingBool = false;
+            yield return new WaitUntil(() => onComplete == true);
+            if (animatorScript != null)
+                animatorScript.talkingBool = true;
+            thisElement.dialogueLines[currentLine] = thisElement.dialogueLines[currentLine].Substring(DialogueManager.onComplete.Length, thisElement.dialogueLines[currentLine].Length - DialogueManager.onComplete.Length);
+            Debug.Log("Confirmation");
+            StartCoroutine(CallLine());
 		}
 		else
 		{
 			yield return new WaitForSeconds(2f);
-			StartCoroutine(CallLine());
+            Debug.Log("Starting next panel");
+            StartCoroutine(CallLine());
 		}
 	}
 

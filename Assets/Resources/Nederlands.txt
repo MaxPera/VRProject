@@ -40,7 +40,8 @@
 			"dialogueName": "Hay1",
 			"dialogueLines":
 			[
-			"Zie je het plateau daar op de grond hier? Je kan hier naar toe teleporteren door de rechter joystick naar voren te duwen en dan los te laten."
+			"Zie je het plateau daar op de grond hier? Je kan hier naar toe teleporteren door de rechter joystick naar voren te duwen en dan los te laten.",
+			".OnComplete.Goed gedaan, bedankt voor het helpen."
 			]
 		},
 		{

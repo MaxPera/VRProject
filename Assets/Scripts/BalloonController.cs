@@ -50,6 +50,7 @@ public class BalloonController : MonoBehaviour
             grabController.enabled = false;
             //So this code only runs once
             other.gameObject.tag = "Untagged";
+            EventBus.Instance.SendEvent(this, new BalloonEvent());
         }
     }
 }
