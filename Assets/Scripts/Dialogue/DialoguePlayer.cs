@@ -71,6 +71,7 @@ public class DialoguePlayer : MonoBehaviour
 
     public void StartDialogue()
 	{
+		currentLine = 0;
 		canvas.enabled = true;
 		StartCoroutine(CallLine());
 	}
