@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
 
 	private DialoguePlayer[] dialoguePlayers;
 	[field: Header("Json string that defines on completion of task")]
-	public string onComplete;
+	public const string onComplete = ".OnComplete.";
 
 	private void Awake()
 	{
